@@ -34,20 +34,21 @@ class star_1_borrower_registration_form_1_education(star_1_borrower_registration
     """This method is called when the button is clicked"""
     qualification = self.drop_down_1.selected_value
     user_id = self.userId
-    if qualification not in  ['10th Standard','12th Standard','Btech / B.E','Mtech','Phd']:
+      
+    if qualification not in  ['10th standard', '12th standard', "Bachelor's degree", "Master's degree", 'PhD']:
       Notification("Please select a valid qualification status").show()
     elif not user_id:
       Notification("User ID is missing").show()
     else:
       anvil.server.call('add_borrower_step1',qualification,user_id)
     
-    if qualification == '10th Standard':
+    if qualification == '10th standard':
       open_form('borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_10th_class',user_id=user_id)
-    elif qualification == '10th Standard':
+    elif qualification == '12th standard':
       open_form('borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_intermediate',user_id = user_id)
-    elif qualification == 'Btech / B.E':
+    elif qualification == "Bachelor's degree":
       open_form('borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_btech',user_id=user_id)
-    elif qualification == 'Mtech':
+    elif qualification == "Master's degree":
       open_form('borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_mtech',user_id = user_id)
     elif qualification == 'Phd':
       open_form('borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_phd',user_id=user_id)

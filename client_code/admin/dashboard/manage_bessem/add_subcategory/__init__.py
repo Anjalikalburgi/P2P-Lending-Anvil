@@ -54,9 +54,9 @@ class add_subcategory(add_subcategoryTemplate):
   def qualification_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     entered_sub = self.text_box_3.text
-    valid_statuses = ['10th Class', 'Intermediate / PUC', "Bachelor's", "Master's", 'PhD']
+    valid_statuses = ['10th standard', '12th standard', "Bachelor's degree", "Master's degree", 'PhD']
     if entered_sub not in valid_statuses:
-        alert("Please enter a valid qualification: '10th Class', 'Intermediate / PUC', 'Bachelor's', 'Master's', 'PhD'.")
+        alert("Please enter a valid qualification: '10th standard', '12th standard', 'Bachelor's degree', 'Master's degree', or 'PhD'.")
         return
     entered_min_pts = int(self.text_box_4.text)
     new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='qualification',sub_category=entered_sub,min_points=entered_min_pts)

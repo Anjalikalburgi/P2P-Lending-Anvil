@@ -214,10 +214,9 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
   def qualification(self, **event_args):
     """This method is called when the button is clicked"""
     entered_data = self.text_box_9.text
-    # Check if the entered status is valid
-    valid_statuses = ['10th Class', 'Intermediate / PUC', "Bachelor's", "Master's", 'PhD']
+    valid_statuses = ['10th standard', '12th standard', "Bachelor's degree", "Master's degree", 'PhD']
     if entered_data not in valid_statuses:
-        alert("Please enter a valid qualification: '10th Class', 'Intermediate / PUC', 'Bachelor's', 'Master's', 'PhD'.")
+        alert("Please enter a valid qualification: '10th standard', '12th standard', 'Bachelor's degree', 'Master's degree', or 'PhD'.")
         return
     new_row = app_tables.fin_borrower_qualification.add_row(borrower_qualification=entered_data)
     self.text_box_9.text = ' '

@@ -27,26 +27,27 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
     user_id = self.userId
     qualification = self.drop_down_1.selected_value
     user_id = self.userId
-    if qualification not in  ['10th class','Intermediate / PUC','Btech / B.E','Mtech','Phd']:
+    
+    if qualification not in  ['10th standard', '12th standard', "Bachelor's degree", "Master's degree", 'PhD']:
       Notification("Please select a valid qualification status").show()
     elif not user_id:
       Notification("User ID is missing").show()
     else:
       anvil.server.call('add_lender_step1',qualification,user_id)
       
-    if qualification == '10th class':
+    if qualification == '10th standard':
       open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_10th_class',user_id=user_id)
-    elif qualification == 'Intermediate / PUC':
+    elif qualification == '12th standard':
       open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Intermediate',user_id = user_id)
-    elif qualification == 'Btech / B.E':
+    elif qualification == "Bachelor's degree":
       open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Btech',user_id=user_id)
-    elif qualification == 'Mtech':
+    elif qualification == "Master's degree":
       open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Mtech',user_id = user_id)
     elif qualification == 'Phd':
       open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Phd',user_id = user_id)
-    # else:
-      # open_form('lendor_registration_form.lender_registration_form_1_education_form',user_id=user_id)
-      # alert('Please select a valid qualification')
+    else:
+      open_form('lendor_registration_form.lender_registration_form_1_education_form',user_id=user_id)
+      
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("bank_users.user_form")
