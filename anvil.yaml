@@ -100,7 +100,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
   fin_lendor_no_of_employees:
-    client: full
+    client: none
     server: full
     columns:
     - name: lendor_no_of_employees
@@ -276,6 +276,14 @@ db_schema:
     - name: borrower_qualification
       admin_ui: {width: 200}
       type: string
+  fin_duration_at_address:
+    title: fin_duration_at_address
+    client: full
+    server: full
+    columns:
+    - name: duration_at_address
+      admin_ui: {width: 200}
+      type: string
   fin_foreclosure:
     title: fin_foreclosure
     client: full
@@ -436,6 +444,14 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     title: fin_borrower_salary_type
+  fin_present_address:
+    title: fin_present_address
+    client: full
+    server: full
+    columns:
+    - name: present_address
+      admin_ui: {width: 200}
+      type: string
   fin_borrower_profession:
     client: full
     server: full
@@ -775,6 +791,12 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: father_occupation
+      admin_ui: {width: 200}
+      type: string
+    - name: duration_at_address
+      admin_ui: {width: 200}
+      type: string
+    - name: present_address
       admin_ui: {width: 200}
       type: string
     title: fin_user_profile
@@ -1121,7 +1143,7 @@ db_schema:
       admin_ui: {order: 15.49609375, width: 135}
       type: date
     - name: loan_id
-      admin_ui: {order: 3, width: 92}
+      admin_ui: {order: 7, width: 108}
       type: string
     - name: borrower_compLeted_monthly_emi
       admin_ui: {order: 27, width: 259}

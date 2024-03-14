@@ -32,7 +32,7 @@ class loan_type(loan_typeTemplate):
       self.processing_fee = user_request['processing_fee']
       self.membership_type = user_request['membership_type']
       self.product_id = user_request['product_id']
-      self.product_desc = user_request['product_discription']
+      # self.product_desc = user_request['product_discription']
 
       # Fetch emi_payment options from the database
       self.emi_payment_options = user_request['emi_payment']
@@ -91,7 +91,7 @@ class loan_type(loan_typeTemplate):
       open_form('borrower_registration_form.dashboard.new_loan_request.check',
                 self.proctct_g, self.prodct_cate, self.product_name, str(loan_amount), tenure,
                 self.user_id, self.roi, self.processing_fee,
-                self.membership_type, self.product_id,self.product_desc,
+                self.membership_type, self.product_id,
                 self.Total_Repayment_Amount, self.credit_limt, self.entered_payment_type,
                 total_interest=self.label_30.text,
                 processing_fee_amount=self.label_32.text,

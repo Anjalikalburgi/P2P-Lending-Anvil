@@ -8,7 +8,7 @@ from .. import main_form_module as main_form_module
 
 class check(checkTemplate):
     def __init__(self, product_group, product_cat, product_name, loan_amount, tenure_months, user_id, interest_rate, processing_fee,
-                 membership_type, product_id,product_desc, total_repayment_amount, credit_limt, emi_payment_type, total_interest=None, processing_fee_amount=None, entered_values=None,
+                 membership_type, product_id, total_repayment_amount, credit_limt, emi_payment_type, total_interest=None, processing_fee_amount=None, entered_values=None,
                  **properties):
         # Initialize properties and data bindings
         self.product_group = product_group
@@ -28,7 +28,7 @@ class check(checkTemplate):
         self.total_repayment_amount = float(str(total_repayment_amount).replace('₹ ', '')) if total_repayment_amount is not None else 0
         self.credit_limt = credit_limt
         self.entered_payment_type = emi_payment_type
-        self.product_discription = product_desc
+        # self.product_discription = product_desc
 
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
@@ -60,8 +60,8 @@ class check(checkTemplate):
                                    self.product_name,
                                    self.entered_payment_type,
                                    self.processing_fee_amount,
-                                   self.total_interest,
-                                   self.product_discription)
+                                   self.total_interest)
+                                   # self.product_discription)
 
         # Log the result for debugging
         print(result)

@@ -44,6 +44,14 @@ class basic_registration_form(basic_registration_formTemplate):
             option_strings = [str(option['gender']) for option in options]
             self.gender_dd.items = option_strings
 
+            options = app_tables.fin_present_address.search()
+            option_strings = [str(option['present_address']) for option in options]
+            self.drop_down_1.items = option_strings
+
+            options = app_tables.fin_duration_at_address.search()
+            option_strings = [str(option['duration_at_address']) for option in options]
+            self.drop_down_2.items = option_strings
+
     def submit_btn_click(self, **event_args):
         """This method is called when the button is clicked"""
         full_name = self.full_name_text_box.text
@@ -62,6 +70,8 @@ class basic_registration_form(basic_registration_formTemplate):
         pincode = self.text_box_4.text
         state = self.text_box_5.text
         country = self.text_box_6.text
+        present = self.drop_down_1.selected_value
+        duration = self.drop_down_2.selected_value
         
         user_id = self.user_id
         
@@ -88,13 +98,13 @@ class basic_registration_form(basic_registration_formTemplate):
         #   self.label_1.text='enter valid aadhar no'
         # elif not re.match(r'^[A-Z]{5}[0-9]{4}[A-Z]$', pan):
         #   self.label_2.text='enter valid pan no'
-        elif not full_name or not gender or not dob or not mobile_no or not alternate_email or not user_photo or not aadhar or not aadhar_card or not pan or not pan_card or not street_adress_1 and not street_address_2 or not city or not pincode or not state or not state or not country:
+        elif not full_name or not gender or not dob or not mobile_no or not alternate_email or not user_photo or not aadhar or not aadhar_card or not pan or not pan_card or not street_adress_1 and not street_address_2 or not city or not pincode or not state or not state or not country or not present or not duration:
             Notification('Please fill all details').show()
         else:
             user_age = datetime.now().year - dob.year - ((datetime.now().month, datetime.now().day) < (dob.month, dob.day))
             anvil.server.call('add_basic_details', full_name, gender, dob, mobile_no, user_photo, alternate_email,
                               aadhar, aadhar_card, pan, pan_card, street_adress_1, street_address_2, city, pincode,
-                              state, country, user_id, user_age)
+                              state, country, user_id, user_age ,present, duration)
             Notification("Basic details form filled up submitted successfully").show()
             open_form('bank_users.user_form')
 
