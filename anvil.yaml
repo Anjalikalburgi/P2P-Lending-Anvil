@@ -797,6 +797,9 @@ db_schema:
     - name: is_liveloan
       admin_ui: {width: 200, order: 3.5}
       type: string
+    - name: age
+      admin_ui: {order: 2.5, width: 200}
+      type: string
     title: fin_admin_beseem_categories
   fin_wallet_transactions:
     title: fin_wallet_transactions

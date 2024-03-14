@@ -159,7 +159,7 @@ class add_lender_dropdown_details(add_lender_dropdown_detailsTemplate):
     if entered_data not in valid_statuses:
         alert("Please enter a valid qualification: '10th class', 'Intermediate / PUC', 'Bachelors', 'Masters', 'PhD'.")
         return
-    new_row = app_tables.fin_lender_qualification.add_row(lender_qualification=entered_data)
+    new_row = app_tables.fin_lendor_qualification.add_row(lendor_qualification=entered_data)
     self.text_box_2.text = ' '
     self.refresh()
     
