@@ -235,7 +235,7 @@ components:
       components:
       - name: label_010_copy_copy
         properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-          visible: true, text: Add Marrital Details, font_size: 18, font: '', spacing_above: small,
+          visible: true, text: Add Marita Details, font_size: 18, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         type: Label

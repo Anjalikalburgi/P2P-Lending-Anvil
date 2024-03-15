@@ -490,10 +490,10 @@ db_schema:
       admin_ui: {width: 200}
       type: media
     - name: gender
-      admin_ui: {width: 200, order: 7}
+      admin_ui: {order: 2.5, width: 200}
       type: string
     - name: date_of_birth
-      admin_ui: {width: 200, order: 8}
+      admin_ui: {order: 2.8125, width: 200}
       type: date
     - name: aadhaar_photo
       admin_ui: {order: 13, width: 200}
@@ -526,10 +526,10 @@ db_schema:
       admin_ui: {width: 200, order: 21}
       type: string
     - name: marital_status
-      admin_ui: {width: 200, order: 22}
+      admin_ui: {order: 2.859375, width: 200}
       type: string
     - name: profficen
-      admin_ui: {order: 40, width: 200}
+      admin_ui: {order: 2.8671875, width: 200}
       type: string
     - name: usertype
       admin_ui: {order: 0.5, width: 200}
@@ -538,7 +538,7 @@ db_schema:
       admin_ui: {order: 14, width: 200}
       type: string
     - name: user_age
-      admin_ui: {width: 200, order: 7.5}
+      admin_ui: {order: 2.75, width: 200}
       type: number
     - name: registration_approve
       admin_ui: {width: 200, order: 31}
@@ -556,7 +556,7 @@ db_schema:
       admin_ui: {width: 200, order: 24.140625}
       type: bool
     - name: qualification
-      admin_ui: {width: 200, order: 24.375}
+      admin_ui: {order: 2.84375, width: 200}
       type: string
     - name: address_type
       admin_ui: {width: 200, order: 24.4375}
@@ -754,7 +754,7 @@ db_schema:
       admin_ui: {width: 200, order: 107}
       type: string
     - name: year_estd
-      admin_ui: {width: 200}
+      admin_ui: {order: 2.875, width: 200}
       type: date
     - name: spouse_annual_salary
       admin_ui: {width: 200}
@@ -763,7 +763,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: spouse_company_name
-      admin_ui: {width: 200}
+      admin_ui: {order: 11.5, width: 200}
       type: string
     - name: spouse_date
       admin_ui: {width: 200}
