@@ -269,45 +269,94 @@ def final_points_update_bessem_table(user_id):
 
 def get_user_points(id):
     users = app_tables.fin_user_profile.search(customer_id=id)
-
     if users:
         user = users[0]
-        gender = user['gender'].lower()
-        qualification = user['qualification'].lower()
-        marital_status = user['marital_status'].lower()
-        profession = user['profession'].lower()
+        gender = user['gender'].lower() 
+        qualification = user['qualification'].lower()  
+        marital_status = user['marital_status'].lower()  
+        profession = user['profficen'].lower()
         user_age = user['user_age']
 
-        # Search for minimum points based on user details
-        gender_points = app_tables.fin_admin_beseem_categories.search(
-            group_name='gender',
-            sub_category=gender
-        )[0]['min_points']
+        # Initialize user points
+        user_points = 0
+      
+        gender_search = app_tables.fin_admin_beseem_categories.search(group_name='gender', sub_category=gender.lower())
+        if gender_search:
+            gender_points = gender_search[0]['min_points']
+            user_points += gender_points
 
-        qualification_points = app_tables.fin_admin_beseem_categories.search(
-            group_name='qualification',
-            sub_category=qualification
-        )[0]['min_points']
+        qualification_search = app_tables.fin_admin_beseem_categories.search(group_name='qualification', sub_category=qualification.lower())
+        if qualification_search:
+            qualification_points = qualification_search[0]['min_points']
+            user_points += qualification_points
 
-        marital_status_points = app_tables.fin_admin_beseem_categories.search(
-            group_name='marital_status',
-            sub_category=marital_status
-        )[0]['min_points']
+        # marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status', sub_category=marital_status)
+        # if marital_status_search:
+        #     marital_status_points = marital_status_search[0]['min_points']
+        #     user_points += marital_status_points
 
-        profession_points = app_tables.fin_admin_beseem_categories.search(
-            group_name='profession',
-            sub_category=profession
-        )[0]['min_points']
-
-        # Calculate total points
-        total_points = gender_points + qualification_points + marital_status_points + profession_points
-
-        # Assuming user_points is a variable holding the existing points of the user
-        user_points = total_points + user_points  # Add calculated points to user_points
+        profession_search = app_tables.fin_admin_beseem_categories.search(group_name='profession', sub_category=profession.lower())
+        if profession_search:
+            profession_points = profession_search[0]['min_points']
+            user_points += profession_points
 
         return user_points
     else:
         return None
+
+def get_group_points():
+    groups = app_tables.fin_admin_beseem_groups.search()
+
+    if groups:
+        group_points = 0
+
+        for group_row in groups:
+            group_points += group_row['max_points']
+
+        return group_points
+    return None
+  
+# def get_user_points(id):
+#     users = app_tables.fin_user_profile.search(customer_id=id)
+
+#     if users:
+#         user = users[0]
+#         gender = user['gender'].lower()
+#         qualification = user['qualification'].lower()
+#         marital_status = user['marital_status'].lower()
+#         profession = user['profession'].lower()
+#         user_age = user['user_age']
+
+#         # Search for minimum points based on user details
+#         gender_points = app_tables.fin_admin_beseem_categories.search(
+#             group_name='gender',
+#             sub_category=gender
+#         )[0]['min_points']
+
+#         qualification_points = app_tables.fin_admin_beseem_categories.search(
+#             group_name='qualification',
+#             sub_category=qualification
+#         )[0]['min_points']
+
+#         marital_status_points = app_tables.fin_admin_beseem_categories.search(
+#             group_name='marital_status',
+#             sub_category=marital_status
+#         )[0]['min_points']
+
+#         profession_points = app_tables.fin_admin_beseem_categories.search(
+#             group_name='profession',
+#             sub_category=profession
+#         )[0]['min_points']
+
+#         # Calculate total points
+#         total_points = gender_points + qualification_points + marital_status_points + profession_points
+
+#         # Assuming user_points is a variable holding the existing points of the user
+#         user_points = total_points + user_points  # Add calculated points to user_points
+
+#         return user_points
+#     else:
+#         return None
       
 # def get_user_points(id):
 #     users = app_tables.fin_user_profile.search(customer_id=id)
@@ -363,14 +412,3 @@ def get_user_points(id):
 #         return user_points
 #     return None
 
-def get_group_points():
-    groups = app_tables.fin_admin_beseem_groups.search()
-
-    if groups:
-        group_points = 0
-
-        for group_row in groups:
-            group_points += group_row['max_points']
-
-        return group_points
-    return None

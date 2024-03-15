@@ -20,7 +20,7 @@ class add_subcategory(add_subcategoryTemplate):
     """Refresh repeating panels with the latest data"""
     self.repeating_panel_1.items = app_tables.fin_admin_beseem_categories.search(group_name="gender")
     self.repeating_panel_2.items = app_tables.fin_admin_beseem_categories.search(group_name="qualification")
-    self.repeating_panel_3.items = app_tables.fin_admin_beseem_categories.search(group_name="marrital_status")
+    self.repeating_panel_3.items = app_tables.fin_admin_beseem_categories.search(group_name="marital_status")
     self.repeating_panel_5.items = app_tables.fin_admin_beseem_categories.search(group_name="profession")
     self.repeating_panel_4.items = app_tables.fin_admin_beseem_categories.search(group_name="all_loans")
 
@@ -79,24 +79,24 @@ class add_subcategory(add_subcategoryTemplate):
     entered_sub = self.text_box_5.text
     entered_age = self.text_box_5a.text
     entered_min_pts = int(self.text_box_6.text)
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='marrital_status',sub_category=entered_sub,min_points=entered_min_pts,age=entered_age)
+    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='marital_status',sub_category=entered_sub,min_points=entered_min_pts,age=entered_age)
     self.text_box_5.text = ' '
     self.text_box_5a.text = ' '
     self.text_box_6.text = ' '
     self.refresh()
 
-    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='marrital_status')]
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='marital_status')]
 
     max_points = max(existing_min_points + [entered_min_pts])
 
-    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="marrital_status")
+    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="marital_status")
     if existing_group_row:
       existing_group_row['max_points'] = max_points
       existing_group_row.update()
 
     else:
       new_group_row = app_tables.fin_admin_beseem_groups.add_row(
-            group_name="marrital_status", max_points=max_points
+            group_name="marital_status", max_points=max_points
         )
 
   def profession_button_click(self, **event_args):
