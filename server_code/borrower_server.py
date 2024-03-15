@@ -267,7 +267,7 @@ def get_user_points(id):
         gender = user['gender'].lower()
         qualification = user['qualification'].lower()
         marital_status = user['marital_status'].lower()
-        profession = user['profficen'].lower()
+        profession = user['profficen'].lower()  
         user_age = user['user_age']
 
         def get_min_points(group_name, sub_category):
@@ -289,7 +289,7 @@ def get_user_points(id):
         total_points = gender_points + qualification_points + marital_status_points + profession_points
 
         user_points = total_points 
-
+        print(f"Debug: user_points={user_points}")
         return user_points
     else:
         return None
