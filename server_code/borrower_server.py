@@ -316,16 +316,16 @@ def get_user_points(id):
 
     if users:
         user = users[0]
-        gender = user['gender']
-        qualification = user['qualification']
-        marital_status = user['marital_status']
-        profession = user['profficen']
+        gender = user['gender'].lower()
+        qualification = user['qualification'].lower()
+        marital_status = user['marital_status'].lower()
+        profession = user['profficen'].lower()
 
         print(f"Debug: gender={gender}, qualification={qualification}, marital_status={marital_status}, profession={profession}")
 
         def search_category(group_name, sub_category):
             return app_tables.fin_admin_beseem_categories.search(
-                group_name=group_name, sub_category=sub_category
+                group_name=group_name.lower(), sub_category=sub_category.lower()
             )
 
         user_points = 0
@@ -338,7 +338,7 @@ def get_user_points(id):
         if qualification_category_rows:
             user_points += qualification_category_rows[0]['min_points']
 
-        # marital_status_category_rows = search_category('marital_status', marrital_status)
+        # marital_status_category_rows = search_category('marital_status', marital_status)
         # if marital_status_category_rows:
         #     user_points += marital_status_category_rows[0]['min_points']
 
