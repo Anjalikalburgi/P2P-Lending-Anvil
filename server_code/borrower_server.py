@@ -259,44 +259,44 @@ def final_points_update_bessem_table(user_id):
         return final_points
     return None
 
-# def get_user_points(id):
-#     users = app_tables.fin_user_profile.search(customer_id=id)
+def get_user_points(id):
+    users = app_tables.fin_user_profile.search(customer_id=id)
 
-#     if users:
-#         user = users[0]
-#         gender = user['gender']
-#         qualification = user['qualification']
-#         marital_status = user['marital_status']
-#         profession = user['profficen']
-#         user_age = user['user_age']
+    if users:
+        user = users[0]
+        gender = user['gender']
+        qualification = user['qualification']
+        marital_status = user['marital_status']
+        profession = user['profficen']
+        user_age = user['user_age']
 
-#         # Search for minimum points based on user details
-#         search_result = app_tables.fin_admin_beseem_categories.search( group_name='gender',sub_category=gender)
-#         if search_result:  # Check if there are any results
-#           gender_points = search_result[0]['min_points']
-#         else:
-#           gender_points = 0
+        # Initialize user points
+        user_points = 0
 
-#         qualification_points = app_tables.fin_admin_beseem_categories.search(
-#             group_name='qualification',
-#             sub_category=qualification
-#         )[0]['min_points']
+        # Search for minimum points based on user details
+        gender_search = app_tables.fin_admin_beseem_categories.search(group_name='gender', sub_category=gender)
+        if gender_search:
+            gender_points = gender_search[0]['min_points']
+            user_points += gender_points
 
-#         marital_status_points = app_tables.fin_admin_beseem_categories.search(
-#             group_name='marital_status',
-#             sub_category=marital_status
-#         )[0]['min_points']
+        qualification_search = app_tables.fin_admin_beseem_categories.search(group_name='qualification', sub_category=qualification)
+        if qualification_search:
+            qualification_points = qualification_search[0]['min_points']
+            user_points += qualification_points
 
-#         profession_points = app_tables.fin_admin_beseem_categories.search(
-#             group_name='profession',
-#             sub_category=profession
-#         )[0]['min_points']
+        # marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status', sub_category=marital_status)
+        # if marital_status_search:
+        #     marital_status_points = marital_status_search[0]['min_points']
+        #     user_points += marital_status_points
 
-#         user_points = gender_points + qualification_points + marital_status_points + profession_points
+        profession_search = app_tables.fin_admin_beseem_categories.search(group_name='profession', sub_category=profession)
+        if profession_search:
+            profession_points = profession_search[0]['min_points']
+            user_points += profession_points
 
-#         return user_points
-#     else:
-#         return None
+        return user_points
+    else:
+        return None
       
 
 def get_group_points():
@@ -311,45 +311,45 @@ def get_group_points():
         return group_points
     return None
 
-def get_user_points(id):
-    users = app_tables.fin_user_profile.search(customer_id=id)
+# def get_user_points(id):
+#     users = app_tables.fin_user_profile.search(customer_id=id)
 
-    if users:
-        user = users[0]
-        gender = user['gender'].lower()
-        qualification = user['qualification'].lower()
-        marital_status = user['marital_status'].lower()
-        profession = user['profficen'].lower()
+#     if users:
+#         user = users[0]
+#         gender = user['gender'].lower()
+#         qualification = user['qualification'].lower()
+#         marital_status = user['marital_status'].lower()
+#         profession = user['profficen'].lower()
 
-        print(f"Debug: gender={gender}, qualification={qualification}, marital_status={marital_status}, profession={profession}")
+#         print(f"Debug: gender={gender}, qualification={qualification}, marital_status={marital_status}, profession={profession}")
 
-        def search_category(group_name, sub_category):
-            return app_tables.fin_admin_beseem_categories.search(
-                group_name=group_name.lower(), sub_category=sub_category.lower()
-            )
+#         def search_category(group_name, sub_category):
+#             return app_tables.fin_admin_beseem_categories.search(
+#                 group_name=group_name.lower(), sub_category=sub_category.lower()
+#             )
 
-        user_points = 0
+#         user_points = 0
 
-        gender_category_rows = search_category('gender', gender)
-        if gender_category_rows:
-            user_points += gender_category_rows[0]['min_points']
+#         gender_category_rows = search_category('gender', gender)
+#         if gender_category_rows:
+#             user_points += gender_category_rows[0]['min_points']
 
-        qualification_category_rows = search_category('qualification', qualification)
-        if qualification_category_rows:
-            user_points += qualification_category_rows[0]['min_points']
+#         qualification_category_rows = search_category('qualification', qualification)
+#         if qualification_category_rows:
+#             user_points += qualification_category_rows[0]['min_points']
 
-        # marital_status_category_rows = search_category('marital_status', marital_status)
-        # if marital_status_category_rows:
-        #     user_points += marital_status_category_rows[0]['min_points']
+#         # marital_status_category_rows = search_category('marital_status', marital_status)
+#         # if marital_status_category_rows:
+#         #     user_points += marital_status_category_rows[0]['min_points']
 
-        profession_category_rows = search_category('profession',profession)
-        if profession_category_rows:
-           user_points += profession_category_rows[0]['min_points']
+#         profession_category_rows = search_category('profession',profession)
+#         if profession_category_rows:
+#            user_points += profession_category_rows[0]['min_points']
 
-        print(f"Debug: user_points={user_points}")
-        return user_points
+#         print(f"Debug: user_points={user_points}")
+#         return user_points
 
-    return None
+#     return None
   
 # def get_user_points(id):
 #     users = app_tables.fin_user_profile.search(customer_id=id)
