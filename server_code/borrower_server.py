@@ -264,10 +264,10 @@ def get_user_points(id):
 
     if users:
         user = users[0]
-        gender = user['gender'].lower()
-        qualification = user['qualification'].lower()
-        marital_status = user['marital_status'].lower()
-        profession = user['profficen'].lower()  
+        gender = user['gender']
+        qualification = user['qualification']
+        marital_status = user['marital_status']
+        profession = user['profficen'] 
         user_age = user['user_age']
 
         def get_min_points(group_name, sub_category):
@@ -286,14 +286,26 @@ def get_user_points(id):
         marital_status_points = get_min_points('marital_status', marital_status)
         profession_points = get_min_points('profession', profession)
 
-        total_points = gender_points + qualification_points + marital_status_points + profession_points
-
-        user_points = total_points 
+        user_points = gender_points + qualification_points + marital_status_points + profession_points
+ 
         print(f"Debug: user_points={user_points}")
         return user_points
     else:
         return None
       
+
+def get_group_points():
+    groups = app_tables.fin_admin_beseem_groups.search()
+
+    if groups:
+        group_points = 0
+
+        for group_row in groups:
+            group_points += group_row['max_points']
+
+        return group_points
+    return None
+
 # def get_user_points(id):
 #     users = app_tables.fin_user_profile.search(customer_id=id)
 
@@ -347,15 +359,3 @@ def get_user_points(id):
 #         print(f"Debug: user_points={user_points}")
 #         return user_points
 #     return None
-
-def get_group_points():
-    groups = app_tables.fin_admin_beseem_groups.search()
-
-    if groups:
-        group_points = 0
-
-        for group_row in groups:
-            group_points += group_row['max_points']
-
-        return group_points
-    return None
