@@ -164,7 +164,7 @@ components:
         properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
           foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#00008B', bold: true, underline: false, icon: ''}
+          italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9}
         event_bindings: {click: gender_button_click}
@@ -216,7 +216,7 @@ components:
         properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
           foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#00008B', bold: true, underline: false, icon: ''}
+          italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9}
         event_bindings: {click: qualification_button_click}
@@ -280,7 +280,7 @@ components:
         properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
           foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#00008B', bold: true, underline: false, icon: ''}
+          italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: UJISFO, width_xs: 2, col_xs: 9}
         event_bindings: {click: marrital_button_click}
@@ -328,7 +328,7 @@ components:
         properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
           foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#00008B', bold: true, underline: false, icon: ''}
+          italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9}
         event_bindings: {click: profession_button_click}
@@ -392,7 +392,7 @@ components:
         properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
           foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#00008B', bold: true, underline: false, icon: ''}
+          italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: BMWBRB, width_xs: 2, col_xs: 10}
         event_bindings: {click: all_loans_button_click}

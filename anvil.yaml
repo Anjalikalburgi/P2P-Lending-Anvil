@@ -481,7 +481,7 @@ db_schema:
     server: full
     columns:
     - name: customer_id
-      admin_ui: {order: 0, width: 200}
+      admin_ui: {order: -0.5, width: 200}
       type: number
     - name: full_name
       admin_ui: {width: 200}
@@ -508,10 +508,10 @@ db_schema:
       admin_ui: {width: 200, order: 15}
       type: string
     - name: email_user
-      admin_ui: {width: 200, order: 16}
+      admin_ui: {order: -1, width: 200}
       type: string
     - name: last_confirm
-      admin_ui: {order: 0.25, width: 200}
+      admin_ui: {order: 0.75, width: 200}
       type: bool
     - name: mobile_check
       admin_ui: {width: 200, order: 19}
@@ -718,7 +718,7 @@ db_schema:
       admin_ui: {width: 200, order: 88.5}
       type: number
     - name: bessem_value
-      admin_ui: {width: 200}
+      admin_ui: {order: 0.875, width: 200}
       type: number
     - name: tenth_class
       admin_ui: {width: 200, order: 96}
@@ -1051,7 +1051,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: none
+    client: full
     server: full
     columns:
     - name: account_id
