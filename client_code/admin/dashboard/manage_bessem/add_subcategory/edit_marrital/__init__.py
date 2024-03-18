@@ -28,9 +28,9 @@ class edit_marrital(edit_marritalTemplate):
   def save_click(self, **event_args):
     """Save changes button click event"""
     # Get the updated values from the input components
-    updated_sub_category = self.text_box_1.text
+    updated_sub_category = self.text_box_1.text.lower()
     updated_points = int(self.text_box_2.text)
-    updated_age = self.text_box_3.text
+    updated_age = self.text_box_3.text.lower()
 
     # Update the existing row in the product_categories table
     if self.selected_row is not None:

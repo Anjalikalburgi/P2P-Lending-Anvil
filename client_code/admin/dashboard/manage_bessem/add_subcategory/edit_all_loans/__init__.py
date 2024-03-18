@@ -14,7 +14,7 @@ class edit_all_loans(edit_all_loansTemplate):
 
     # Set the initial values for the input components
     self.text_box_1.text = selected_row['sub_category']
-    self.text_box_1.enabled = False  
+    self.text_box_1.enabled = True  
 
     self.text_box_2.text = selected_row['min_points']
     self.text_box_2.enabled = True  
@@ -28,9 +28,9 @@ class edit_all_loans(edit_all_loansTemplate):
   def save_click(self, **event_args):
     """Save changes button click event"""
     # Get the updated values from the input components
-    updated_sub_category = self.text_box_1.text
+    updated_sub_category = self.text_box_1.text.lower()
     updated_points = int(self.text_box_2.text)
-    updated_yesno = self.text_box_3.text
+    updated_yesno = self.text_box_3.text.lower()
     
     # Update the existing row in the product_categories table
     if self.selected_row is not None:

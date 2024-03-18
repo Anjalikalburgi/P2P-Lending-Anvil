@@ -25,7 +25,7 @@ class edit_organization_type(edit_organization_typeTemplate):
   def save_click(self, **event_args):
     """Save changes button click event"""
     # Get the updated values from the input components
-    updated_sub_category = self.text_box_1.text
+    updated_sub_category = self.text_box_1.text.lower()
     updated_points = int(self.text_box_2.text)
 
     # Update the existing row in the product_categories table

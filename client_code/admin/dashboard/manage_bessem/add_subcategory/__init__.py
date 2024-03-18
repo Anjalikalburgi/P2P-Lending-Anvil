@@ -33,7 +33,7 @@ class add_subcategory(add_subcategoryTemplate):
     
   def gender_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_sub = self.text_box_1.text
+    entered_sub = self.text_box_1.text.lower()
     entered_min_pts = int(self.text_box_2.text)
     new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='gender',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_1.text = ' '
@@ -56,7 +56,7 @@ class add_subcategory(add_subcategoryTemplate):
 
   def qualification_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_sub = self.text_box_3.text
+    entered_sub = self.text_box_3.text.lower()
     entered_min_pts = int(self.text_box_4.text)
     new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='qualification',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_3.text = ' '
@@ -79,8 +79,8 @@ class add_subcategory(add_subcategoryTemplate):
 
   def marrital_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_sub = self.text_box_5.text
-    entered_age = self.text_box_5a.text
+    entered_sub = self.text_box_5.text.lower()
+    entered_age = self.text_box_5a.text.lower()
     entered_min_pts = int(self.text_box_6.text)
     new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='marital_status',sub_category=entered_sub,min_points=entered_min_pts,age=entered_age)
     self.text_box_5.text = ' '
@@ -104,10 +104,10 @@ class add_subcategory(add_subcategoryTemplate):
 
   def profession_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_sub = self.text_box_7.text
+    entered_sub = self.text_box_7.text.lower()
     valid_statuses = ['student', 'employee', 'self employment']
     if entered_sub not in valid_statuses:
-        alert("Please enter a valid profession: 'student', 'employee', 'self employment'.")
+        alert("Please enter a valid profession: 'Student', 'Employee', 'Self employment'.")
         return
     entered_min_pts = int(self.text_box_8.text)
     new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='profession',sub_category=entered_sub,min_points=entered_min_pts)
@@ -131,11 +131,11 @@ class add_subcategory(add_subcategoryTemplate):
     
   def all_loans_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_sub = self.text_box_9.text
-    entered_yes_no = self.text_box_10.text
+    entered_sub = self.text_box_9.text.lower()
+    entered_yes_no = self.text_box_10.text.lower()
     valid_statuses = ['yes', 'no']
     if entered_yes_no not in valid_statuses:
-        alert("Kindly input either 'yes' or 'no'.")
+        alert("Kindly input either 'Yes' or 'No'.")
         return
     entered_min_pts = int(self.text_box_11.text)
     
@@ -161,7 +161,7 @@ class add_subcategory(add_subcategoryTemplate):
 
   def organization_type_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_sub = self.text_box_12.text
+    entered_sub = self.text_box_12.text.lower()
     entered_min_pts = int(self.text_box_13.text)
     new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='organization_type',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_12.text = ' '
@@ -184,7 +184,7 @@ class add_subcategory(add_subcategoryTemplate):
 
   def present_address_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_sub = self.text_box_14.text
+    entered_sub = self.text_box_14.text.lower()
     entered_min_pts = int(self.text_box_15.text)
     new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='present_address',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_14.text = ' '
@@ -207,7 +207,7 @@ class add_subcategory(add_subcategoryTemplate):
 
   def duration_at_address_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_sub = self.text_box_16.text
+    entered_sub = self.text_box_16.text.lower()
     entered_min_pts = int(self.text_box_17.text)
     new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='duration_at_address',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_16.text = ' '
