@@ -371,7 +371,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_10.visible = False
     self.grid_panel_11.visible = False
 
-  def all_loans_click(self, **event_args):
+  def home_loan_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.grid_panel_1.visible = False
     self.grid_panel_2.visible = False
