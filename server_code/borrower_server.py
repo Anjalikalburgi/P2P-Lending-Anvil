@@ -282,21 +282,32 @@ def get_user_points(id):
         present_address = user['present_address'].lower()
         duration_at_address = str(user['duration_at_address']).lower()
         self_employment = user['self_employment'].lower()
-        age_of_business = user['business_age'].lower()
+        age_of_business = user['business_age']
         salary_type = user['salary_type'].lower()
         home_loan = user['running_Home_Loan'].lower()
         other_loan = user['other_loan'].lower()
         live_loan = user['running_or_live loans'].lower()
         credit_card_loan = user['credit_card_loans'].lower()
         vehicle_loan = user['wheeler_loans'].lower()
-        data = app_tables.fin_guarantor_details.search(customer_id=id)
-        if data:
-          another_person = data['another_person']
-          spouse_profession = data['guarantor_profession']
         
         # Initialize user points
         user_points = 0
-        
+
+        # Find the age range for the user_age
+        user_age_range = None
+        if 18 <= user_age <= 24:
+          user_age_range = '18-24'
+        elif 25 <= user_age <= 30:
+          user_age_range = '25-30'
+        elif 31 <= user_age <= 36:
+          user_age_range = '31-36'
+        elif 37 <= user_age <= 40:
+          user_age_range = '37-40'
+        elif 41 <= user_age <= 50:
+          user_age_range = '41-50'
+        else:
+          user_age_range = '51+'
+      
         gender_search = app_tables.fin_admin_beseem_categories.search(group_name='gender', sub_category=gender)
         if gender_search:
             gender_points = gender_search[0]['min_points']
@@ -352,11 +363,15 @@ def get_user_points(id):
                     print("Business Age Points:", business_age_points)
                     user_points += business_age_points
                   
-        marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status', sub_category=marital_status.lower())
+        marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status', sub_category=marital_status.lower(),age=user_age_range)
         if marital_status_search:
             marital_status_points = marital_status_search[0]['min_points']
             print("Marital status Points:", marital_status_points)
             user_points += marital_status_points
+            data = app_tables.fin_guarantor_details.search(customer_id=id)
+            if data:
+               another_person = data['another_person']
+               spouse_profession = data['guarantor_profession']
           
             if marital_status == 'married' and another_person == 'spouse':
                spouse_profession_search = app_tables.fin_admin_beseem_categories.search(group_name='spouse_profession',sub_category=spouse_profession.lower())
