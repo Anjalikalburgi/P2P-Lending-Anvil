@@ -644,10 +644,7 @@ db_schema:
       admin_ui: {width: 200, order: 51}
       type: string
     - name: bank_id
-      admin_ui: {order: 60, width: 200}
-      type: string
-    - name: net_bank
-      admin_ui: {width: 200, order: 55}
+      admin_ui: {order: 73.75, width: 200}
       type: string
     - name: mail_id
       admin_ui: {width: 200}
@@ -827,16 +824,16 @@ db_schema:
       admin_ui: {order: 81.5, width: 200}
       type: string
     - name: company_type
-      admin_ui: {order: 81.875, width: 200}
+      admin_ui: {order: 76.5, width: 200}
       type: string
     - name: business_age
       admin_ui: {order: 2.9375, width: 200}
       type: number
     - name: profession
-      admin_ui: {order: 81.9375, width: 200}
+      admin_ui: {order: 65.5, width: 200}
       type: string
     - name: self_employment
-      admin_ui: {order: 104.998046875, width: 200}
+      admin_ui: {order: 65.75, width: 200}
       type: string
     - name: wheeler_loans
       admin_ui: {order: 81.375, width: 200}
@@ -1129,7 +1126,7 @@ db_schema:
       admin_ui: {width: 200, order: 2}
       type: number
     - name: guarantor_profession
-      admin_ui: {width: 200, order: 3}
+      admin_ui: {order: 1, width: 200}
       type: string
     - name: guarantor_address
       admin_ui: {order: 2.5, width: 200}

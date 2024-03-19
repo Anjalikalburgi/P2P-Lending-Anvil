@@ -290,6 +290,7 @@ def get_user_points(id):
         credit_card_loan = user['credit_card_loans'].lower()
         vehicle_loan = user['wheeler_loans'].lower()
         
+        
         # Initialize user points
         user_points = 0
 
@@ -363,28 +364,34 @@ def get_user_points(id):
                     print("Business Age Points:", business_age_points)
                     user_points += business_age_points
                   
-        marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status', sub_category=marital_status.lower(),age=user_age_range)
+        marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status', sub_category=marital_status.lower(), age=user_age_range)
         if marital_status_search:
             marital_status_points = marital_status_search[0]['min_points']
             print("Marital status Points:", marital_status_points)
             user_points += marital_status_points
+    
             data = app_tables.fin_guarantor_details.search(customer_id=id)
             if data:
-               another_person = data['another_person']
-               spouse_profession = data['guarantor_profession']
-          
-            if marital_status == 'married' and another_person == 'spouse':
-               spouse_profession_search = app_tables.fin_admin_beseem_categories.search(group_name='spouse_profession',sub_category=spouse_profession.lower())
-               if spouse_profession_search:
-                 spouse_profession_points = spouse_profession_search[0]['min_points']
-                 print("Spouse profession:", spouse_profession_points)
-                 user_points += spouse_profession_points 
+                for item in data:
+                    another_person = item['another_person'].lower()
+                    print("another person:",another_person)
+                    spouse_profession = item['guarantor_profession'].lower()
+                    print("spouse prof:", spouse_profession)
+              
+                    # if marital_status == 'married' and another_person == 'spouse':
+                    #     spouse_profession_search = app_tables.fin_admin_beseem_categories.search(group_name='spouse_profession', sub_category=spouse_profession)
+                    #     if spouse_profession_search:
+                    #        spouse_profession_points = spouse_profession_search[0]['min_points']
+                    #        print("Spouse profession:", spouse_profession_points)
+                    #        user_points += spouse_profession_points
+                    #     else:
+                    #         print("Spouse profession category not found")
 
-        if home_loan:
-            home_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category=home_loan.lower())
-            if home_loan_search and home_loan_search[0]['is_liveloan']:
-                home_loan_points = home_loan_search[0]['min_points']
-                user_points += home_loan_points
+        # if home_loan:
+        #     home_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category=home_loan.lower())
+        #     if home_loan_search and home_loan_search[0]['is_liveloan']:
+        #         home_loan_points = home_loan_search[0]['min_points']
+        #         user_points += home_loan_points
 
         if other_loan:
             other_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category=other_loan.lower())
