@@ -387,12 +387,11 @@ def get_user_points(id):
         loan_points_total = 0
         for loan_column in loan_columns:
             loan_value = user[loan_column].lower()
-            if loan_value in ['yes', 'no']:  # Validating loan value
-                # Search for matching entry in fin_admin_beseem_categories
+            if loan_value in ['yes', 'no']: 
                 loan_search = app_tables.fin_admin_beseem_categories.search(
                     (app_tables.fin_admin_beseem_categories.group_name == 'all_loans') &
-                    (app_tables.fin_admin_beseem_categories.sub_category == loan_column) &
-                    (app_tables.fin_admin_beseem_categories.is_liveloan == loan_value)
+                    (app_tables.fin_admin_beseem_categories.sub_category == loan_column.lower()) &
+                    (app_tables.fin_admin_beseem_categories.is_liveloan == loan_value.lower())
                 )
                 if loan_search:
                     loan_points_total += loan_search[0]['min_points']
