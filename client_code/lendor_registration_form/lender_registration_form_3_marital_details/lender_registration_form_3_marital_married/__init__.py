@@ -218,17 +218,7 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
     def button_submit_click(self, **event_args):
         # Collect details from the form
         details = self.collect_details()
-
-        # Insert details into the data table
-        new_row = app_tables.fin_guarantor_details.add_row(
-            customer_id=self.userId,
-            guarantor_name=details['father_name'],
-            guarantor_date_of_birth=details['father_dob'],
-            guarantor_mobile_no=details['father_mbl_no'],
-            guarantor_profession=details['father_profession'],
-            guarantor_address=details['father_address'],
-            another_person=details['another_person'] 
-        )
+        
         # Validations...
         if not re.match(r'^[A-Za-z\s]+$', details['father_name']):
            Notification("Enter a valid full name!").show()
@@ -241,8 +231,18 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
 
         if not all(details[key] for key in ['father_name', 'father_dob', 'father_mbl_no', 'father_profession', 'father_address']):
            Notification("Please fill all the required fields").show()
-        else:
-           open_form('lendor_registration_form.lender_registration_form_4_bank_form_1', user_id=self.userId)
+           return
+        # Insert details into the data table
+        new_row = app_tables.fin_guarantor_details.add_row(
+            customer_id=self.userId,
+            guarantor_name=details['father_name'],
+            guarantor_date_of_birth=details['father_dob'],
+            guarantor_mobile_no=details['father_mbl_no'],
+            guarantor_profession=details['father_profession'],
+            guarantor_address=details['father_address'],
+            another_person=details['another_person'] 
+        )
+        open_form('lendor_registration_form.lender_registration_form_4_bank_form_1', user_id=self.userId)
 
     def button_submit_copy_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -298,18 +298,18 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
 
     def prev_1_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=self.userId)
+      open_form('lendor_registration_form.lender_registration_form_3_marital_details', user_id=self.userId)
 
     def prev_2_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=self.userId)
+      open_form('lendor_registration_form.lender_registration_form_3_marital_details', user_id=self.userId)
 
     def prev_3_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=self.userId)
+      open_form('lendor_registration_form.lender_registration_form_3_marital_details', user_id=self.userId)
 
     def prev_4_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=self.userId)
+      open_form('lendor_registration_form.lender_registration_form_3_marital_details', user_id=self.userId)
 
  
