@@ -264,7 +264,6 @@ def final_points_update_bessem_table(user_id):
         return final_points
     return None
 
-
 def get_user_points(id):
     users = app_tables.fin_user_profile.search(customer_id=id)
 
@@ -429,54 +428,66 @@ def get_user_points(id):
                      print("Spouse profession Points:", min_points)
                      user_points += min_points
                      break 
-                      
-        # marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status')
-        # print(f"Size of marital_status_search: {len(marital_status_search)}")
-        # for row in marital_status_search:
-        #   if row['sub_category'].split(","):
-        #     sub_categories = row['sub_category'].split(",")
-        #     min_points = row['min_points']
-        #     for sub_cat in sub_categories:
-        #       if sub_cat.strip().lower() == marital_status.lower() and row['age'].lower() == user_age_range.lower():
-        #          marital_status_points = min_points
-        #          print("Marital Status Points:", marital_status_points)
-        #          user_points += marital_status_points
-        #          break
-        #   elif row['sub_category'].lower() == marital_status.lower() and row['age'].lower() == user_age_range.lower():
-        #     marital_status_points = row['min_points']
-        #     print("Marital Status Points:", marital_status_points)
-        #     user_points += marital_status_points
-        #     break
-
-        #   data = app_tables.fin_guarantor_details.search(customer_id=id)
-        #   for item in data:
-        #     another_person = item['another_person'].lower()
-        #     spouse_profession = item['guarantor_profession'].lower()
-
-        #     if marital_status == 'married' and another_person == 'spouse':
-        #       spouse_profession_search = app_tables.fin_admin_beseem_categories.search(group_name='spouse_profession', sub_category=spouse_profession.lower())
-        #       print(f"Size of spouse_profession_search: {len(spouse_profession_search)}")
-        #       for row in spouse_profession_search:
-        #         if row['sub_category'].split(","): 
-        #           sub_categories = row['sub_category'].split(",")
-        #           min_points = row['min_points']
-        #           for sub_cat in sub_categories:
-        #            if sub_cat.strip().lower() == spouse_profession.lower():
-        #                 spouse_profession_points = min_points
-        #                 print("Spouse profession Points:", spouse_profession_points)
-        #                 user_points += spouse_profession_points
-        #                 break
-        #         elif row['sub_category'].lower() == spouse_profession.lower():
-        #           spouse_profession_points = row['min_points']
-        #           print("Spouse profession Points:", spouse_profession_points)
-        #           user_points += spouse_profession_points
-        #         break
 
         return user_points
 
     else:
         return None
 
+def get_group_points(customer_id):
+    # Fetch user details
+    user = app_tables.fin_user_profile.get(customer_id=customer_id)
+    if user:
+        profession = user['profession'].lower()
+        marital_status = user['marital_status'].lower()
+        
+        loans_data = app_tables.fin_guarantor_details.search(customer_id=customer_id)
+        another_person = ''
+        spouse_profession = ''
+        if loans_data:
+            for item in loans_data:
+                another_person = item['another_person'].lower()
+                spouse_profession = item['guarantor_profession'].lower()
+
+        groups = app_tables.fin_admin_beseem_groups.search()
+        if groups:
+            group_points = 0
+            for group_row in groups:
+                group_name = group_row['group_name'].lower()
+                max_points = group_row['max_points']
+                
+                if group_name == 'gender':
+                    group_points += max_points
+                elif group_name == 'present_address':
+                    group_points += max_points
+                elif group_name == 'duration_at_address':
+                    group_points += max_points
+                elif group_name == 'qualification':
+                    group_points += max_points
+                elif group_name == 'home_loan':
+                    group_points += max_points
+                elif group_name == 'other_loan':
+                    group_points += max_points
+                elif group_name == 'credit_card_loan':
+                    group_points += max_points
+                elif group_name == 'vehicle_loan':
+                    group_points += max_points
+                elif group_name == 'profession':
+                    group_points += max_points
+                elif group_name == 'organization_type' and profession == 'employee':
+                    group_points += max_points
+                elif group_name == 'salary_type' and profession == 'employee':
+                    group_points += max_points
+                elif group_name == 'age_of_business' and profession == 'business':
+                    group_points += max_points
+                elif group_name == 'marital_status':
+                    group_points += max_points
+                elif group_name == 'spouse_profession' and marital_status == 'married' and another_person == 'spouse':
+                    group_points += max_points
+
+            return group_points
+
+    return None
 
 # second
 # def get_user_points(id):
@@ -755,64 +766,6 @@ def get_user_points(id):
 
 #     else:
 #         return None
-
-      
-def get_group_points(customer_id):
-    # Fetch user details
-    user = app_tables.fin_user_profile.get(customer_id=customer_id)
-    if user:
-        profession = user['profession'].lower()
-        marital_status = user['marital_status'].lower()
-        
-        loans_data = app_tables.fin_guarantor_details.search(customer_id=customer_id)
-        another_person = ''
-        spouse_profession = ''
-        if loans_data:
-            for item in loans_data:
-                another_person = item['another_person'].lower()
-                spouse_profession = item['guarantor_profession'].lower()
-
-        groups = app_tables.fin_admin_beseem_groups.search()
-        if groups:
-            group_points = 0
-            for group_row in groups:
-                group_name = group_row['group_name'].lower()
-                max_points = group_row['max_points']
-                
-                # Add points based on group criteria
-                if group_name == 'gender':
-                    group_points += max_points
-                elif group_name == 'present_address':
-                    group_points += max_points
-                elif group_name == 'duration_at_address':
-                    group_points += max_points
-                elif group_name == 'qualification':
-                    group_points += max_points
-                elif group_name == 'home_loan':
-                    group_points += max_points
-                elif group_name == 'other_loan':
-                    group_points += max_points
-                elif group_name == 'credit_card_loan':
-                    group_points += max_points
-                elif group_name == 'vehicle_loan':
-                    group_points += max_points
-                elif group_name == 'profession':
-                    group_points += max_points
-                elif group_name == 'organization_type' and profession == 'employee':
-                    group_points += max_points
-                elif group_name == 'salary_type' and profession == 'employee':
-                    group_points += max_points
-                elif group_name == 'age_of_business' and profession == 'business':
-                    group_points += max_points
-                elif group_name == 'marital_status':
-                    group_points += max_points
-                elif group_name == 'spouse_profession' and marital_status == 'married' and another_person == 'spouse':
-                    group_points += max_points
-
-            return group_points
-
-    return None
-
 
 # def get_group_points():
 #     groups = app_tables.fin_admin_beseem_groups.search()
