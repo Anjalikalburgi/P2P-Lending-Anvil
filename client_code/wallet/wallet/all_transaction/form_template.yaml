@@ -54,13 +54,13 @@ components:
       icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled
         Container', bold: false, underline: false, icon: ''}
     type: Label
-    layout_properties: {grid_position: 'URUGRY,XSXLIG'}
+    layout_properties: {grid_position: 'URUGRY,XSXLIG', full_width_row: true}
   - name: column_panel_1_copy
     properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"WMAWGC":10,"TLBMAZ":15,"XWMMJZ":10,"UPVPFP":10,"MFIVTW":15}',
       spacing_below: small, background: 'theme:Tertiary Container'}
     type: ColumnPanel
-    layout_properties: {grid_position: 'ZEJVWH,BFAYJA'}
+    layout_properties: {grid_position: 'ZEJVWH,BFAYJA', full_width_row: true}
     components:
     - name: label_4
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
@@ -100,5 +100,5 @@ components:
   - name: repeating_panel_1
     properties: {item_template: wallet.wallet.all_transaction.ItemTemplate99}
     type: RepeatingPanel
-    layout_properties: {grid_position: 'MGHNFD,UFOHYI'}
+    layout_properties: {grid_position: 'MGHNFD,UFOHYI', full_width_row: true}
 is_package: true
