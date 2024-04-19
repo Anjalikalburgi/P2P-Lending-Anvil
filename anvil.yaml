@@ -1248,6 +1248,9 @@ db_schema:
     - name: guarantor_marriage_date
       admin_ui: {order: 3.5, width: 200}
       type: date
+    - name: guarantor_date_of_births
+      admin_ui: {width: 200}
+      type: string
     title: fin_guarantor_details
   fin_loan_details:
     client: full

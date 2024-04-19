@@ -291,7 +291,6 @@ class check_out(check_outTemplate):
                         extra_fee=extra_fee,
                         borrower_customer_id=borrower_id,
                         lender_customer_id=lender_id,
-                        status=True,
                        
                         
                         

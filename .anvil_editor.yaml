@@ -198,6 +198,7 @@ unique_ids:
     borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_mtech: '1706674270701675999290307.5544'
     admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate15: '1706531093919318495904081.8403'
     admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate13: '1706531037115138590863812.6314'
+    borrower_registration_form.dashboard.today_dues.ItemTemplate64: '171350779928717481139745.64425'
     admin.dashboard.loan_management.loan_disbursed: '1701159817062849579236397.6018'
     admin.dashboard.manage_bessem.add_subcategory.edit_credit_card_loan: '1711089519107109695436234.73665'
     borrower_registration_form.ots_dashboard.view_profile: '170781846204037880739353.10043'

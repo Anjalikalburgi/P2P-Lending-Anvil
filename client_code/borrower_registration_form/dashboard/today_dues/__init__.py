@@ -20,7 +20,7 @@ class today_dues(today_duesTemplate):
             first_emi_payment_due_date=q.less_than_or_equal_to(today_date),
             borrower_customer_id=self.user_id
         )
-        
+    
         for loan in all_loans_disbursed:
             loan_id = loan['loan_id']
             borrower_customer_id = loan['borrower_customer_id']
@@ -31,7 +31,8 @@ class today_dues(today_duesTemplate):
                 borrower_customer_id=borrower_customer_id
             ))
             if payment_done:
-              self.repeating_panel_2.visible = False
+              # self.repeating_panel_2.visible = False
+              continue
               
             all_loans = list(app_tables.fin_emi_table.search(
                 loan_id=loan_id,
@@ -103,10 +104,23 @@ class today_dues(today_duesTemplate):
                         'user_photo':user_photo
                     })
             else:
-                if payment_done:
-                  self.repeating_panel_2.visible = False
+                for loan in all_loans_disbursed:
+                  loan_id = loan['loan_id']
+                  borrower_customer_id = loan['borrower_customer_id']
+                  loan_detail = app_tables.fin_loan_details.get(loan_id=loan_id)
+                  payment_done_1 = list(app_tables.fin_emi_table.search(
+                      loan_id=loan_id,
+                      next_payment=q.greater_than(today_date),
+                      borrower_customer_id=borrower_customer_id
+                  ))
+                  if payment_done_1:
+                      continue
+                # if payment_done:
+                #   self.repeating_panel_2.visible = False
                 # If there are no emi records, append loan details without checking next payment date
                 loan_detail = app_tables.fin_loan_details.get(loan_id=loan_id)
+
+                  
                 user_profile = app_tables.fin_user_profile.get(customer_id=loan_detail['lender_customer_id'])
 
                 if loan_detail is not None and user_profile is not None:
