@@ -267,7 +267,7 @@ db_schema:
       admin_ui: {width: 200, order: 18}
       type: number
     - name: extension_allowed
-      admin_ui: {width: 200, order: 19}
+      admin_ui: {order: 17.625, width: 200}
       type: string
     - name: late_fee
       admin_ui: {width: 200, order: 20}
@@ -1350,7 +1350,7 @@ db_schema:
       admin_ui: {order: 15.4375, width: 228}
       type: datetime
     - name: loan_extension_months
-      admin_ui: {width: 200, order: 31}
+      admin_ui: {order: 22.875, width: 200}
       type: number
     - name: first_emi_payment_due_date
       admin_ui: {order: 15.46875, width: 228}
