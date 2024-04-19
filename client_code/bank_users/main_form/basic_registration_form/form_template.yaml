@@ -38,7 +38,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'CEJILL,YDONOA'}
 - name: full_name_text_box
-  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Enter Your Full Name,
+  properties: {role: null, align: center, hide_text: false, tooltip: '', placeholder: Enter Your Full Name,
     border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
     font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
     background: 'theme:Light Overlay 1', bold: false, underline: false}
@@ -77,7 +77,7 @@ components:
     underline: false
     include_placeholder: true
   type: DropDown
-  layout_properties: {grid_position: 'FOXPPS,KQZQAA'}
+  layout_properties: {grid_position: 'FOXPPS,KQZQAA', full_width_row: true}
   event_bindings: {change: gender_dd_change}
 - name: label_04
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
