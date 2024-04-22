@@ -688,7 +688,7 @@ components:
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ZVWPOF":15,"SUKCJD":35,"CSNNJQ":10,"LIEPZE":10,"JPALOD":31}',
       spacing_below: small, background: ''}
     type: ColumnPanel
-    layout_properties: {grid_position: 'OGUIXC,FJFKHH'}
+    layout_properties: {grid_position: 'OLCEOY,WWUYMJ'}
     components:
     - name: label_010_copy
       properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
@@ -732,6 +732,55 @@ components:
       properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate85}
       type: RepeatingPanel
       layout_properties: {grid_position: 'NGLJCV,JPALOD HVHKCW,PTQRLD'}
+  - name: column_panel_12
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ZVWPOF":15,"SUKCJD":35,"CSNNJQ":10,"LIEPZE":10}',
+      spacing_below: small, background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'JMUQQZ,WHYYWN'}
+    components:
+    - name: label_010_copy_copy
+      properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Add Land Type, font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled
+          Container', bold: true, underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'HDLRVE,NMTFRV'}
+    - name: label_1_copy_copy
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Land Type, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: 'theme:Secondary
+          Container', bold: false, underline: false, icon: ''}
+      type: Label
+      layout_properties:
+        col_widths: {}
+        grid_position: JDKCYC,ZVWPOF
+    - name: text_box_01_copy_copy
+      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      type: TextBox
+      layout_properties: {grid_position: 'JDKCYC,SUKCJD'}
+      event_bindings: {pressed_enter: text_box_1_pressed_enter}
+    - name: land_type_btn
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '#0b2547', bold: true, underline: false, icon: ''}
+      type: Button
+      layout_properties:
+        col_widths: {}
+        grid_position: JDKCYC,CSNNJQ
+      event_bindings: {click: land_type_btn_click}
+    - name: spacer_2_copy_3_copy
+      properties: {height: 160}
+      type: Spacer
+      layout_properties: {grid_position: 'NGLJCV,LIEPZE'}
+    - name: repeating_panel_12
+      properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate102}
+      type: RepeatingPanel
+      layout_properties: {grid_position: 'NGLJCV,AMZHYN'}
 - type: Button
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: white, visible: true, text: Back, font_size: null, font: '16', spacing_above: small,
