@@ -92,7 +92,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'NROBLP,CZAKDO WCSPKZ,HPQSTF'}
     - name: spacer_1
-      properties: {height: 23.25}
+      properties: {height: '25'}
       type: Spacer
       layout_properties: {grid_position: 'NROBLP,CZAKDO VZPFHN,CIEMRU'}
     - name: button_1
@@ -101,8 +101,7 @@ components:
       type: Button
       layout_properties: {grid_position: 'NROBLP,CZAKDO MBZJBS,NDOICY'}
     - name: image_1
-      properties: {source: _/theme/women1-removebg-preview.png, height: 384.24993896484375,
-        display_mode: shrink_to_fit}
+      properties: {source: _/theme/women1-removebg-preview.png, height: 409.66668701171875}
       type: Image
       layout_properties: {grid_position: 'NROBLP,IUEWEM'}
   - name: spacer_2

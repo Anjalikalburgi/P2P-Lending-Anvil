@@ -33,6 +33,6 @@ components:
     - name: repeating_panel_1
       properties: {item_template: admin.dashboard.borrowers.ItemTemplate96}
       type: RepeatingPanel
-      layout_properties: {x: 0, y: 0, width: 979.39990234375}
+      layout_properties: {x: 0, y: 0, width: 944.793701171875}
       data_bindings:
       - {property: tooltip, code: '', writeback: false}

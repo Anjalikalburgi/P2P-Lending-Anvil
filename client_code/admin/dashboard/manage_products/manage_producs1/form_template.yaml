@@ -54,7 +54,7 @@ components:
       type: Image
       layout_properties: {grid_position: 'ZRRFMJ,FAHHZK ZIRCRQ,QXDJBG'}
   - name: content_panel_copy_2
-    properties: {col_widths: '{"MDEDBG":15,"PXZVBJ":45,"MCTKUR":15,"ATTTCS":45,"TMXKCS":15,"CINFFS":45,"VCXMJX":15,"JFRVJM":45,"BDNNPF":15,"SGESUN":45,"ISZLJC":15,"WTQISA":15,"WXXRFH":45,"OJIHEK":15,"IYQGKI":45,"TBYJFS":15,"XQNRAL":45,"NKBTBS":15,"DIPAEL":45,"AMDKLS":15,"THUSTC":45,"NCNLKS":15,"MOTETH":45,"OOWZYB":15,"IRJLYI":45,"HKRRQQ":15,"PNHZQE":45,"NUBSJG":15,"LUIXAT":45,"EGPDHJ":15,"OTAWYP":45,"MDCECT":15,"JDSOTP":45,"RFLPCA":15,"BCDMZG":45,"NSDLRL":15,"JYVZRS":45,"CZANZO":15,"KPVTOB":45,"CDQIBY":15,"HHXHMY":45,"APHHWE":45,"SZZBPE":15,"GXSPGE":45}',
+    properties: {col_widths: '{"KGORIJ":15,"KCWIQP":45,"MDEDBG":15,"PXZVBJ":45,"MCTKUR":15,"ATTTCS":45,"TMXKCS":15,"CINFFS":45,"VCXMJX":15,"JFRVJM":45,"SZZBPE":15,"GXSPGE":45,"BDNNPF":15,"SGESUN":45,"ISZLJC":15,"WTQISA":15,"WXXRFH":45,"OJIHEK":15,"IYQGKI":45,"TBYJFS":15,"XQNRAL":45,"NKBTBS":15,"DIPAEL":45,"AMDKLS":15,"THUSTC":45,"NCNLKS":15,"MOTETH":45,"OOWZYB":15,"IRJLYI":45,"HKRRQQ":15,"PNHZQE":45,"NUBSJG":15,"LUIXAT":45,"EGPDHJ":15,"OTAWYP":45,"MDCECT":15,"JDSOTP":45,"RFLPCA":15,"BCDMZG":45,"NSDLRL":15,"JYVZRS":45,"CZANZO":15,"KPVTOB":45,"CDQIBY":15,"HHXHMY":45,"APHHWE":45}',
       background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: ''}
@@ -618,27 +618,27 @@ components:
     - name: spacer_8
       properties: {height: -5}
       type: Spacer
-      layout_properties: {grid_position: 'NLOQQZ,QAIPXH'}
+      layout_properties: {grid_position: 'VJYOJJ,KGORIJ NLOQQZ,QAIPXH'}
     - name: spacer_12
       properties: {height: -5}
       type: Spacer
-      layout_properties: {grid_position: 'TTZYQN,IEYPYX'}
+      layout_properties: {grid_position: 'VJYOJJ,KGORIJ TTZYQN,IEYPYX'}
     - name: spacer_15
       properties: {height: -6}
       type: Spacer
-      layout_properties: {grid_position: 'VEVXRJ,XKJJJM'}
+      layout_properties: {grid_position: 'VJYOJJ,KGORIJ VEVXRJ,XKJJJM'}
     - name: spacer_14
       properties: {height: -1}
       type: Spacer
-      layout_properties: {grid_position: 'ZMBYTG,KNIPKE'}
+      layout_properties: {grid_position: 'VJYOJJ,KGORIJ ZMBYTG,KNIPKE'}
     - name: spacer_17
       properties: {height: -1}
       type: Spacer
-      layout_properties: {grid_position: 'DNDLNK,TTTZXS'}
+      layout_properties: {grid_position: 'VJYOJJ,KGORIJ DNDLNK,TTTZXS'}
     - name: spacer_16
       properties: {height: -40}
       type: Spacer
-      layout_properties: {grid_position: 'MOVBIS,LAJNUK'}
+      layout_properties: {grid_position: 'VJYOJJ,KGORIJ MOVBIS,LAJNUK'}
     - name: button_1_copy_3
       properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: 'Back  ', font_size: 17,

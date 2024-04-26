@@ -100,7 +100,6 @@ class user_form(user_formTemplate):
     user_data=app_tables.fin_user_profile.get(customer_id=userid)
     if user_data:
       actual_count=user_data['form_count']
-      marital_status = user_data['marital_status']
       print(actual_count)
       print("")
       if actual_count==1:
@@ -131,8 +130,8 @@ class user_form(user_formTemplate):
         open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_3',user_id=userid)
       elif actual_count==3:
         open_form('lendor_registration_form.lender_registration_form_3_marital_details',user_id=userid)
-      elif actual_count==3.1:
-        open_form('lendor_registration_form.lender_registration_form_3_marital_details.lender_registration_form_3_marital_married',user_id=userid,marital_status = marital_status)
+      # elif actual_count==3.1:
+      #   open_form('lendor_registration_form.lender_registration_form_3_marital_details.lender_registration_form_3_marital_married',user_id=userid)
       elif actual_count==4:
         open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id=userid)
       elif actual_count==5:

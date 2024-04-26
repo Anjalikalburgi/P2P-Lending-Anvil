@@ -93,7 +93,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'QTNQBN,OPOTBI YLFEOI,FVWLFL'}
     - name: spacer_1
-      properties: {height: 30.24993896484375}
+      properties: {height: '25'}
       type: Spacer
       layout_properties: {grid_position: 'QTNQBN,OPOTBI SSEHLE,IKLMTS DBHHQV,NPFFKF'}
     - name: button_1
@@ -102,7 +102,7 @@ components:
       type: Button
       layout_properties: {grid_position: 'QTNQBN,OPOTBI TECORI,LIWIMN'}
     - name: image_1
-      properties: {height: 368.25, source: _/theme/credit card loan.png}
+      properties: {height: 376.11102294921875, source: _/theme/credit card loan.png}
       type: Image
       layout_properties: {grid_position: 'QTNQBN,JBTPFF'}
   - name: spacer_2

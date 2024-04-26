@@ -221,13 +221,13 @@ db_schema:
     server: full
     columns:
     - name: product_categories
-      admin_ui: {order: -1, width: 154}
+      admin_ui: {width: 200, order: 0}
       type: string
     - name: extension_fee
       admin_ui: {width: 200, order: 1}
       type: number
     - name: membership_type
-      admin_ui: {order: 1.5, width: 200}
+      admin_ui: {width: 200, order: 2}
       type: string
     - name: interest_type
       admin_ui: {width: 200, order: 3}
@@ -236,10 +236,10 @@ db_schema:
       admin_ui: {width: 200, order: 4}
       type: number
     - name: product_group
-      admin_ui: {order: 0.375, width: 138}
+      admin_ui: {width: 200, order: 5}
       type: string
     - name: product_name
-      admin_ui: {order: -0.5, width: 127}
+      admin_ui: {width: 200, order: 6}
       type: string
     - name: product_id
       admin_ui: {order: 16.5, width: 200}
@@ -299,10 +299,10 @@ db_schema:
       admin_ui: {order: 27, width: 200}
       type: number
     - name: occupation
-      admin_ui: {order: 2, width: 200}
+      admin_ui: {width: 200}
       type: string
     - name: product_description
-      admin_ui: {order: 1, width: 277}
+      admin_ui: {width: 200}
       type: string
     - name: min_extension_months
       admin_ui: {order: 17.75, width: 200}
@@ -624,7 +624,7 @@ db_schema:
     server: full
     columns:
     - name: customer_id
-      admin_ui: {order: -2, width: 135}
+      admin_ui: {order: -2, width: 200}
       type: number
     - name: full_name
       admin_ui: {order: -3, width: 200}
@@ -633,7 +633,7 @@ db_schema:
       admin_ui: {width: 200}
       type: media
     - name: gender
-      admin_ui: {order: 0.125, width: 106}
+      admin_ui: {order: 0.125, width: 200}
       type: string
     - name: aadhaar_photo
       admin_ui: {order: 6.953125, width: 200}
@@ -651,7 +651,7 @@ db_schema:
       admin_ui: {order: -2.5, width: 200}
       type: string
     - name: last_confirm
-      admin_ui: {order: -1.625, width: 146}
+      admin_ui: {order: -1.625, width: 200}
       type: bool
     - name: mobile_check
       admin_ui: {order: 6.984375, width: 200}
@@ -669,7 +669,7 @@ db_schema:
       admin_ui: {order: 0.78125, width: 200}
       type: string
     - name: usertype
-      admin_ui: {order: -1.75, width: 139}
+      admin_ui: {order: -1.75, width: 200}
       type: string
     - name: aadhaar_no
       admin_ui: {order: 6.96484375, width: 200}
@@ -771,7 +771,7 @@ db_schema:
       admin_ui: {order: 6.99999999627471, width: 200}
       type: string
     - name: mail_id
-      admin_ui: {order: -1.5, width: 124}
+      admin_ui: {order: -1.5, width: 200}
       type: string
     - name: college_name
       admin_ui: {order: 6.999999999068677, width: 200}
@@ -840,7 +840,7 @@ db_schema:
       admin_ui: {order: 6.999999998137355, width: 200}
       type: string
     - name: form_count
-      admin_ui: {order: -1.59375, width: 124}
+      admin_ui: {order: -1.59375, width: 200}
       type: number
     - name: bessem_value
       admin_ui: {order: -1.5625, width: 200}
@@ -1192,7 +1192,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: full
+    client: none
     server: full
     columns:
     - name: account_id

@@ -18,7 +18,7 @@ class lenders(lendersTemplate):
 
         self.result = []
         for user_profile in self.data:
-            if user_profile['usertype'] == 'lender':
+            if user_profile['usertype'].lower() == 'lender':
                 # Retrieve credit limit from fin_lender table based on customer ID
                 # lender_record = app_tables.fin_lender.get(customer_id=user_profile['customer_id'])
                 # if lender_record is not None:

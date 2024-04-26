@@ -32,15 +32,6 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
         option_strings = [str(option['spouse_profession']) for option in options]
         self.drop_down_1.items = option_strings
 
-        user_data=app_tables.fin_guarantor_details.get(customer_id=user_id)
-        if user_data:
-           self.selected_radio_button = user_data['another_person']
-           self.father_name_text.text=user_data['guarantor_name']
-           self.date_picker_1.date =user_data['guarantor_date_of_birth']
-           self.father_mbl_no_text.text=user_data['guarantor_mobile_no']
-           self.father_profession_text.text = user_data['guarantor_profession']
-           self.father_address_text.text = user_data['guarantor_address']
-
     def show_spouse_controls(self):
         # Show the spouse radio button and related panels
         self.grid_panel_1.visible = False
@@ -227,22 +218,18 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
         }
 
     def button_submit_click(self, **event_args):
-     details = self.collect_details()
-     if details:
-        # Extracting details from the form
-        father_name = details.get('father_name', '')
-        father_dob = details.get('father_dob', '')
-        father_mbl_no = details.get('father_mbl_no', '')
-        father_profession = details.get('father_profession', '')
-        father_address = details.get('father_address', '')
-        another_person = details.get('another_person', '')
+      details = self.collect_details()
+      if details:
+         father_name = details.get('father_name', '')
+         father_dob = details.get('father_dob', '')
+         father_mbl_no = details.get('father_mbl_no', '')
+         father_profession = details.get('father_profession', '')
+         father_address = details.get('father_address', '')
+         another_person = details.get('another_person', '')
 
-        # Checking if the user already has data in the table
-        existing_row = app_tables.fin_guarantor_details.get(customer_id=self.userId)
-
-        try:
-            # If there's no existing data, add a new row
-            if existing_row is None:
+         existing_row = app_tables.fin_guarantor_details.get(customer_id=self.userId)
+         if existing_row is None:
+            try:
                 new_row = app_tables.fin_guarantor_details.add_row(
                     customer_id=self.userId,
                     guarantor_name=father_name,
@@ -252,40 +239,93 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
                     guarantor_address=father_address,
                     another_person=another_person
                 )
-            else:
-                # If there's existing data, update it
-                existing_row.update(
-                    guarantor_name=father_name,
-                    guarantor_date_of_birth=father_dob,
-                    guarantor_mobile_no=father_mbl_no,
-                    guarantor_profession=father_profession,
-                    guarantor_address=father_address,
-                    another_person=another_person
-                )
-        except Exception as e:
-            Notification(f"Failed to submit form: {e}").show()
-            return
+            except Exception as e:
+                Notification(f"Failed to submit form: {e}").show()
+                return
+         else:
+            existing_row['guarantor_name'] = father_name
+            existing_row['guarantor_date_of_birth'] = father_dob
+            existing_row['guarantor_mobile_no'] = father_mbl_no
+            existing_row['guarantor_profession'] = father_profession
+            existing_row['guarantor_address'] = father_address
+            existing_row['another_person'] = another_person
 
-        # Validations...
-        errors = []
-        if not re.match(r'^[A-Za-z\s]+$', father_name):
-            errors.append("Enter a valid full name!")
-        if not father_dob or father_dob > datetime.now().date():
-            errors.append("Enter a valid date of birth!")
-        if (datetime.now().date() - father_dob).days < 365 * 18:
-            errors.append("You must be at least 18 years old!")
-        if not re.match(r'^\d{10}$', str(father_mbl_no)):
-            errors.append("Enter a valid mobile no!")
+            try:
+                existing_row.update()
+            except Exception as e:
+                Notification(f"Failed to update form: {e}").show()
+                return
 
-        if errors:
+         # Validations...
+         errors = []
+         if not re.match(r'^[A-Za-z\s]+$', father_name):
+             errors.append("Enter a valid full name!")
+         if not father_dob or father_dob > datetime.now().date():
+             errors.append("Enter a valid date of birth!")
+         if datetime.now().date() - father_dob < timedelta(days=365 * 18):
+             errors.append("You must be at least 18 years old!")
+         if not re.match(r'^\d{10}$', str(father_mbl_no)):
+             errors.append("Enter a valid mobile no!")
+
+         if errors:
             Notification("\n".join(errors)).show()
-        else:
+         else:
+            # Call server code add_lendor_father_details
             anvil.server.call('add_lendor_father_details', 
                               another_person, father_name, father_dob, 
                               father_mbl_no, father_profession, 
                               father_address, self.userId)
             open_form('lendor_registration_form.lender_registration_form_4_bank_form_1', 
                       user_id=self.userId)
+          
+    # def button_submit_click(self, **event_args):
+    
+    #    existing_row = app_tables.fin_guarantor_details.get(customer_id=self.userId)
+    
+    #    if existing_row is None:
+    #       try:
+    #          new_row = app_tables.fin_guarantor_details.add_row(
+    #             customer_id=self.userId,
+    #             guarantor_name=details['father_name'],
+    #             guarantor_date_of_birth=details['father_dob'],
+    #             guarantor_mobile_no=details['father_mbl_no'],
+    #             guarantor_profession=details['father_profession'],
+    #             guarantor_address=details['father_address'],
+    #             another_person=details['another_person']
+    #         )
+    #       except Exception as e:
+    #          Notification(f"Failed to submit form: {e}").show()
+    #          return
+    #    else:
+    #      existing_row['guarantor_name'] = details['father_name']
+    #      existing_row['guarantor_date_of_birth'] = details['father_dob']
+    #      existing_row['guarantor_mobile_no'] = details['father_mbl_no']
+    #      existing_row['guarantor_profession'] = details['father_profession']
+    #      existing_row['guarantor_address'] = details['father_address']
+    #      existing_row['another_person'] = details['another_person']
+        
+    #      try:
+    #          existing_row.update()
+    #      except Exception as e:
+    #          Notification(f"Failed to update form: {e}").show()
+    #          return
+    
+    #    # Validations...
+    #    errors = []
+    #    if not re.match(r'^[A-Za-z\s]+$', details['father_name']):
+    #      errors.append("Enter a valid full name!")
+    #    if not details['father_dob'] or details['father_dob'] > datetime.now().date():
+    #      errors.append("Enter a valid date of birth!")
+    #    if datetime.now().date() - details['father_dob'] < timedelta(days=365 * 18):
+    #      errors.append("You must be at least 18 years old!")
+    #    if not re.match(r'^\d{10}$', str(details['father_mbl_no'])):
+    #      errors.append("Enter a valid mobile no!")
+
+    #    if errors:
+    #      Notification("\n".join(errors)).show()
+    #    else:
+    #      anvil.server.call('add_lendor_father_details',another_person,father_name,father_dob,father_mbl_no,father_profession,father_address,user_id)
+    #      open_form('lendor_registration_form.lender_registration_form_4_bank_form_1', user_id=self.userId)
 
     def button_submit_copy_click(self, **event_args):
        details = self.collect_details()
