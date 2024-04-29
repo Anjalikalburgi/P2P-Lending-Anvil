@@ -79,14 +79,8 @@ class basic_registration_form(basic_registration_formTemplate):
         duration = self.drop_down_2.selected_value
         
         user_id = self.user_id
-        
-        # self.full_name_label.text = ''
-        # self.dob_label.text = ''
-        # self.mobile_label.text = ''
-        # self.email
 
         if not re.match(r'^[A-Za-z]+$', country):
-            # self.country_label.text = 'Enter a valid country name '
           alert('Enter a valid country name ')
     
         # Validate state
@@ -96,19 +90,15 @@ class basic_registration_form(basic_registration_formTemplate):
     
         # Validate city
         if not re.match(r'^[A-Za-z]+$', city):
-            # self.city_lab?el.text = 'Enter a valid city name '
               alert('Enter a valid city name ')
           
         # Validate full name
         if not re.match(r'^[A-Za-z\s]+$', full_name):
-            # self.full_name_label.text = 'Enter a valid full name'
           alert('Enter a valid full name')
         elif not dob or datetime.strptime(dob, '%Y-%m-%d').date() > datetime.now().date():
-            # self.dob_label.text = 'Enter a valid date of birth'
           alert('Enter a valid date of birth')
         # Validate age (must be 18 or older)
         elif datetime.now().date() - datetime.strptime(dob, '%Y-%m-%d').date() < timedelta(days=365 * 18):
-            # self.dob_label.text = 'You must be at least 18 years old'
           alert('You must be at least 18 years old')
         elif not re.match(r'^\d{10}$', mobile_no):
             # self.mobile_label.text = 'Enter valid mobile no'
@@ -124,10 +114,9 @@ class basic_registration_form(basic_registration_formTemplate):
             Notification('Please fill all details').show()
         else:
             user_data = app_tables.fin_user_profile.get(customer_id=user_id)
-
+            
             # Check if the entered alternate email matches the existing alternate email for the user
             if user_data and alternate_email == user_data['email_user']:
-                # self.email_label.text = 'Alternate email already exists'
               alert('Alternate email already exists')
             else:
                 user_age = datetime.now().year - datetime.strptime(dob, '%Y-%m-%d').year - ((datetime.now().month, datetime.now().day) < (datetime.strptime(dob, '%Y-%m-%d').month, datetime.strptime(dob, '%Y-%m-%d').day))
@@ -135,7 +124,12 @@ class basic_registration_form(basic_registration_formTemplate):
                                   aadhar, aadhar_card, pan, pan_card, street_adress_1, street_address_2, city, pincode,
                                   state, country, user_id, user_age ,present, duration)
                 Notification("Basic details form filled up submitted successfully").show()
-                open_form('bank_users.user_form')
+                if user_data['usertype']=='lender':
+                  open_form('lendor_registration_form.lender_registration_form_1_education_form')
+                elif user_data['usertype']=='borrower':
+                  open_form('borrower_registration_form.star_1_borrower_registration_form_1_education')
+                else:
+                  open_form('bank_users.user_form')
               
             # user_age = datetime.now().year - datetime.strptime(dob, '%Y-%m-%d').year - ((datetime.now().month, datetime.now().day) < (datetime.strptime(dob, '%Y-%m-%d').month, datetime.strptime(dob, '%Y-%m-%d').day))
             # anvil.server.call('add_basic_details', full_name, gender, dob, mobile_no, user_photo, alternate_email,

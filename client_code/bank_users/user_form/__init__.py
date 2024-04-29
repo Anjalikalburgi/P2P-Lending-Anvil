@@ -78,7 +78,7 @@ class user_form(user_formTemplate):
       elif actual_count==3:
         open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital',user_id=userid)
       elif actual_count==3.1:
-        open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital.star_1_borrower_registration_form_3_marital_married',user_id=userid)
+        open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital.star_1_borrower_registration_form_3_marital_married',user_id=userid, marital_status = marital_status)
       elif actual_count==4:
         open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan',user_id=userid)
       elif actual_count==5:
@@ -97,8 +97,6 @@ class user_form(user_formTemplate):
   #   open_form('borrower_registration_form.star_1_borrower_registration_form_1_education',user_id=userid)
 
   def lendor_button_click(self, **event_args):
-    userid = self.user_id
-    # open_form('lendor_registration_form.lender_registration_form_1_education_form',user_id=userid)
     userid = self.user_id
     user_data=app_tables.fin_user_profile.get(customer_id=userid)
     if user_data:
@@ -135,7 +133,7 @@ class user_form(user_formTemplate):
       elif actual_count==3:
         open_form('lendor_registration_form.lender_registration_form_3_marital_details',user_id=userid)
       elif actual_count==3.1:
-        open_form('lendor_registration_form.lender_registration_form_3_marital_details.lender_registration_form_3_marital_married',user_id=userid)
+        open_form('lendor_registration_form.lender_registration_form_3_marital_details.lender_registration_form_3_marital_married',user_id=userid,marital_status = marital_status)
       elif actual_count==4:
         open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id=userid)
       elif actual_count==5:

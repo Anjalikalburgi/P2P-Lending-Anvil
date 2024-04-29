@@ -18,7 +18,7 @@ class borrowers(borrowersTemplate):
 
         self.result = []
         for user_profile in self.data:
-            if user_profile['usertype'].lower() == 'borrower':
+            if user_profile['usertype'] == 'borrower':
                 # Retrieve credit limit from fin_borrower table based on customer ID
                 borrower_record = app_tables.fin_borrower.get(customer_id=user_profile['customer_id'])
                 if borrower_record is not None:
