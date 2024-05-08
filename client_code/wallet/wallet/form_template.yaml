@@ -18,7 +18,7 @@ components:
     layout_properties: {width: 181}
 - name: logout_1
   properties: {}
-  type: form:borrower_registration_form.logout
+  type: form:borrower.logout
   layout_properties: {grid_position: 'WPEYAS,DSISZB'}
 - name: navbar_links_copy_1
   properties: {role: null, vertical_align: full, spacing: huge, align: center, tooltip: '',
