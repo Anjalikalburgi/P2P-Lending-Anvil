@@ -8,7 +8,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 from datetime import datetime
-from . import bessem as bessemfunctions
+# from . import bessem as bessemfunctions
 from . import wallet
 
 
