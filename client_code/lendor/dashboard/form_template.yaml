@@ -411,3 +411,7 @@ components:
   - properties: {item_template: lendor.dashboard.RowTemplate13}
     type: RepeatingPanel
     name: repeating_panel_1
+- name: label_1
+  properties: {text: Hi Anvil}
+  type: Label
+  layout_properties: {grid_position: 'CCIIXU,HUNYKM WNSVHD,PPPBQP'}
