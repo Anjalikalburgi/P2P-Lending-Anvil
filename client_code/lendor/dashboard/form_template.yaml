@@ -86,7 +86,8 @@ components:
     type: Link
     event_bindings: {click: wallet_dashboard_link_click}
 - properties: {background: '#0b2547', col_spacing: huge, wrap_on: mobile, visible: false,
-    col_widths: '{"HHWUAS":15,"PHFXOI":45,"TSZKPJ":15,"SXSDMG":45,"CWXWOL":15,"CJTGKC":45,"RBVPNX":15,"MLUZQH":45,"IGVEGE":15,"PQPAOD":45,"LGSJLQ":15,"WNGBSR":45,"BZXLWI":15,"LPUDZC":45,"VJCHUS":15,"BQXFAA":45,"ULYWCK":15,"HHJFGS":45,"KTFBWN":15,"ZPIOTE":45}'}
+    col_widths: '{"HHWUAS":15,"PHFXOI":45,"TSZKPJ":15,"SXSDMG":45,"CWXWOL":15,"CJTGKC":45,"RBVPNX":15,"MLUZQH":45,"IGVEGE":15,"PQPAOD":45,"LGSJLQ":15,"WNGBSR":45,"BZXLWI":15,"LPUDZC":45,"VJCHUS":15,"BQXFAA":45,"ULYWCK":15,"HHJFGS":45,"KTFBWN":15,"ZPIOTE":45}',
+    spacing_above: none, spacing_below: none}
   type: ColumnPanel
   layout_properties: {grid_position: 'CCIIXU,QFGZTD', full_width_row: true, row_background: ''}
   name: column_panel_3

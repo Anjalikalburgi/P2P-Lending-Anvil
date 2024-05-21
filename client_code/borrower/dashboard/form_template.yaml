@@ -18,7 +18,8 @@ components:
   type: form:borrower.logout
   layout_properties: {grid_position: 'LFJREP,WHPFJH', full_width_row: true}
   name: logout_1
-- properties: {role: null, col_widths: '{"AJWSNT":75,"GWXDDK":10}', background: '#05264d'}
+- properties: {role: null, col_widths: '{"AJWSNT":75,"GWXDDK":10}', background: '#05264d',
+    spacing_above: none, spacing_below: none}
   type: ColumnPanel
   layout_properties: {grid_position: 'XQSVFB,DDDFWM', full_width_row: true}
   name: column_panel_1
@@ -38,7 +39,7 @@ components:
     layout_properties: {grid_position: 'IPYSRE,AJWSNT'}
     name: navigation_form_dashboard_1
 - properties: {col_widths: '{"CHNNLA":15,"OHZSYC":45,"EOEYGI":15,"YNUSTO":45,"TGYSCZ":15,"TRRXRD":45,"EGWXJB":15,"SFHJNS":45,"TZYAXL":15,"PGYUMF":45,"SRZLUY":15,"VEOGOV":45,"LUXDGV":15,"PCKMGS":45,"HWFJNP":15,"QTCHNM":45,"CDLMBO":15,"CCTMMS":45,"KDXING":15,"ZHMDPW":45}',
-    background: '#05264d ', visible: true}
+    background: '#05264d ', visible: true, spacing_above: none, spacing_below: none}
   type: ColumnPanel
   layout_properties: {grid_position: 'XJNATW,SKVUZK', full_width_row: true}
   name: content_panel_copy_3
@@ -188,13 +189,9 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'BGTBAA,JGZFPN'}
     name: spacer_9
-- properties: {height: '2'}
-  type: Spacer
-  layout_properties: {grid_position: 'XJNATW,EICYCB CIVIBA,ZIOOXV'}
-  name: spacer_11
 - properties: {height: '20'}
   type: Spacer
-  layout_properties: {grid_position: 'XJNATW,EICYCB OLAXPQ,FSEXYY UTOTGO,IMYQDO'}
+  layout_properties: {grid_position: 'XJNATW,EICYCB'}
   name: spacer_12
 - properties: {height: '140', source: '', horizontal_align: center, role: null}
   type: Image
