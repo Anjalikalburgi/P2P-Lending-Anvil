@@ -121,7 +121,7 @@ components:
     type: Label
     layout_properties: {}
   - name: label_6
-    properties: {icon: 'fa:envelope', text: '  Kotakinvestment@p2p.coom', align: center,
+    properties: {icon: 'fa:envelope', text: ' ascendinvestment@p2p.coom', align: center,
       bold: true}
     type: Label
     layout_properties: {}
