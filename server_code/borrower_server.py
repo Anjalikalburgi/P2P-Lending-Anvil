@@ -90,13 +90,12 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
     if row:
         row[0]['bank_id'] = bank_id
         row[0]['account_bank_branch'] = bank_branch
-        # bessem_value = bessemfunctions.final_points_update_bessem_table(user_id)
-        bessem_value = final_points_update_bessem_table(user_id)
-        if bessem_value is not None:
-           row[0]['bessem_value'] = float(bessem_value)
+        ascend_value = final_points_update_ascend_table()(user_id)
+        if ascend_value is not None:
+           row[0]['ascend_value'] = float(ascend_value)
         else:
-           row[0]['bessem_value'] = 0.0
-           print("Warning: bessem_value is None for user_id:", user_id)
+           row[0]['ascend_value'] = 0.0
+           print("Warning: Ascend Value is None for user_id:", user_id)
 
         row[0]['usertype'] = 'borrower'
         row[0]['last_confirm'] = True
@@ -113,7 +112,7 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
             # If a row exists, update the existing row
             existing_borrower_row['user_name'] = row[0]['full_name']
             existing_borrower_row['bank_acc_details'] = row[0]['account_number']
-            existing_borrower_row['beseem_score'] = row[0]['bessem_value']
+            existing_borrower_row['ascend_score'] = row[0]['ascend_value']
             existing_borrower_row['credit_limit'] = 1000000
 
             if row[0]['last_confirm']:
@@ -127,7 +126,7 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
                 email_id=row[0]['email_user'],
                 user_name=row[0]['full_name'],
                 bank_acc_details=row[0]['account_number'],
-                beseem_score=row[0]['bessem_value'],
+                ascend_score=row[0]['ascend_value'],
                 credit_limit=1000000
             )
 
@@ -264,9 +263,9 @@ def generate_emi_id():
 
 
 
-# bessem code
+# Ascend Score code
 @anvil.server.callable
-def final_points_update_bessem_table(user_id):
+def final_points_update_ascend_table(user_id):
     user_points = get_user_points(user_id)
     group_points = get_group_points(user_id)
 
@@ -334,7 +333,7 @@ def get_user_points(id):
         }
 
         for category, value in search_categories.items():
-            category_search = app_tables.fin_admin_beseem_categories.search(group_name=category)
+            category_search = app_tables.fin_admin_ascend_categories.search(group_name=category)
             print(f"Size of {category}_search: {len(category_search)}")
             for row in category_search:
                 if row['sub_category'].split(","): 
@@ -353,7 +352,7 @@ def get_user_points(id):
                     break
 
         if profession.lower() == 'self employment' or profession.lower() == 'employee':
-           self_employment_search = app_tables.fin_admin_beseem_categories.search(group_name='profession')
+           self_employment_search = app_tables.fin_admin_ascend_categories.search(group_name='profession')
            print(f"Size of self_employment_search: {len(self_employment_search)}")
            for row in self_employment_search:
              if row['sub_category']: 
@@ -372,7 +371,7 @@ def get_user_points(id):
 
         elif profession == 'employee':
            for category in ['organization_type', 'salary_type']:
-              category_search = app_tables.fin_admin_beseem_categories.search(group_name=category)
+              category_search = app_tables.fin_admin_ascend_categories.search(group_name=category)
               print(f"Size of {category}_search: {len(category_search)}")
               for row in category_search:
                  if row['sub_category'].split(","):
@@ -391,7 +390,7 @@ def get_user_points(id):
                     break
 
         elif profession == 'business':
-           business_age_search = app_tables.fin_admin_beseem_categories.search(group_name='age_of_business')
+           business_age_search = app_tables.fin_admin_ascend_categories.search(group_name='age_of_business')
            print(f"Size of business_age_search: {len(business_age_search)}")
            for row in business_age_search:
               if row['sub_category'].split(","): 
@@ -408,7 +407,7 @@ def get_user_points(id):
                 user_points += min_points
                 break
 
-        marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status')
+        marital_status_search = app_tables.fin_admin_ascend_categories.search(group_name='marital_status')
         print(f"Size of marital_status_search: {len(marital_status_search)}")
         for row in marital_status_search:
            if row['sub_category'].split(","):
@@ -432,7 +431,7 @@ def get_user_points(id):
            spouse_profession = item['guarantor_profession'].lower()
 
            if marital_status == 'married' and another_person == 'spouse':
-               spouse_profession_search = app_tables.fin_admin_beseem_categories.search(group_name='spouse_profession')
+               spouse_profession_search = app_tables.fin_admin_ascend_categories.search(group_name='spouse_profession')
                print(f"Size of spouse_profession_search: {len(spouse_profession_search)}")
 
                for row in spouse_profession_search:
@@ -476,7 +475,7 @@ def get_group_points(customer_id):
                 another_person = item['another_person'].lower()
                 spouse_profession = item['guarantor_profession'].lower()
 
-        groups = app_tables.fin_admin_beseem_groups.search()
+        groups = app_tables.fin_admin_ascend_groups.search()
         if groups:
             group_points = 0
             for group_row in groups:
