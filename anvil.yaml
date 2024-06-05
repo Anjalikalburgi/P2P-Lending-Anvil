@@ -1079,7 +1079,7 @@ db_schema:
       admin_ui: {order: 1.625, width: 200}
       type: datetime
     - name: emi_number
-      admin_ui: {order: 1.6875, width: 200}
+      admin_ui: {order: 6.25, width: 200}
       type: number
     - name: account_number
       admin_ui: {order: 1.875, width: 200}
@@ -1088,7 +1088,7 @@ db_schema:
       admin_ui: {order: 3.5, width: 200}
       type: date
     - name: scheduled_payment
-      admin_ui: {order: -1, width: 200}
+      admin_ui: {order: 6.5, width: 200}
       type: date
     - name: amount_paid
       admin_ui: {order: 13, width: 200}
@@ -1471,7 +1471,7 @@ db_schema:
       admin_ui: {order: 22.96875, width: 200}
       type: number
     - name: remaining_amount
-      admin_ui: {order: 22.984375, width: 200}
+      admin_ui: {order: 15.5, width: 200}
       type: number
     - name: lender_returns
       admin_ui: {width: 200, order: 8.875}

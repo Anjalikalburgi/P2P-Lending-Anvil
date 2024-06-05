@@ -219,7 +219,9 @@ def transfer_money(lender_id, borrower_id, transfer_amount):
     print("transfer_amount", transfer_amount)
     print("lender_id", lender_id)
     print("borrower_id", borrower_id)
-    
+
+    lender_email = None
+    borrower_email = None
     try:
         # Obtain the current timestamp
         transaction_timestamp = datetime.now()
@@ -327,7 +329,9 @@ def transfer_money_1(lender_id, borrower_id, transfer_amount):
     print("transfer_amount", transfer_amount)
     print("lender_id", lender_id)
     print("borrower_id", borrower_id)
-    
+
+    lender_email = None
+    borrower_email = None
     try:
         # Obtain the current timestamp
         transaction_timestamp = datetime.now()

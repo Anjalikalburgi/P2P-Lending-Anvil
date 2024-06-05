@@ -83,14 +83,16 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
             self.due_amount.visible = True
             self.total_amount.visible = True
 
-            foreclosure_row = app_tables.fin_foreclosure.get(loan_id=loan_id)
-            if foreclosure_row :
-              foreclosure_amount = foreclosure_row['foreclose_amount']
-              total_due_amount =foreclosure_row['total_due_amount']
-              total_amount = foreclosure_amount  + total_due_amount
-              self.foreclose_amount.text ="{:.2f}".format(foreclosure_amount)
-              self.due_amount.text ="{:.2f}".format(total_due_amount)
-              self.total_amount.text ="{:.2f}".format(total_amount)
+            # foreclosure_row = app_tables.fin_foreclosure.get(loan_id=loan_id)
+            # if foreclosure_row :
+            #   foreclosure_amount = foreclosure_row['foreclose_amount']
+            #   total_due_amount =foreclosure_row['total_due_amount']
+            #   total_amount = foreclosure_amount  + total_due_amount
+            #   self.foreclose_amount.text ="{:.2f}".format(foreclosure_amount)
+            #   self.due_amount.text ="{:.2f}".format(total_due_amount)
+            #   self.total_amount.text ="{:.2f}".format(total_amount)
+
+              
             Notification("Your request has been accepted.").show()
         elif rejected_status:
             # If there is a reject status, show an alert
@@ -159,33 +161,94 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
                     if next_payment_date:
                         if (next_payment_date - timedelta(days=2)) > datetime.now().date():
                             self.is_payment_date_valid = True
+
+                            # foreclosure_row = app_tables.fin_foreclosure.get(loan_id=loan_id)
+                            # if foreclosure_row:
+                            #     foreclosure_amount = foreclosure_row['foreclose_amount']
+                            #     total_due_amount = foreclosure_row['total_due_amount']
+                            #     total_amount = foreclosure_amount + total_due_amount
+                            #     self.foreclose_amount.text = "{:.2f}".format(foreclosure_amount)
+                            #     self.due_amount.text = "{:.2f}".format(total_due_amount)
+                            #     self.total_amount.text = "{:.2f}".format(total_amount)
+                              
+                            #     emi_row = app_tables.fin_emi_table.get(loan_id=loan_id, emi_number=total_payments_made)
+                            #     if emi_row:
+                            #           next_payment_date = emi_row['next_payment']
+                            #         # if next_payment_date  < (datetime.now()):
+                            #           additional_fees = self.calculate_additional_fees(emi_row)
+                            #           if additional_fees is not None:
+                            #               # total_amount = float(self.total_amount.text)
+                            #               total_amount += additional_fees
+                            #               if additional_fees > 0:
+                            #                   self.label_13.visible = True
+                            #                   self.extra_fee.visible = True
+                            #                   self.extra_fee.text = "{:.2f}".format(additional_fees)
+                            #                   self.total_amount.text = "{:.2f}".format(total_amount)
+                            #               else:
+                            #                 self.extra_fee.text = 0
+
+                      
+
+                      
                         else:
                             self.is_payment_date_valid = False
-                            alert("The next payment date must be at least two days before today's date for foreclosure.")
+                            # alert("The next payment date must be at least two days before today's date for foreclosure.")
                     else:
                         self.is_payment_date_valid = False
                         alert("Next payment date not found.")
+                        open_form('borrower.dashboard.foreclosure_request')
                 else:
                     total_payments_made = 0
-                    alert("No EMIs found for this loan.")                    
+                    self.button_2.visible = False
+                    self.button_foreclose.visible = False
+                    self.button_5.visible = True
+                    alert("No EMIs found for this loan.") 
+                    open_form('borrower.dashboard')
             else:
                 total_payments_made = 0
-                alert("No EMIs found for this loan.")                
+                alert("No EMIs found for this loan.")   
+                open_form('borrower.dashboard')
         except ValueError as e:
             alert(str(e))
 
-        emi_row = app_tables.fin_emi_table.get(loan_id=loan_id,emi_number = total_payments_made)
-        if emi_row :
-                next_payment_date = emi_row['next_payment']
-              # if next_payment_date  < (datetime.now()):
-                additional_fees = self.calculate_additional_fees(emi_row)
-                if additional_fees is not None:
-                  total_amount += additional_fees
-                  if additional_fees > 0:
-                    self.label_13.visible = True
-                    self.extra_fee.visible = True
-                    self.extra_fee.text ="{:.2f}".format(additional_fees)
-                    self.total_amount.text ="{:.2f}".format(total_amount)
+        foreclosure_row = app_tables.fin_foreclosure.get(loan_id=loan_id)
+        if foreclosure_row:
+                                foreclosure_amount = foreclosure_row['foreclose_amount']
+                                total_due_amount = foreclosure_row['total_due_amount']
+                                total_amount = foreclosure_amount + total_due_amount
+                                self.foreclose_amount.text = "{:.2f}".format(foreclosure_amount)
+                                self.due_amount.text = "{:.2f}".format(total_due_amount)
+                                self.total_amount.text = "{:.2f}".format(total_amount)
+                              
+                                emi_row = app_tables.fin_emi_table.get(loan_id=loan_id, emi_number=total_payments_made)
+                                if emi_row:
+                                      next_payment_date = emi_row['next_payment']
+                                    # if next_payment_date  < (datetime.now()):
+                                      additional_fees = self.calculate_additional_fees(emi_row)
+                                      if additional_fees is not None:
+                                          # total_amount = float(self.total_amount.text)
+                                          total_amount += additional_fees
+                                          if additional_fees > 0:
+                                              self.label_13.visible = True
+                                              self.extra_fee.visible = True
+                                              self.extra_fee.text = "{:.2f}".format(additional_fees)
+                                              self.total_amount.text = "{:.2f}".format(total_amount)
+                                          else:
+                                            self.extra_fee.text = 0
+
+                      
+        # emi_row = app_tables.fin_emi_table.get(loan_id=loan_id,emi_number = total_payments_made)
+        # if emi_row :
+        #         next_payment_date = emi_row['next_payment']
+        #       # if next_payment_date  < (datetime.now()):
+        #         additional_fees = self.calculate_additional_fees(emi_row)
+        #         if additional_fees is not None:
+        #           total_amount += additional_fees
+        #           if additional_fees > 0:
+        #             self.label_13.visible = True
+        #             self.extra_fee.visible = True
+        #             self.extra_fee.text ="{:.2f}".format(additional_fees)
+        #             self.total_amount.text ="{:.2f}".format(total_amount)
         
     def button_foreclose_click(self, **event_args):
         selected_row = self.selected_row
@@ -234,15 +297,7 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
         foreclosure_row.update()
         alert("Your Foreclosure request is submitted.")
         open_form('borrower.dashboard')
-  
-        # selected_row = self.selected_row
-        # # loan_id = selected_row['loan_id']
-        # # total_payments_made = self.loan_details_row['total_payments_made']
-        # if self.total_payments_made >= self.min_months:
-        #     open_form('borrower.dashboard.foreclosure_request.borrower_foreclosure.foreclose',  selected_row=selected_row, total_payments_made=self.total_payments_made)
-        # else:
-        #     alert('You are not eligible for foreclosure! You have to pay at least ' + str(self.min_months) + ' months.')
-        #     open_form('borrower.dashboard.foreclosure_request')
+
 
     def again_back_click(self, **event_args):
       """This method is called when the button is clicked"""
@@ -263,9 +318,14 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
             alert("Foreclosure details not found.")
             return
 
+        extra_fee = float(self.extra_fee.text)
+        if extra_fee  is None:
+          extra_fee = 0.0
+        
+          
         foreclosure_amount = foreclosure_row['foreclose_amount']
         total_due_amount = foreclosure_row['total_due_amount']
-        total_amount = foreclosure_amount + total_due_amount + float(self.extra_fee.text)
+        total_amount = foreclosure_amount + total_due_amount + extra_fee
         total_extra_fee = foreclosure_amount + float(self.extra_fee.text)
 
         # self.foreclose_amount.text ="{:.2f}".format(foreclosure_amount)
@@ -291,7 +351,7 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
                 if loan_row:
                     loan_row['remaining_amount'] -= total_due_amount
                     loan_row['total_amount_paid'] += total_amount
-                    loan_row['lender_returns'] -= foreclosure_amount
+                    loan_row['lender_returns'] += foreclosure_amount
                     loan_row['loan_updated_status'] = 'closed'
                     loan_row.update()
 
@@ -410,7 +470,7 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
     
                 if product_details['npa'] != 0:
                     npa_fee_percentage = product_details['npa']
-                    npa_fee_amount += days_in_npa * (npa_fee_percentage * float(self.emi.text) / 100)
+                    npa_fee_amount += days_in_npa * (npa_fee_percentage * float(self.due_amount.text) / 100)
                 elif product_details['npa_amount'] != 0:
                     npa_fee_amount += days_in_npa * product_details['npa_amount']
                 
