@@ -110,17 +110,22 @@ components:
     layout_properties: {x: 723.4375122077763, y: 333.9750099182129, width: 159}
     event_bindings: {click: button_3_click}
     name: button_3
-  - properties: {height: 404.25, source: _/theme/bank_users/main_form/main.png, display_mode: zoom_to_fill}
-    type: Image
-    layout_properties: {x: 149.23435974121094, y: 43.015625, width: 265}
-    name: image_2
+  - name: spacer_42
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {x: 1289.888916015625, y: 403.1111145019531, width: 200}
   - type: Image
     properties: {height: 39, source: _/theme/bank_users/main_form/12-300x94.png}
-    layout_properties: {x: 298.140625, y: 280.296875, width: 181.891}
+    layout_properties: {x: 476.847223918885, y: 278.5555521659553, width: 181.88888549804688}
     name: image_12
+  - properties: {height: 420.22222900390625, source: _/theme/bank_users/main_form/main.png,
+      display_mode: zoom_to_fill}
+    type: Image
+    layout_properties: {x: 327.93056742474437, y: 38, width: 265}
+    name: image_2
   - type: Image
     properties: {height: 46, source: _/theme/bank_users/main_form/rbi-registered-1.svg}
-    layout_properties: {x: 80.234375, y: 365.296875, width: 230.59375}
+    layout_properties: {x: 258.93055979534984, y: 363.5555521659553, width: 230.5833282470703}
     name: image_11
 - properties: {height: 32}
   type: Spacer

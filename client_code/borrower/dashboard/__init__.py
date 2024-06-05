@@ -60,9 +60,11 @@ class dashboard(dashboardTemplate):
           q.like('approved%'),
           q.like('under process%'),
           q.like('foreclosure%'),
-          q.like('disbursed loan%'),
-          q.like('Disbursed loan%'),
-          q.like('Under Process%')
+          q.like('extension'),
+          q.like('disbursed%'),
+          q.like('Disbursed%'),
+          q.like('Under Process%'),
+          q.like('rejected')
         )
       )
       num_existing_loans = len(existing_loans)
