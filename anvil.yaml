@@ -1271,7 +1271,7 @@ db_schema:
     - name: member_since
       admin_ui: {order: 5.5, width: 200}
       type: date
-    - name: 'lender_total_commitments '
+    - name: lender_total_commitments
       admin_ui: {order: 4.953125, width: 200}
       type: number
     - name: present_commitments

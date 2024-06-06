@@ -377,7 +377,6 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         if loan_deta is not None:
             self.lender_customer_id = loan_deta['lender_customer_id']
             print("lender", self.lender_customer_id)
-          
         
         self.update_ui_based_on_status()
         
@@ -652,6 +651,11 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             # Call the transfer_money function
             transfer_money(lender_id=self.lender_customer_id, borrower_id=entered_borrower_customer_id, transfer_amount=loan_amount)
 
+            lender_data = app_tables.fin_lender.get(customer_id=self.lender_customer_id)
+            if lender_data:
+              lender_data['lender_total_commitments'] += loan_amount
+              lender_data['present_commitments'] += loan_amount
+              lender_data.update()
             # You may want to update the loan_updated_status here if needed
             updated_loan_status = 'disbursed loan'
             loan_row['loan_updated_status'] = updated_loan_status
