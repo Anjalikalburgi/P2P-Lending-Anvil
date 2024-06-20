@@ -1,4 +1,4 @@
-from ._anvil_designer import view_field_engineerTemplate
+from ._anvil_designer import add_report_issues_dropdownTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,14 +9,19 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class view_field_engineer(view_field_engineerTemplate):
+class add_report_issues_dropdown(add_report_issues_dropdownTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.repeating_panel_1.items = app_tables.fin_field_engineers.search()
 
   def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('admin.dashboard.admin_management.add_field_engineer')
+    open_form('admin.dashboard.manage_cms')
+
+  def button_21_copy_click(self, **event_args):
+    open_form('admin.dashboard.manage_cms.add_report_issues_dropdown.Issues_category_dropdown')
+
+  def subcategory_dropdown_click(self, **event_args):
+    open_form('admin.dashboard.manage_cms.loan_subcategory_dropdown')
+

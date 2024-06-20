@@ -1,0 +1,70 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"EEMXNP":30,"GTLPLI":25,"ZQKFLO":25}'}
+components:
+- name: home_button_admin_1
+  properties: {}
+  type: form:admin.dashboard.home_button_admin
+  layout_properties: {grid_position: 'FDZCKR,HLKJHX', full_width_row: true}
+- name: button_1
+  properties: {text: Back, background: '#05264d', foreground: white, role: elevated-button, icon: 'fa:angle-double-left', align: right}
+  type: Button
+  layout_properties: {grid_position: 'ESRDLA,WAUOEX', full_width_row: true}
+  event_bindings: {click: button_1_click}
+- name: spacer_3
+  properties: {height: 187.33331298828125}
+  type: Spacer
+  layout_properties: {grid_position: 'UIUSFV,ZQKFLO'}
+- name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy
+  properties: {col_widths: '{}', background: white, role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'UIUSFV,EEMXNP'}
+  components:
+  - name: image_4_copy
+    properties: {source: _/theme/manage_issues/loan%20(7).png, display_mode: shrink_to_fit, height: '100'}
+    type: Image
+    layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+    event_bindings: {mouse_up: image_4_copy_mouse_up}
+  - name: button_9
+    properties: {text: Category's, font_size: 16, foreground: black, bold: true}
+    type: Button
+    layout_properties: {grid_position: 'GMECOB,ATAMRQ'}
+    event_bindings: {click: button_9_click}
+- name: spacer_2
+  properties: {height: 183.46664428710938}
+  type: Spacer
+  layout_properties: {grid_position: 'UIUSFV,GTLPLI'}
+- name: column_panel_3
+  properties: {role: null, col_widths: '{"FMAEVI":40,"RJJXSS":10,"EXKHYD":20,"DOZNEX":15,"KGGUBA":45}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: false, border: '', tooltip: ''}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'VBWZHV,RGOEEN'}
+  components:
+  - name: label_11
+    properties: {role: outlined-card, bold: true, align: center, spacing_above: small, background: 'theme:Disabled Container', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Add Loan Category details}
+    type: Label
+    layout_properties: {grid_position: 'SZCQOZ,KOOONE'}
+  - name: label_2
+    properties: {role: null, bold: false, align: center, spacing_above: small, background: 'theme:Tertiary Container', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Loan Category}
+    type: Label
+    layout_properties: {grid_position: 'TCPJKI,EXKHYD'}
+  - name: text_box_2
+    properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    type: TextBox
+    layout_properties: {grid_position: 'TCPJKI,FMAEVI'}
+    event_bindings: {}
+  - name: loan_category
+    properties: {role: null, bold: true, align: center, spacing_above: small, background: '#0b2547', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ADD}
+    type: Button
+    layout_properties:
+      col_widths: {}
+      grid_position: TCPJKI,RJJXSS
+    event_bindings: {click: loan_category_click}
+  - name: spacer_1
+    properties: {height: 222.71420288085938}
+    type: Spacer
+    layout_properties: {grid_position: 'WAMUGI,DOZNEX'}
+  - name: repeating_panel_1
+    properties: {item_template: admin.dashboard.manage_cms.add_report_issues_dropdown.ItemTemplate111}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'WAMUGI,KGGUBA ISXTVL,WMJBEH'}
+is_package: true

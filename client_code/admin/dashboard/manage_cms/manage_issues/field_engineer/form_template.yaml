@@ -1,0 +1,56 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"REVFRI":30,"IZRUZI":25,"LJMYXU":25}'}
+components:
+- name: home_button_admin_1
+  properties: {}
+  type: form:admin.dashboard.home_button_admin
+  layout_properties: {grid_position: 'CAUWVD,XSNNQQ', full_width_row: true}
+- name: button_1
+  properties: {text: Back, role: elevated-button, icon: 'fa:backward', foreground: white, background: '#05264d', align: right}
+  type: Button
+  layout_properties: {grid_position: 'DFQNOE,JUAMND', full_width_row: true}
+  event_bindings: {click: button_1_click}
+- name: spacer_1
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'NYOXIF,QBXUPO'}
+- name: spacer_3
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'MYJMVP,LJMYXU'}
+- name: content_panel_copy_copy_3_copy_3_copy_copy_copy_9_copy
+  properties: {col_widths: '{}', background: white, role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'MYJMVP,REVFRI'}
+  components:
+  - name: image_10_copy
+    properties: {source: _/theme/manage_issues/issue.png, display_mode: shrink_to_fit, height: '100'}
+    type: Image
+    layout_properties: {grid_position: 'YGLFNC,ASARUK'}
+    event_bindings: {mouse_up: image_10_mouse_up}
+  - name: Manage_issues
+    properties:
+      text: |-
+        Field Engineer's
+        Dropdowns
+      foreground: black
+      bold: true
+      font_size: 16
+    type: Button
+    layout_properties: {grid_position: 'VXGGJT,QMFGMX'}
+    event_bindings: {click: Manage_issues_click}
+- name: spacer_2
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'MYJMVP,IZRUZI'}
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'KVNYFK,FQNLGX'}
+  components:
+  - name: repeating_panel_1
+    properties: {item_template: admin.dashboard.manage_cms.manage_issues.field_engineer.ItemTemplate82}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'JKASRX,YXBUTX'}
+is_package: true

@@ -4,7 +4,7 @@ container:
   properties: {html: ''}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"KVJMEQ":60}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -12,19 +12,45 @@ components:
     properties: {}
     name: home_button_admin_1
     layout_properties: {grid_position: 'EMFUOQ,KUTSLQ', full_width_row: true}
+  - name: button_1
+    properties: {text: Back, role: elevated-button, icon: 'fa:backward', foreground: white, background: '#05264d', align: right}
+    type: Button
+    layout_properties: {grid_position: 'IKIKJG,HASCAQ', full_width_row: true}
+    event_bindings: {click: button_1_click}
   - name: label_1_copy
     properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Manage Issues}
     type: Label
     layout_properties: {grid_position: 'FIZXVR,KVJMEQ'}
-  - type: RepeatingPanel
-    properties: {role: null, spacing_above: small, background: '', item_template: admin.dashboard.manage_cms.manage_issues.ItemTemplate82, foreground: '', items: null, spacing_below: small, visible: true, border: '', tooltip: ''}
-    name: repeating_panel_1
-    layout_properties: {grid_position: 'QAUYHV,OAOMUQ'}
+  - name: spacer_1
+    properties: {height: 21.466644287109375}
+    type: Spacer
+    layout_properties: {grid_position: 'JYOXEC,WIPIDP'}
+  - name: data_grid_1
+    properties:
+      columns:
+      - {id: JKSDUP, title: User Photo, data_key: column_1, width: 94.199951171875, expand: false}
+      - {id: VJQQOR, title: Name, data_key: column_2}
+      - {id: OJLQEN, title: Email, data_key: column_3, width: 173.5999755859375, expand: false}
+      - {id: WVMRQI, data_key: column_4, title: Mobile No, width: 143.8665771484375, expand: false}
+      - {id: JZYYGB, data_key: column_5, title: Description}
+      - {id: YYWHWZ, data_key: column_6, title: Report Date, width: 194.13330078125, expand: false}
+      - {id: YCWJHX, data_key: column_7, title: IT Is Urgent, width: 94.533203125, expand: false}
+      - {id: RMEGPH, data_key: column_8, title: Issue Photo, width: 91.9998779296875, expand: false}
+      - {id: UDGJCC, data_key: column_9, title: Category, width: 118.13330078125, expand: false}
+      - {id: TYMPQJ, data_key: column_10, title: Subcategory, width: 129.13330078125, expand: false}
+      - {id: SSBISO, data_key: column_11, title: User type, width: 114.733154296875, expand: false}
+      - {id: OLVPRS, data_key: column_1, title: ''}
+      role: tonal-data-grid
+      rows_per_page: 10
+      wrap_on: never
+    type: DataGrid
+    components:
+    - name: repeating_panel_1
+      properties: {item_template: admin.dashboard.manage_cms.manage_issues.RowTemplate41, role: null}
+      type: RepeatingPanel
+      layout_properties: {}
+    layout_properties: {grid_position: 'QIEQNR,NUDAYC', full_width_row: true}
   - type: Label
     properties: {role: null, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: false, border: '', italic: false, font_size: null, tooltip: '', text: No issues reported}
     name: label_no_issues
-    layout_properties: {grid_position: 'CSEMIT,VANQTS'}
-- type: FlowPanel
-  properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}
+    layout_properties: {grid_position: 'XUYLLM,XNRFIU'}

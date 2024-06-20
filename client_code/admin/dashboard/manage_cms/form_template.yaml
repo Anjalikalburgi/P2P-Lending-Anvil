@@ -13,7 +13,7 @@ components:
     layout_properties: {grid_position: 'SXILWN,KFDSUL', full_width_row: true}
     name: content_panel
     components:
-    - properties: {col_widths: '{"KIDUKX":15,"OAKPAJ":15,"PDDEHR":15,"HASWNZ":15}', background: '#Edf0f4', role: null}
+    - properties: {col_widths: '{"OAKPAJ":19,"PDDEHR":18,"XHOETE":8,"KHVRLQ":10}', background: '#Edf0f4', role: null}
       type: ColumnPanel
       layout_properties: {grid_position: 'LXFUJT,JYZOLW', full_width_row: true}
       name: content_panel_copy_copy_3_copy_3_copy_copy_copy_copy
@@ -33,7 +33,7 @@ components:
       - name: spacer_3
         properties: {height: 32}
         type: Spacer
-        layout_properties: {grid_position: 'RWPRWQ,KIDUKX'}
+        layout_properties: {grid_position: 'RWPRWQ,KHVRLQ'}
       - properties: {col_widths: '{}', background: white, role: elevated-card}
         type: ColumnPanel
         layout_properties: {grid_position: 'RWPRWQ,OAKPAJ'}
@@ -75,7 +75,12 @@ components:
       - name: spacer_2
         properties: {height: 32}
         type: Spacer
-        layout_properties: {grid_position: 'RWPRWQ,HASWNZ'}
+        layout_properties: {grid_position: 'RWPRWQ,XHOETE'}
+      - name: button_2
+        properties: {text: Back, background: '#05264d', foreground: white, role: elevated-button, icon: 'fa:backward'}
+        type: Button
+        layout_properties: {grid_position: 'ZXNQMN,ZTKBHK'}
+        event_bindings: {click: button_2_click}
       - properties: {height: '3'}
         type: Spacer
         layout_properties: {grid_position: 'LXEPFH,FVTVHC'}

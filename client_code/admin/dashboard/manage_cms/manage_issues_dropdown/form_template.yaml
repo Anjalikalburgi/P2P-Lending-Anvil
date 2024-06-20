@@ -1,0 +1,53 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"GFEBMX":30,"EJXETC":30}'}
+components:
+- name: home_button_admin_1
+  properties: {}
+  type: form:admin.dashboard.home_button_admin
+  layout_properties: {grid_position: 'CODIYS,MLGEDV', full_width_row: true}
+- name: content_panel_copy_copy_3_copy_3_copy_copy_copy_9_copy
+  properties: {col_widths: '{}', background: white, role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'XSUURW,GFEBMX'}
+  components:
+  - name: image_10_copy
+    properties: {source: _/theme/admin/dashboard/risk-management.png, display_mode: shrink_to_fit, height: '100'}
+    type: Image
+    layout_properties: {grid_position: 'YGLFNC,ASARUK'}
+    event_bindings: {mouse_up: image_10_mouse_up}
+    data_bindings: []
+  - name: Manage_issues
+    properties:
+      text: "  Manage \nIssues Reports"
+      foreground: black
+      bold: true
+      font_size: 16
+    type: Button
+    layout_properties: {grid_position: 'VXGGJT,QMFGMX'}
+    event_bindings: {click: Manage_issues_click}
+- name: content_panel_copy_copy_3_copy_3_copy_copy_copy_9_copy_copy
+  properties: {col_widths: '{}', background: white, role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'XSUURW,EJXETC'}
+  components:
+  - name: image_10_copy_copy
+    properties: {source: _/theme/manage_issues/general-dropdown.png, display_mode: shrink_to_fit, height: '100'}
+    type: Image
+    layout_properties: {grid_position: 'YGLFNC,ASARUK'}
+    event_bindings: {mouse_up: image_10_mouse_up}
+  - name: button_21_copy_copy
+    properties:
+      text: "  Manage \nIssues Dropdowns"
+      foreground: black
+      bold: true
+      font_size: 16
+    type: Button
+    layout_properties: {grid_position: 'VXGGJT,QMFGMX'}
+    event_bindings: {click: button_21_copy_copy_click}
+- name: button_1
+  properties: {text: back, icon: 'fa:angle-double-left', background: '#05264d', foreground: white, role: elevated-button}
+  type: Button
+  layout_properties: {grid_position: 'LCFCNZ,EEBDBM'}
+  event_bindings: {click: button_1_click}
+is_package: true

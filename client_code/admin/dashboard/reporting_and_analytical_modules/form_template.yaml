@@ -1,67 +1,67 @@
+is_package: true
 container:
   type: ColumnPanel
   properties: {background: '#Edf0f4'}
 components:
-- name: home_button_admin_1
-  properties: {}
+- properties: {}
   type: form:admin.dashboard.home_button_admin
   layout_properties: {grid_position: 'RUJLCE,UVZNQK', full_width_row: true}
-- name: label_1
-  properties: {text: 'Reporting & Analytics ', align: center, bold: true, font_size: 22}
+  name: home_button_admin_1
+- properties: {text: 'Reporting & Analytics ', align: center, bold: true, font_size: 22}
   type: Label
   layout_properties: {grid_position: 'MZKOVG,EKIHDQ'}
-- name: content_panel
-  properties: {col_widths: '{}', background: white, role: elevated-card}
+  name: label_1
+- properties: {col_widths: '{}', background: white, role: elevated-card}
   type: ColumnPanel
   layout_properties: {grid_position: 'KSJELA,FAUUJL'}
+  name: content_panel
   components:
-  - name: image_1
-    properties: {source: _/theme/admin/dashboard/reporting_analytics/risk_pool.png, height: '100'}
+  - properties: {source: _/theme/admin/dashboard/reporting_analytics/risk_pool.png, height: '100'}
     type: Image
     layout_properties: {grid_position: 'GNRRDW,FEOFAR'}
     event_bindings: {mouse_enter: image_1_mouse_enter, mouse_down: image_1_mouse_down, mouse_up: image_1_mouse_up}
-  - name: button_14
-    properties: {text: Risk Pool Analysis, bold: true, foreground: black, font_size: 16}
+    name: image_1
+  - properties: {text: Risk Pool Analysis, bold: true, foreground: black, font_size: 16}
     type: Button
     layout_properties: {grid_position: 'LFNPCJ,OTMDIA'}
     event_bindings: {click: risk_poolh_click}
-- name: content_panel_copy
-  properties: {col_widths: '{}', background: white, role: elevated-card}
+    name: button_14
+- properties: {col_widths: '{}', background: white, role: elevated-card}
   type: ColumnPanel
   layout_properties: {grid_position: 'KSJELA,RDSUBJ'}
+  name: content_panel_copy
   components:
-  - name: image_1_copy
-    properties: {source: _/theme/admin/dashboard/reporting_analytics/risk-portfolio.png, height: '100'}
+  - properties: {source: _/theme/admin/dashboard/reporting_analytics/risk-portfolio.png, height: '100'}
     type: Image
     layout_properties: {grid_position: 'GNRRDW,FEOFAR'}
     event_bindings: {mouse_enter: image_1_mouse_enter, mouse_down: image_1_mouse_down, mouse_up: image_1_mouse_up}
-  - name: button_14_copy
-    properties: {text: Risk Portfolio, bold: true, foreground: black, font_size: 16}
+    name: image_1_copy
+  - properties: {text: Risk Portfolio, bold: true, foreground: black, font_size: 16}
     type: Button
     layout_properties: {grid_position: 'LFNPCJ,OTMDIA'}
     event_bindings: {click: port_polio_risk_click}
-- name: content_panel_copy_2
-  properties: {col_widths: '{}', background: white, role: elevated-card}
+    name: button_14_copy
+- properties: {col_widths: '{}', background: white, role: elevated-card}
   type: ColumnPanel
   layout_properties: {grid_position: 'KSJELA,WTPQQU'}
+  name: content_panel_copy_2
   components:
-  - name: image_1_copy_2
-    properties: {source: _/theme/admin/dashboard/reporting_analytics/key-metrics.png, height: '100'}
+  - properties: {source: _/theme/admin/dashboard/reporting_analytics/key-metrics.png, height: '100'}
     type: Image
     layout_properties: {grid_position: 'GNRRDW,FEOFAR'}
     event_bindings: {mouse_enter: image_1_mouse_enter, mouse_down: image_1_mouse_down, mouse_up: image_1_mouse_up}
-  - name: button_14_copy_2
-    properties: {text: Key Metrics, bold: true, foreground: black, font_size: 16}
+    name: image_1_copy_2
+  - properties: {text: Key Metrics, bold: true, foreground: black, font_size: 16}
     type: Button
     layout_properties: {grid_position: 'LFNPCJ,OTMDIA'}
     event_bindings: {click: kay_metrics_click}
-- name: spacer_1
-  properties: {height: 32}
+    name: button_14_copy_2
+- properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'FSBWYC,YDQLON'}
-- name: button_1_copy_3
-  properties: {role: elevated-button, bold: true, align: center, spacing_above: small, background: '#05264d', icon: 'fa:backward', underline: false, font: '16', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
+  name: spacer_1
+- properties: {role: elevated-button, bold: true, align: center, spacing_above: small, background: '#05264d', icon: 'fa:backward', underline: false, font: '16', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
   type: Button
   layout_properties: {grid_position: 'HRUCLF,QEEXKR'}
   event_bindings: {click: button_1_copy_3_click}
-is_package: true
+  name: button_1_copy_3

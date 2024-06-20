@@ -1,0 +1,178 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"LGTNDB":20}'}
+components:
+- name: home_button_admin_1
+  properties: {}
+  type: form:admin.dashboard.home_button_admin
+  layout_properties: {grid_position: 'RUMNPV,LGTNDB', full_width_row: true}
+- name: button_1
+  properties: {text: Back, background: '#05264d', foreground: white, role: elevated-button, icon: 'fa:angle-double-left', icon_align: left, align: right}
+  type: Button
+  layout_properties: {grid_position: 'BDLZYU,IOAOQX', full_width_row: true}
+  event_bindings: {click: button_1_click}
+- name: content_panel_copy_copy_3_copy_3_copy_copy_copy_9_copy
+  properties: {col_widths: '{}', background: white, role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'LPKSBG,ICIGXJ'}
+  components:
+  - name: image_10_copy
+    properties: {source: _/theme/manage_issues/loan%20(7).png, display_mode: shrink_to_fit, height: '100'}
+    type: Image
+    layout_properties: {grid_position: 'YGLFNC,ASARUK'}
+    event_bindings: {mouse_up: image_10_mouse_up}
+  - name: Manage_issues
+    properties:
+      text: |-
+        Borrower Loan issue
+        Dropdowns
+      foreground: black
+      bold: true
+      font_size: 16
+    type: Button
+    layout_properties: {grid_position: 'VXGGJT,QMFGMX'}
+    event_bindings: {click: borrower_loan_issue}
+- name: content_panel_copy_copy_3_copy_3_copy_copy_copy_9_copy_copy
+  properties: {col_widths: '{}', background: white, role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'LPKSBG,VKSLIA'}
+  components:
+  - name: image_10_copy_copy
+    properties: {source: _/theme/manage_issues/debt.png, display_mode: shrink_to_fit, height: '100'}
+    type: Image
+    layout_properties: {grid_position: 'YGLFNC,ASARUK'}
+    event_bindings: {mouse_up: image_10_mouse_up}
+  - name: Manage_issues_copy
+    properties:
+      text: |-
+        Lender Loan issue
+        Dropdowns
+      foreground: black
+      bold: true
+      font_size: 16
+    type: Button
+    layout_properties: {grid_position: 'VXGGJT,QMFGMX'}
+    event_bindings: {click: lender_loan_issue}
+- name: content_panel_copy_copy_3_copy_3_copy_copy_copy_9_copy_copy_2
+  properties: {col_widths: '{}', background: white, role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'LPKSBG,WISJCU'}
+  components:
+  - name: image_10_copy_copy_2
+    properties: {source: _/theme/manage_issues/issue.png, display_mode: shrink_to_fit, height: '100'}
+    type: Image
+    layout_properties: {grid_position: 'YGLFNC,ASARUK'}
+    event_bindings: {mouse_up: image_10_mouse_up}
+  - name: Manage_issues_copy_2
+    properties:
+      text: |-
+        Technical Issue
+        Dropdowns
+      foreground: black
+      bold: true
+      font_size: 16
+    type: Button
+    layout_properties: {grid_position: 'VXGGJT,QMFGMX'}
+    event_bindings: {click: technical_issue}
+- name: column_panel_10
+  properties: {role: null, col_widths: '{"ACRDSD":15,"OXEFAE":35,"OZGSCX":10,"KCEGDH":15,"UXELTA":45}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: false, border: '', tooltip: ''}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'BVZLAD,CUEWRQ'}
+  components:
+  - name: label_14
+    properties: {role: outlined-card, bold: true, align: center, spacing_above: small, background: 'theme:Disabled Container', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Add Borrower Loan Issues}
+    type: Label
+    layout_properties: {grid_position: 'TPHGGJ,ZEPRGQ'}
+  - name: label_9
+    properties: {text: Issue, align: center, background: 'theme:Secondary Container'}
+    type: Label
+    layout_properties: {grid_position: 'LOSRQA,ACRDSD'}
+  - name: text_box_9
+    properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    type: TextBox
+    layout_properties: {grid_position: 'LOSRQA,OXEFAE'}
+    data_bindings:
+    - {property: text, code: 'self.item[''borrower_subcategory_loan_issue'']', writeback: false}
+  - name: borrower_issue
+    properties: {role: null, bold: true, align: center, spacing_above: small, background: '#0b2547', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ADD}
+    type: Button
+    layout_properties:
+      col_widths: {}
+      grid_position: LOSRQA,OZGSCX
+    event_bindings: {click: borrower_issue}
+  - name: spacer_10
+    properties: {height: 139.5714111328125}
+    type: Spacer
+    layout_properties: {grid_position: 'MJHXDQ,KCEGDH'}
+  - name: repeating_panel_1
+    properties: {item_template: admin.dashboard.manage_cms.loan_subcategory_dropdown.ItemTemplate112}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'MJHXDQ,UXELTA'}
+- name: column_panel_11_copy
+  properties: {role: null, col_widths: '{"ACRDSD":15,"OXEFAE":35,"OZGSCX":10,"XOPJRZ":15,"YFSIRX":45}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: false, border: '', tooltip: ''}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'TQIETV,BUFHKP'}
+  components:
+  - name: label_14_copy
+    properties: {role: outlined-card, bold: true, align: center, spacing_above: small, background: 'theme:Disabled Container', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Add Technical Issues}
+    type: Label
+    layout_properties: {grid_position: 'TPHGGJ,ZEPRGQ'}
+  - name: label_9_copy
+    properties: {text: Issue, align: center, background: 'theme:Secondary Container'}
+    type: Label
+    layout_properties: {grid_position: 'LOSRQA,ACRDSD'}
+  - name: text_box_9_copy
+    properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: none, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: none, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    type: TextBox
+    layout_properties: {grid_position: 'LOSRQA,OXEFAE'}
+    data_bindings:
+    - {property: placeholder, code: 'self.item[''lender_subcategory_loan_issue'']', writeback: false}
+  - name: technical_issue
+    properties: {role: null, bold: true, align: center, spacing_above: small, background: '#0b2547', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ADD}
+    type: Button
+    layout_properties:
+      col_widths: {}
+      grid_position: LOSRQA,OZGSCX
+    event_bindings: {click: technical_issue_click}
+  - name: spacer_10_copy
+    properties: {height: 139.5714111328125}
+    type: Spacer
+    layout_properties: {grid_position: 'VRTHOW,XOPJRZ'}
+  - name: repeating_panel_2
+    properties: {item_template: admin.dashboard.manage_cms.loan_subcategory_dropdown.ItemTemplate113}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'VRTHOW,YFSIRX MBOGNU,HPWKWL'}
+- name: column_panel_12_copy_2
+  properties: {role: null, col_widths: '{"ACRDSD":15,"OXEFAE":35,"OZGSCX":10,"XOPJRZ":15,"PCZMQL":45}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: false, border: '', tooltip: ''}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'LWIXZO,QSQIXV'}
+  components:
+  - name: label_14_copy_2
+    properties: {role: outlined-card, bold: true, align: center, spacing_above: small, background: 'theme:Disabled Container', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Add Lender Loan Issues}
+    type: Label
+    layout_properties: {grid_position: 'TPHGGJ,ZEPRGQ'}
+  - name: label_9_copy_2
+    properties: {text: Issue, align: center, background: 'theme:Secondary Container', spacing_above: none, spacing_below: none}
+    type: Label
+    layout_properties: {grid_position: 'LOSRQA,ACRDSD'}
+  - name: text_box_9_copy_2
+    properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: none, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: none, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    type: TextBox
+    layout_properties: {grid_position: 'LOSRQA,OXEFAE'}
+  - name: lender_issue
+    properties: {role: null, bold: true, align: center, spacing_above: none, background: '#0b2547', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: none, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ADD}
+    type: Button
+    layout_properties:
+      col_widths: {}
+      grid_position: LOSRQA,OZGSCX
+    event_bindings: {click: lender_issue_click}
+  - name: spacer_10_copy_2
+    properties: {height: 139.5714111328125}
+    type: Spacer
+    layout_properties: {grid_position: 'VRTHOW,XOPJRZ'}
+  - name: repeating_panel_3
+    properties: {item_template: admin.dashboard.manage_cms.loan_subcategory_dropdown.ItemTemplate114}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'VRTHOW,PCZMQL'}
+    data_bindings: []
+is_package: true

@@ -1,0 +1,17 @@
+is_package: true
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"YZIDKY":45,"HOJVND":15}'}
+components:
+- name: label_1
+  properties: {text: ''}
+  type: Label
+  layout_properties: {grid_position: 'CCZRCE,YZIDKY'}
+  data_bindings:
+  - {property: text, code: 'self.item[''issue_category'']', writeback: false}
+- name: link_1
+  properties: {text: Edit Details}
+  type: Link
+  layout_properties: {grid_position: 'CCZRCE,HOJVND'}
+  event_bindings: {click: link_1_click}
+  data_bindings: []

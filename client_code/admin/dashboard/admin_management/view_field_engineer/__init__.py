@@ -1,4 +1,4 @@
-from ._anvil_designer import manage_issuesTemplate
+from ._anvil_designer import view_field_engineerTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,12 +9,14 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class manage_issues(manage_issuesTemplate):
+class view_field_engineer(view_field_engineerTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    self.repeating_panel_1.items = app_tables.fin_reported_problems.search()
+    # Any code you write here will run before the form opens.
+    self.repeating_panel_1.items = app_tables.fin_field_engineers.search()
 
   def button_1_click(self, **event_args):
-    open_form('admin.dashboard.manage_cms')
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.admin_management')

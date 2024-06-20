@@ -1,4 +1,4 @@
-from ._anvil_designer import manage_issuesTemplate
+from ._anvil_designer import RowTemplate41Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,12 +9,13 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class manage_issues(manage_issuesTemplate):
+class RowTemplate41(RowTemplate41Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    self.repeating_panel_1.items = app_tables.fin_reported_problems.search()
+   
+  def button_1_click_click(self, **event_args):
+    selcted_row=self.item
+    open_form('admin.dashboard.manage_cms.manage_issues.field_engineer', selected_row=selcted_row)
 
-  def button_1_click(self, **event_args):
-    open_form('admin.dashboard.manage_cms')

@@ -1,0 +1,54 @@
+container: {type: ColumnPanel}
+components:
+- name: home_button_admin_1
+  properties: {}
+  type: form:admin.dashboard.home_button_admin
+  layout_properties: {grid_position: 'GCNQPK,CNCBCX', full_width_row: true}
+- name: content_panel_copy_copy_3_copy_3_copy_copy_copy_9_copy
+  properties: {col_widths: '{}', background: white, role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'KMQROR,CQLDEF'}
+  components:
+  - name: image_10_copy
+    properties: {source: _/theme/manage_issues/general-dropdown.png, display_mode: shrink_to_fit, height: '100'}
+    type: Image
+    layout_properties: {grid_position: 'YGLFNC,ASARUK'}
+    event_bindings: {mouse_up: image_10_mouse_up}
+  - name: button_21_copy
+    properties:
+      text: |
+        Loan
+        Category Dropdown
+      foreground: black
+      bold: true
+      font_size: 16
+    type: Button
+    layout_properties: {grid_position: 'TYJFSG,AJKNWC'}
+    event_bindings: {click: button_21_copy_click}
+- name: content_panel_copy_copy_3_copy_3_copy_copy_copy_9_copy_copy
+  properties: {col_widths: '{}', background: white, role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'KMQROR,DSLPYH'}
+  components:
+  - name: image_10_copy_copy
+    properties: {source: _/theme/manage_issues/borrower-dropdown.png, display_mode: shrink_to_fit, height: '100'}
+    type: Image
+    layout_properties: {grid_position: 'YGLFNC,ASARUK'}
+    event_bindings: {mouse_up: image_10_mouse_up}
+  - name: subcategory_dropdown
+    properties:
+      text: |
+        Loan
+        SubCategory Dropdown
+      foreground: black
+      bold: true
+      font_size: 16
+    type: Button
+    layout_properties: {grid_position: 'TYJFSG,AJKNWC'}
+    event_bindings: {click: subcategory_dropdown_click}
+- name: button_1
+  properties: {text: Back, background: '#05264d', foreground: white, role: elevated-button, icon: 'fa:backward'}
+  type: Button
+  layout_properties: {grid_position: 'BAARKL,JRKQRF'}
+  event_bindings: {click: button_1_click}
+is_package: true

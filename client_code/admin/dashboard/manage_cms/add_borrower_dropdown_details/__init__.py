@@ -70,7 +70,7 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
     new_row = app_tables.fin_borrower_no_of_employees.add_row(borrower_no_of_employees=entered_data)
     self.text_box_4.text = ' '
     self.refresh()
-
+    
   def profession_click(self, **event_args):
     """This method is called when the button is clicked"""
     entered_data = self.text_box_5.text
@@ -559,6 +559,8 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
     self.column_panel_10.visible = False    
     self.column_panel_04.visible = False
     self.column_panel_12.visible = True
+
+
 
 
 

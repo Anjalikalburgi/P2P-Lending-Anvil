@@ -16,9 +16,9 @@ components:
   properties:
     columns:
     - {id: JKSDUP, title: User Photo, data_key: column_1}
-    - {id: VJQQOR, title: Customer Id, data_key: column_2}
-    - {id: OJLQEN, title: Customer Name, data_key: column_3, width: 172.28570556640625, expand: false}
-    - {id: DZHTTI, data_key: column_4, title: Customer Email, width: 221.8570556640625, expand: false}
+    - {id: VJQQOR, title: Customer Id, data_key: column_2, width: 228.857177734375, expand: false}
+    - {id: OJLQEN, title: Customer Name, data_key: column_3, width: 246.4285888671875, expand: false}
+    - {id: DZHTTI, data_key: column_4, title: Customer Email, width: 347.1427001953125, expand: false}
     - {id: DZDXAO, data_key: column_5, title: Product Name}
     - {id: WXNVGZ, data_key: column_6, title: Loan Status}
     - {id: KGPDJR, data_key: column_7, title: Remaining Amount}

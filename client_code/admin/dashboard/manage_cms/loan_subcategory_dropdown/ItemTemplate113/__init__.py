@@ -1,4 +1,4 @@
-from ._anvil_designer import manage_issuesTemplate
+from ._anvil_designer import ItemTemplate113Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,12 +9,14 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class manage_issues(manage_issuesTemplate):
+class ItemTemplate113(ItemTemplate113Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    self.repeating_panel_1.items = app_tables.fin_reported_problems.search()
+    # Any code you write here will run before the form opens.
 
-  def button_1_click(self, **event_args):
-    open_form('admin.dashboard.manage_cms')
+  def link_1_click(self, **event_args):
+    item_data = self.item
+    open_form('admin.dashboard.manage_cms.loan_subcategory_dropdown.edit_technical_issue', selected_row=item_data)
+    
