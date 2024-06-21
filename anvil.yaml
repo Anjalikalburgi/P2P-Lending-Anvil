@@ -279,6 +279,50 @@ db_schema:
       admin_ui: {width: 200, order: 33}
       type: number
     title: fin_product_details
+  fin_field_engineers:
+    client: full
+    server: full
+    columns:
+    - name: field_engineer_email
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: full_name
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: photo
+      admin_ui: {width: 200, order: 3}
+      type: media
+    - name: gender
+      admin_ui: {width: 200, order: 4}
+      type: string
+    - name: engineer_role
+      admin_ui: {width: 200, order: 5}
+      type: string
+    - name: join_date
+      admin_ui: {width: 200, order: 6}
+      type: date
+    - name: status
+      admin_ui: {width: 200, order: 7}
+      type: bool
+    - name: last_login
+      admin_ui: {width: 200, order: 8}
+      type: date
+    - name: ref_admin_email
+      admin_ui: {width: 200, order: 9}
+      type: string
+    - name: ref_admin_name
+      admin_ui: {width: 200, order: 10}
+      type: string
+    - name: field_engineer_id
+      admin_ui: {order: 11, width: 200}
+      type: number
+    - name: mobile_no
+      admin_ui: {width: 200, order: 0.5}
+      type: number
+    - name: address
+      admin_ui: {width: 200, order: 12}
+      type: string
+    title: fin_field_engineers
   fin_admin_ascend_categories:
     client: full
     server: full
@@ -774,6 +818,14 @@ db_schema:
     - name: color
       admin_ui: {width: 200}
       type: string
+  fin_lender_subcategory_loan_issue:
+    client: full
+    server: full
+    columns:
+    - name: lender_subcategory_loan_issue
+      admin_ui: {width: 200, order: 0}
+      type: string
+    title: fin_lender_subcategory_loan_issue
   fin_spouse_profession:
     client: full
     server: full
@@ -893,6 +945,22 @@ db_schema:
       admin_ui: {width: 200, order: 10.5}
       type: number
     title: fin_extends_loan
+  fin_borrower_subcategory_loan_issue:
+    client: full
+    server: full
+    columns:
+    - name: borrower_subcategory_loan_issue
+      admin_ui: {order: 0, width: 280}
+      type: string
+    title: fin_borrower_subcategory_loan_issue
+  fin_issue_category:
+    client: full
+    server: full
+    columns:
+    - name: issue_category
+      admin_ui: {order: 0, width: 200}
+      type: string
+    title: fin_issue_category
   fin_manage_credit_limit:
     title: fin_manage_credit_limit
     client: none
@@ -1394,6 +1462,14 @@ db_schema:
       admin_ui: {width: 200, order: 9}
       type: bool
     title: fin_wallet
+  fin_subcategory_technical_issue:
+    client: full
+    server: full
+    columns:
+    - name: subcategory_technical_issue
+      admin_ui: {width: 200, order: 0}
+      type: string
+    title: fin_subcategory_technical_issue
   fin_product_group:
     client: full
     server: full
@@ -1647,83 +1723,10 @@ db_schema:
     - name: email_confirmation_key
       admin_ui: {order: 1.5, width: 200}
       type: string
-    title: Users
-  fin_field_engineers:
-    client: full
-    server: full
-    columns:
-    - name: field_engineer_email
-      admin_ui: {width: 200, order: 0}
-      type: string
-    - name: full_name
-      admin_ui: {width: 200, order: 1}
-      type: string
-    - name: photo
-      admin_ui: {width: 200, order: 3}
-      type: media
-    - name: gender
-      admin_ui: {width: 200, order: 4}
-      type: string
-    - name: engineer_role
-      admin_ui: {width: 200, order: 5}
-      type: string
-    - name: join_date
-      admin_ui: {width: 200, order: 6}
-      type: date
-    - name: status
-      admin_ui: {width: 200, order: 7}
-      type: bool
-    - name: last_login
+    - name: email_verified
       admin_ui: {width: 200, order: 8}
-      type: date
-    - name: ref_admin_email
-      admin_ui: {width: 200, order: 9}
-      type: string
-    - name: ref_admin_name
-      admin_ui: {width: 200, order: 10}
-      type: string
-    - name: field_engineer_id
-      admin_ui: {order: 11, width: 200}
-      type: number
-    - name: mobile_no
-      admin_ui: {width: 200, order: 0.5}
-      type: number
-    - name: address
-      admin_ui: {width: 200, order: 12}
-      type: string
-    title: fin_field_engineers
-  fin_issue_category:
-    client: full
-    server: full
-    columns:
-    - name: issue_category
-      admin_ui: {order: 0, width: 200}
-      type: string
-    title: fin_issue_category
-  fin_lender_subcategory_loan_issue:
-    client: full
-    server: full
-    columns:
-    - name: lender_subcategory_loan_issue
-      admin_ui: {width: 200, order: 0}
-      type: string
-    title: fin_lender_subcategory_loan_issue
-  fin_borrower_subcategory_loan_issue:
-    client: full
-    server: full
-    columns:
-    - name: borrower_subcategory_loan_issue
-      admin_ui: {order: 0, width: 280}
-      type: string
-    title: fin_borrower_subcategory_loan_issue
-  fin_subcategory_technical_issue:
-    client: full
-    server: full
-    columns:
-    - name: subcategory_technical_issue
-      admin_ui: {width: 200, order: 0}
-      type: string
-    title: fin_subcategory_technical_issue
+      type: bool
+    title: Users
 secrets:
   new_key:
     type: key
