@@ -32,8 +32,8 @@ class lender_commitments_chart(lender_commitments_chartTemplate):
     lender_data = app_tables.fin_lender.search(customer_id=self.user_id)
     
     # Calculate total commitments and present commitments
-    lender_total_commitments = sum(row['lender_total_commitments'] for row in lender_data)
-    present_commitments = sum(row['present_commitments'] for row in lender_data)
+    lender_total_commitments = sum((row['lender_total_commitments'] or 0) for row in lender_data)
+    present_commitments = sum((row['present_commitments'] or 0) for row in lender_data)
     
     # Prepare data for the pie chart
     values = [lender_total_commitments, present_commitments]

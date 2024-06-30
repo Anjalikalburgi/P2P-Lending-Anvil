@@ -145,7 +145,7 @@ components:
         type: Button
         layout_properties: {grid_position: 'BJUXXD,DMUXBO KQOMKX,OFGOCS'}
         event_bindings: {click: label_2_click}
-      - properties: {}
+      - properties: {align: center}
         type: Label
         layout_properties: {grid_position: 'BJUXXD,DMUXBO KGCDDA,SCSBSB'}
         name: label_3
