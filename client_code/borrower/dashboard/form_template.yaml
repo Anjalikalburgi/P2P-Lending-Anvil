@@ -284,6 +284,12 @@ components:
       layout_properties: {}
       event_bindings: {click: link_9_click}
       name: link_9
+    - properties: {text: '', icon: 'fa:bell', icon_align: left, role: null, font_size: 26, foreground: black, background: '', align: left}
+      type: Button
+      layout_properties: {}
+      event_bindings: {click: notifications_click}
+      name: notifications
+      data_bindings: []
     - properties: {}
       type: form:borrower.logout
       name: logout_1

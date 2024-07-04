@@ -213,6 +213,7 @@ unique_ids:
     lendor.lendor_registration_forms.lender_registration_form_4_bank_form_1: '1699429435323170866799491.21808'
     borrower.dashboard.today_dues.ItemTemplate71: 6XRAUIQGWJSUISEXTEYG7WGZH6VKO3O2
     admin.dashboard.loan_management.loan_aggrements: '1718346458767692582292605.4009'
+    borrower.dashboard.borrower_notifications: '1719897289037730570850293.506'
     lendor.dashboard.view_lost_oppurtunities.RowTemplate34: '1704968592298956121945816.4596'
     admin.dashboard.accounting.mis_reports: '171877405384637568003103.99866'
     lendor.dashboard.view_loan_extension_requests.ItemTemplate78: '170979552945950654853738.55006'
@@ -435,6 +436,7 @@ unique_ids:
     borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment: '1699373440164759513719499.4375'
     admin.dashboard.integration.KYC_provider_integration: '171960456581871893345027.09177'
     bank_users.main_form.basic_registration_form: '1706530260736283711618019.2678'
+    borrower.dashboard.borrower_notifications.notifications_view_profile: '1719990187967429809903702.48737'
     borrower.dashboard.borrower_profile: M4GBTRWVQV7UYNVPLA2V5R2QAYH5JVCM
     borrower.dashboard.borrower_portfolio_first_page.RowTemplate38: '1717855403590411855234461.318'
     admin.dashboard.loan_management.editing_detabase_details.RowTemplate66: '1719814050439694072930175.3925'
@@ -516,6 +518,7 @@ unique_ids:
     lendor.dashboard.lender_portfolio: '1716968660461688344879676.6324'
     admin.dashboard.loan_management.application_intake.Approved_loans.RowTemplate63: '1719380520348436747869533.4148'
     admin.dashboard.integration: '1718264070768451697059543.39'
+    borrower.dashboard.borrower_notifications.ItemTemplate117: '1719898063628233722055522.83676'
     lendor.dashboard.my_returns: 4IEF7M5W2HNGQTDKZOOF4RFXFAGAJB5S
     admin.dashboard.loan_servicing.tracking_late_payments.RowTemplate45: '1718615883950918347490650.2042'
     borrower.dashboard.RowTemplate7: T3FUXLYGRAVXJ3IHK72RQZ2D33FIBR42

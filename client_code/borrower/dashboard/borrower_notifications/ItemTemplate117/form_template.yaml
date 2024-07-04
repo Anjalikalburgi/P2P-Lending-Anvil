@@ -1,0 +1,10 @@
+is_package: true
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"EYCZSQ":10,"TWQACQ":32}', role: tonal-card}
+components:
+- name: label_1
+  properties: {bold: true, underline: false, icon: 'fa:commenting-o'}
+  type: Link
+  layout_properties: {grid_position: 'STITIC,TWQACQ'}
+  event_bindings: {click: label_1_click}

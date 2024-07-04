@@ -98,7 +98,7 @@ db_schema:
       admin_ui: {order: 8.5, width: 261}
       type: date
     - name: product_id
-      admin_ui: {order: -0.125, width: 103}
+      admin_ui: {order: 5, width: 103}
       type: string
     - name: borrower_first_payment_done
       admin_ui: {width: 200, order: 27}
@@ -166,6 +166,12 @@ db_schema:
     - name: lender_rejected_timestamp
       admin_ui: {width: 200, order: 41}
       type: datetime
+    - name: notification_read
+      admin_ui: {width: 200, order: 45}
+      type: bool
+    - name: notification_date
+      admin_ui: {width: 200, order: 46}
+      type: date
     title: fin_loan_details
   fin_lendor_salary_type:
     client: full
