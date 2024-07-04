@@ -289,16 +289,24 @@ class part_payment(part_paymentTemplate):
                                   next_scheduled_payment = prev_scheduled_payment + timedelta(days=180)
                                   next_next_payment = prev_next_payment + timedelta(days=180)
                               elif emi_payment_type == 'One Time':
-                                  if self.loan_details['tenure']:
-                                      # next_scheduled_payment = prev_scheduled_payment + timedelta(days=30 * tenure)
-                                      # next_next_payment = self.selected_row['next_payment'] + timedelta(days=30 * tenure)
-                                      next_scheduled_payment = prev_scheduled_payment + timedelta(days=30 * self.loan_details['tenure'])
-                                      next_next_payment = self.selected_row['next_payment'] + timedelta(days=30 * self.loan_details['tenure'])
+                                  # if self.loan_details['tenure']:
+                                  #     # next_scheduled_payment = prev_scheduled_payment + timedelta(days=30 * tenure)
+                                  #     # next_next_payment = self.selected_row['next_payment'] + timedelta(days=30 * tenure)
+                                  #     next_scheduled_payment = prev_scheduled_payment + timedelta(days=30 * self.loan_details['tenure'])
+                                  #     next_next_payment = self.selected_row['next_payment'] + timedelta(days=30 * self.loan_details['tenure'])
+                                  if 'tenure' in self.loan_details and isinstance(self.loan_details['tenure'], int):
+                                        tenure = self.loan_details['tenure']
+                                        next_scheduled_payment = prev_scheduled_payment + timedelta(days=30 * tenure)
+                                        next_next_payment = self.selected_row['next_payment'] + timedelta(days=30 * tenure)
                           else:
                               # Default to monthly calculation
                               next_scheduled_payment = prev_scheduled_payment + timedelta(days=30)
                               next_next_payment = prev_next_payment + timedelta(days=30)
 
+                          # Ensure next_scheduled_payment and next_next_payment have been assigned
+                          if next_scheduled_payment is None or next_next_payment is None:
+                              raise ValueError("next_scheduled_payment and next_next_payment must be defined.")
+                              
                           npa = (self.loan_details['npa_fee'])
                           default = (self.loan_details['default_fee'])
                           lapsed = (self.loan_details['lapsed_fee'])

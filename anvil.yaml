@@ -460,6 +460,9 @@ db_schema:
     - name: lender_returns
       admin_ui: {width: 200, order: 9.5}
       type: number
+    - name: part_lender_returns
+      admin_ui: {width: 200}
+      type: number
   fin_guarantor_details:
     client: full
     server: full

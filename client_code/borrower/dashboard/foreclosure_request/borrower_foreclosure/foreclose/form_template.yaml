@@ -21,7 +21,7 @@ components:
     name: navigation_form_dashboard_1
     layout_properties: {grid_position: 'RETVYY,WNWIWS', full_width_row: true}
   - type: Label
-    properties: {role: outlined-card, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: true, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: Foreclosure Details}
+    properties: {role: outlined-card, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: Foreclosure Details}
     name: label_1
     layout_properties: {grid_position: 'EJRVTI,HMSFTX'}
   - type: ColumnPanel
