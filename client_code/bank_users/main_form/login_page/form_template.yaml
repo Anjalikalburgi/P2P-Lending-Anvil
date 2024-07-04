@@ -82,7 +82,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'WUAZDP,FZHHNU'}
     - name: column_panel_1_copy_copy
-      properties: {role: elevated-card, col_widths: '{"CQYWXR":10,"WLTEQM":5,"BJDXSL":55,"LGHLJP":55,"OTWMDU":5,"EKYSFD":54,"EOHAME":6,"PKGYXY":54,"EBNTMA":6,"VXLYLN":40,"IKUFXQ":10,"UXCVZV":40}'}
+      properties: {role: elevated-card, col_widths: '{"WLTEQM":5,"BJDXSL":55,"LGHLJP":55,"OTWMDU":5,"EKYSFD":54,"EOHAME":6,"PKGYXY":54,"EBNTMA":6,"VXLYLN":40,"UXCVZV":61,"GZTMWY":9}'}
       type: ColumnPanel
       layout_properties: {grid_position: 'WUAZDP,LLBEDS', full_width_row: false}
       components:
@@ -90,18 +90,14 @@ components:
         properties: {height: 526.8570556640625}
         type: Spacer
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,WLTEQM'}
-      - name: spacer_13
-        properties: {height: 55.857147216796875}
+      - name: spacer_2
+        properties: {height: 27.666656494140625}
         type: Spacer
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,IKUFXQ'}
+        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,GZTMWY'}
       - name: label_7
-        properties: {role: display, text: Login, background: '', foreground: '#094586', bold: true, underline: false, italic: false}
+        properties: {role: display, text: Login, background: '', foreground: '#094586', bold: true, underline: false, italic: false, align: center}
         type: Label
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,UXCVZV'}
-      - name: spacer_6
-        properties: {height: 32}
-        type: Spacer
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,CQYWXR'}
       - name: spacer_7
         properties: {height: 478.28558349609375}
         type: Spacer
