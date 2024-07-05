@@ -27,7 +27,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'CEJILL,YDONOA'}
 - name: full_name_text_box
-  properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:Light Overlay 1', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+  properties: {role: null, bold: false, align: left, placeholder: Enter Full Name, spacing_above: small, background: 'theme:Light Overlay 1', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: false, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
   type: TextBox
   layout_properties: {grid_position: 'CEJILL,TLPWFY SYBIYL,XWCQGR'}
   event_bindings: {show: borrower_full_name_test_show, pressed_enter: full_name_text_box_pressed_enter}
@@ -53,7 +53,7 @@ components:
     foreground: ''
     items: [Male, Female, Others]
     spacing_below: small
-    visible: true
+    visible: false
     border: ''
     italic: false
     enabled: true
