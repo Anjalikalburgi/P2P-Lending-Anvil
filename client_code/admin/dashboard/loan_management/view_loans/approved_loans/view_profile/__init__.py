@@ -51,3 +51,5 @@ class view_profile(view_profileTemplate):
       """This method is called when the button is clicked"""
       open_form('admin.dashboard.loan_management.view_loans.approved_loans')
 
+    
+

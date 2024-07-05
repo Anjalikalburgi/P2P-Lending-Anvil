@@ -2,28 +2,8 @@ container:
   type: ColumnPanel
   properties: {col_widths: '{}'}
 components:
-- type: ColumnPanel
-  properties: {role: null, col_widths: '', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
-  name: content_panel
-  layout_properties:
-    col_widths: {}
-    grid_position: CGGMYR,RKJRXK
-    full_width_row: true
-  components:
-  - type: ColumnPanel
-    properties: {role: null, col_widths: '{}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
-    name: content_panel_copy
-    layout_properties:
-      col_widths: {}
-      grid_position: SDSJYQ,RIJUQY
-      full_width_row: true
-    components:
-    - type: form:admin.dashboard.home_button_admin
-      properties: {}
-      name: home_button_admin_1
-      layout_properties: {grid_position: 'JJMMBB,ZQYNHW', full_width_row: true}
 - name: column_panel_1
-  properties: {col_widths: '{"MBWJOT":15,"LQZNUS":25,"RGKGXI":15,"DCDWDF":5}'}
+  properties: {col_widths: '{"MBWJOT":15,"LQZNUS":25,"RGKGXI":15,"DCDWDF":5}', visible: false}
   type: ColumnPanel
   layout_properties: {grid_position: 'KEOLBU,PBWODH'}
   components:
@@ -156,6 +136,152 @@ components:
   name: button_1_copy
   layout_properties:
     col_widths: {}
-    grid_position: FULVNJ,KDZFFT
+    grid_position: CGYBOH,MHDFRD
   event_bindings: {click: button_1_copy_click}
+- name: column_panel_1_copy
+  properties: {background: '#Edf0f4', col_widths: '{"YOQYNJ":15,"YMQFBG":15}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'TCAGZA,SBPNJI', full_width_row: true}
+  components:
+  - name: home_button_admin_1_copy
+    properties: {}
+    type: form:admin.dashboard.home_button_admin
+    layout_properties: {grid_position: 'UGIZVU,RFGSNV', full_width_row: true}
+  - name: label_3_copy
+    properties: {text: Loan Details, bold: true, font_size: 30, align: center}
+    type: Label
+    layout_properties: {grid_position: 'YSBCDH,HOTHOD', full_width_row: true}
+  - name: spacer_4_copy
+    properties: {height: '15'}
+    type: Spacer
+    layout_properties: {grid_position: 'LACDGY,HHVTXF'}
+  - name: label_1_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Loan ID}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,ADCDTR WAASPV,REGPDM'}
+  - name: label_2_copy
+    properties: {role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,ADCDTR GHBOYP,GZRSIG'}
+  - name: label_5_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Full Name}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,ADCDTR TRMTTZ,HKCUEB'}
+  - name: label_6_copy
+    properties: {role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,ADCDTR OISJIJ,OKRBOR'}
+  - name: label_9_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: false, border: '', italic: false, font_size: null, tooltip: '', text: Application Status}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,ADCDTR UBIPUO,OWAWJO'}
+  - name: label_10_copy
+    properties: {visible: false, role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,ADCDTR RQUQDQ,VEPCQO'}
+  - name: label_17_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Approved Time Stamp}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,ADCDTR DDQYQU,FHJFRT'}
+  - name: label_18_copy
+    properties: {role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,ADCDTR YOQZXB,ROYALI'}
+  - name: label_21_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: false, border: '', italic: false, font_size: null, tooltip: '', text: Payment Done}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,ADCDTR GFQEPB,PUVFYS'}
+  - name: label_22_copy
+    properties: {visible: false, role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,ADCDTR TNVCLV,CUEBYM'}
+  - name: label_27_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Email ID}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,ADCDTR CLTKJI,RWACQP'}
+  - name: label_28_copy
+    properties: {role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,ADCDTR KKNADR,UNGXHC'}
+  - name: label_31_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Updated Loan Status}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,ADCDTR VYVRJN,RWJPMI'}
+  - name: label_32_copy
+    properties: {role: outlined-card, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,ADCDTR NCWLAE,OKGLEM'}
+  - name: label_3_copy_2
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Customer ID}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,SPBCDK SSKTSV,LQNGNR'}
+  - name: label_4_copy
+    properties: {role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,SPBCDK GJAEYQ,TARNEU'}
+  - name: label_7_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: false, border: '', italic: false, font_size: null, tooltip: '', text: Loan Status}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,SPBCDK VTCYRE,DSNXPQ'}
+  - name: label_8_copy
+    properties: {visible: false, role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,SPBCDK VIACHN,LNZTZT'}
+  - name: label_15_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Interest Rate '}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,SPBCDK HIYVDX,VIVSEK'}
+  - name: label_16_copy
+    properties: {role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,SPBCDK BBEIIU,VAGHDT'}
+  - name: label_19_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Total Repayment Date}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,SPBCDK LJZRTJ,ZLMKIR'}
+  - name: label_20_copy
+    properties: {role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,SPBCDK JUIZOU,XMWSOM'}
+  - name: label_25_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Ascend Score}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,SPBCDK HXPANN,BBBAOL'}
+  - name: label_26_copy
+    properties: {role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,SPBCDK LBCGPI,ARBEAX'}
+  - name: label_29_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Tenure}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,SPBCDK OMZVPU,NTZUPY'}
+  - name: label_30_copy
+    properties: {role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,SPBCDK QFBIAJ,TWJISZ'}
+  - name: label_33_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: User Type}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,SPBCDK XGNJCF,JNFXZP'}
+  - name: label_34_copy
+    properties: {role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'TWAMKL,SPBCDK TOCOFR,TZPSAA'}
+  - name: spacer_4
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'BPCDFN,YOQYNJ'}
+  - name: spacer_1_copy
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'BPCDFN,YMQFBG'}
+  - name: button_1_copy_copy
+    properties: {role: elevated-button, bold: true, align: center, spacing_above: small, background: '#05264d', icon: 'fa:backward', underline: false, font: '16', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
+    type: Button
+    layout_properties: {grid_position: 'MESAUW,PTTRHY'}
+    event_bindings: {click: button_1_copy_click}
+  - name: spacer_6
+    properties: {height: 88.0999755859375}
+    type: Spacer
+    layout_properties: {grid_position: 'UAVJTK,AOQVMV'}
 is_package: true

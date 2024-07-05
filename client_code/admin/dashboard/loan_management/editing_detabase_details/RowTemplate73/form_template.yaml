@@ -1,74 +1,50 @@
 is_package: true
 container: {type: DataRowPanel}
 components:
-- name: text_box_1
-  properties: {align: center, role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: JKSDUP}
-  data_bindings:
-  - {property: text, code: 'self.item[''loan_id'']', writeback: false}
-- name: text_box_2
-  properties: {align: center, role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: VJQQOR}
-  data_bindings:
-  - {property: text, code: 'self.item[''borrower_name'']', writeback: false}
-- name: text_box_4
-  properties: {role: outlined, align: center, enabled: false}
-  type: TextBox
-  layout_properties: {column: DOSJXL}
-  data_bindings:
-  - {property: text, code: 'self.item[''lender_customer_id'']', writeback: false}
-- name: date_picker_1
-  properties: {role: outlined, pick_time: true}
-  type: DatePicker
-  layout_properties: {column: QFLUNJ}
-  data_bindings:
-  - {property: date, code: 'self.item[''requested_on'']', writeback: false}
-- name: text_box_6
-  properties: {align: center, role: outlined, enabled: true}
-  type: TextBox
-  layout_properties: {column: MWGBYZ}
-  data_bindings:
-  - {property: text, code: 'self.item[''status'']', writeback: false}
-- name: text_box_3
-  properties: {align: center, role: outlined, enabled: true}
-  type: TextBox
-  layout_properties: {column: UARLLF}
-  data_bindings:
-  - {property: text, code: 'self.item[''foreclosure_emi_num'']', writeback: false}
 - name: link_1
-  properties: {align: center, text: Save, bold: true}
+  properties: {align: center, text: Edit Details, bold: true}
   type: Link
   layout_properties: {column: SLKGWJ}
   event_bindings: {click: link_1_click}
-- name: text_box_5
-  properties: {role: outlined, enabled: false}
-  type: TextBox
+- name: label_1
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_id'']', writeback: false}
+- name: label_2
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''borrower_name'']', writeback: false}
+- name: label_3
+  properties: {align: center}
+  type: Label
   layout_properties: {column: OJLQEN}
   data_bindings:
   - {property: text, code: 'self.item[''borrower_customer_id'']', writeback: false}
-- name: text_box_7
-  properties: {role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: WUTRAU}
+- name: label_4
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: DOSJXL}
   data_bindings:
-  - {property: text, code: 'self.item[''foreclose_amount'']', writeback: false}
-- name: text_box_8
-  properties: {role: outlined, enabled: false}
-  type: TextBox
+  - {property: text, code: 'self.item[''lender_customer_id'']', writeback: false}
+- name: label_6
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: UARLLF}
+  data_bindings:
+  - {property: text, code: 'self.item[''foreclosure_emi_num'']', writeback: false}
+- name: label_7
+  properties: {align: center}
+  type: Label
   layout_properties: {column: PQMFNL}
   data_bindings:
   - {property: text, code: 'self.item[''total_due_amount'']', writeback: false}
-- name: text_box_9
-  properties: {role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: YDCRJU}
+- name: label_8
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: MWGBYZ}
   data_bindings:
-  - {property: text, code: 'self.item[''reason'']', writeback: false}
-- name: text_box_10
-  properties: {role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: IRNUSH}
-  data_bindings:
-  - {property: text, code: 'self.item[''status_timestamp '']', writeback: false}
+  - {property: text, code: 'self.item[''status'']', writeback: false}

@@ -16,7 +16,7 @@ services:
 - source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: bank_users.main_form}
+startup: {type: form, module: admin.dashboard}
 package_name: pip_install_reportlab
 allow_embedding: false
 name: P2P Lending App clone 25/06/2024
@@ -465,9 +465,6 @@ db_schema:
       type: number
     - name: lender_returns
       admin_ui: {width: 200, order: 9.5}
-      type: number
-    - name: part_lender_returns
-      admin_ui: {width: 200}
       type: number
   fin_guarantor_details:
     client: full

@@ -44,7 +44,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'XIHJVG,WFAWEW'}
       - name: label_8
-        properties: {}
+        properties: {role: null}
         type: Label
         layout_properties: {grid_position: 'XIHJVG,UHNZLC'}
         data_bindings:

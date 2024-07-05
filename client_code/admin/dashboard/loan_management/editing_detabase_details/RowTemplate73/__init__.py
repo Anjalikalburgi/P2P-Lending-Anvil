@@ -20,9 +20,11 @@ class RowTemplate73(RowTemplate73Template):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
 
-    self.item['foreclosure_emi_num'] = int(self.text_box_3.text)
-    self.item['status'] = self.text_box_6.text
-    self.item['requested_on'] = self.date_picker_1.date
-    self.item.update()
-    self.refresh_data_bindings()
-    alert('data saved')
+    loan_details = self.item
+    open_form('admin.dashboard.loan_management.editing_detabase_details.edit',loan_details = None,emi_details = None,extension_details = None,foreclosure_details=loan_details)
+    # self.item['foreclosure_emi_num'] = int(self.text_box_3.text)
+    # self.item['status'] = self.text_box_6.text
+    # self.item['requested_on'] = self.date_picker_1.date
+    # self.item.update()
+    # self.refresh_data_bindings()
+    # alert('data saved')

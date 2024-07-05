@@ -1,11 +1,14 @@
 /**
  This CSS implements the Material Design 3 look and feel for Anvil apps.
  **/
+.anvil-role-wide .data-grid-child-panel {
+  overflow-x: auto;
+}
 
-/* Stop panel-cols cutting off drop shadows */
-.scrollable-data-grid {
-    overflow-x: auto;
-    white-space: nowrap;
+.anvil-role-wide .anvil-data-row-panel {
+  flex-wrap: nowrap;
+  min-width: -moz-min-content;
+  min-width: min-content;
 }
 
 
@@ -1135,5 +1138,4 @@ button.btn.btn-default.to-disable{
 span.btn-text{
   text-align: center;
 }
-
 

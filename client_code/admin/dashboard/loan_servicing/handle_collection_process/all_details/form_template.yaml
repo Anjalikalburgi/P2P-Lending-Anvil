@@ -2,30 +2,30 @@ container:
   type: ColumnPanel
   properties: {col_widths: '{}'}
 components:
-- name: home_button_admin_1
-  properties: {}
-  type: form:admin.dashboard.home_button_admin
-  layout_properties: {grid_position: 'VZCAAT,BYLRIM', full_width_row: true}
-- name: button_1
-  properties: {role: outlined-button, bold: true, align: right, spacing_above: small, background: '#05264d', icon: 'fa:backward', underline: false, font: '', icon_align: left, foreground: white, spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
-  type: Button
-  layout_properties: {grid_position: 'LQIEMI,QOBHPX', full_width_row: true}
-  event_bindings: {click: button_1_click}
-- name: label_9
-  properties: {align: center, role: headline, text: View All Details}
-  type: Label
-  layout_properties: {grid_position: 'RUZOGD,FCQTUP'}
 - name: column_panel_1
-  properties: {col_widths: '{}', role: null}
+  properties: {col_widths: '{}', role: null, background: '#Edf0f4'}
   type: ColumnPanel
   layout_properties: {grid_position: 'VSPAHF,XZUAUU', full_width_row: true}
   components:
+  - name: home_button_admin_1
+    properties: {}
+    type: form:admin.dashboard.home_button_admin
+    layout_properties: {grid_position: 'TZKRNB,KAEAGU', full_width_row: true}
+  - name: button_1
+    properties: {role: outlined-button, bold: true, align: right, spacing_above: small, background: '#05264d', icon: 'fa:backward', underline: false, font: '', icon_align: left, foreground: white, spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
+    type: Button
+    layout_properties: {grid_position: 'ZQNFYJ,MZFZPS', full_width_row: true}
+    event_bindings: {click: button_1_click}
+  - name: label_9
+    properties: {align: center, role: headline, text: View All Details, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'CGCCHF,VMTOGR'}
   - name: label_5
     properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Borrower Name :'}
     type: Label
     layout_properties: {grid_position: 'VPJWRP,YSFDWJ SUTLTM,LEKTGJ'}
   - name: borrower_full_name
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'VPJWRP,YSFDWJ FGOMDM,NPOEFO'}
   - name: label_20
@@ -33,7 +33,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'VPJWRP,BCKHMK MAJOMD,GJMIRX'}
   - name: borrower_id
-    properties: {role: outlined-card, background: ''}
+    properties: {role: outlined-card, background: '', border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'VPJWRP,BCKHMK QQVEYD,KWAZUG'}
   - name: label_27
@@ -41,7 +41,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'AVFVVB,LXMBWS MHAKLO,QZQYJF'}
   - name: borrower_email
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'AVFVVB,LXMBWS BYNKMP,OYYVNY'}
   - name: label_7
@@ -49,7 +49,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'AVFVVB,PUGBVS FYLEQU,WXMUXI'}
   - name: another_email
-    properties: {role: outlined-card, bold: false}
+    properties: {role: outlined-card, bold: false, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'AVFVVB,PUGBVS SGFNPI,HIALMQ'}
   - name: label_1
@@ -57,7 +57,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'EBDSRZ,ZJLDEP OUWNIR,KKRGJX'}
   - name: loan_id
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'EBDSRZ,ZJLDEP RVCPRK,FDJEXY'}
   - name: label_17
@@ -65,7 +65,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'EBDSRZ,IUQTRU ELMPEH,VWPNLW'}
   - name: product_name
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'EBDSRZ,IUQTRU FBHZND,QXJYUR'}
   - name: label_6
@@ -73,7 +73,7 @@ components:
     type: Label
     layout_properties: {grid_position: ''}
   - name: customer_address
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: ''}
   - name: label_11
@@ -81,7 +81,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'PTHWUO,JFSIVK'}
   - name: customer_address_2
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'GSIGQP,TUYMYK'}
   - name: label_29
@@ -89,7 +89,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'OCRRMV,TIZBJX'}
   - name: relative_relation
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'BPPXUI,OUWZGQ'}
   - name: label_28
@@ -101,11 +101,11 @@ components:
     type: Label
     layout_properties: {grid_position: 'PKQGQX,NPPFSG'}
   - name: relative_name
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'JQTZAA,UEDXGO'}
   - name: relative_number
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'JQTZAA,OKCCSQ'}
   - name: label_4
@@ -113,7 +113,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'YFIOHY,ECETIN'}
   - name: relative_address
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'BGXCYV,EFLLJA'}
   - name: label_19
@@ -121,7 +121,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'DVHWDH,IJKAEY DFBTJD,XSKLNF'}
   - name: emi_number
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'DVHWDH,IJKAEY UFDCIJ,PDFIWN'}
   - name: label_8
@@ -129,7 +129,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'DVHWDH,TVKKOB HNNZXX,TJZEIL'}
   - name: status
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'DVHWDH,TVKKOB SMCDQU,KBOZET'}
   - name: label_3
@@ -137,20 +137,20 @@ components:
     type: Label
     layout_properties: {grid_position: 'OXXBGX,FWIRRG'}
   - name: remaining_amount
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'RGCNQH,ERDZKE'}
 - name: column_panel_2
-  properties: {role: outlined-card, col_widths: '{"VEKYWU":40}'}
+  properties: {role: outlined-card, col_widths: '{"VEKYWU":40}', background: '#Edf0f4'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'PNWQPI,ODJWPW'}
+  layout_properties: {grid_position: 'PNWQPI,ODJWPW', full_width_row: true}
   components:
   - name: label_10
-    properties: {align: left, text: 'Field Engineer :', role: outlined-card, bold: true, font_size: 18, background: 'theme:Primary Overlay 1'}
+    properties: {align: left, text: 'Field Engineer :', role: input-prompt, bold: true, font_size: 18, background: ''}
     type: Label
     layout_properties: {grid_position: 'TLYTDA,REICSL'}
   - name: nearest_engineer_label
-    properties: {role: outlined-card, font_size: 16}
+    properties: {role: outlined-card, font_size: 16, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'VFEKDJ,ESQHAB'}
 - name: button_1_copy

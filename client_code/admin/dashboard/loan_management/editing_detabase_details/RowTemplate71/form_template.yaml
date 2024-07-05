@@ -1,91 +1,50 @@
 is_package: true
 container: {type: DataRowPanel}
 components:
-- name: text_box_1
-  properties: {role: outlined, align: center, enabled: false}
-  type: TextBox
-  layout_properties: {column: JKSDUP}
-  data_bindings:
-  - {property: text, code: 'self.item[''loan_id'']', writeback: false}
-- name: text_box_2
-  properties: {role: outlined, align: center, bold: false, enabled: false}
-  type: TextBox
-  layout_properties: {column: VJQQOR}
-  data_bindings:
-  - {property: text, code: 'self.item[''borrower_customer_id'']', writeback: false}
-- name: link_2
-  properties: {align: center, text: Delete, bold: true}
-  type: Link
-  layout_properties: {column: VFNTND}
-  event_bindings: {click: link_2_click}
 - name: link_1
-  properties: {align: center, text: Save, bold: true}
+  properties: {align: center, text: Edit Details, bold: true}
   type: Link
   layout_properties: {column: CCRGRD}
   event_bindings: {click: link_1_click}
-- name: date_picker_2
-  properties: {role: outlined, align: center}
-  type: DatePicker
-  layout_properties: {column: KYNONL}
+- name: label_1
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: JKSDUP}
   data_bindings:
-  - {property: date, code: 'self.item[''next_payment'']', writeback: false}
-- name: date_picker_1
-  properties: {role: outlined, align: center}
-  type: DatePicker
-  layout_properties: {column: HEOULS}
+  - {property: text, code: 'self.item[''loan_id'']', writeback: false}
+- name: label_2
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: VJQQOR}
   data_bindings:
-  - {property: date, code: 'self.item[''scheduled_payment'']', writeback: false}
-- name: date_picker_3
-  properties: {role: outlined, pick_time: true, align: center, enabled: false}
-  type: DatePicker
-  layout_properties: {column: POFFSI}
-  data_bindings:
-  - {property: date, code: 'self.item[''scheduled_payment_made'']', writeback: false}
-- name: text_box_3
-  properties: {role: outlined, align: center, enabled: true}
-  type: TextBox
-  layout_properties: {column: AMIBQP}
-  data_bindings:
-  - {property: text, code: 'self.item[''emi_number'']', writeback: false}
-- name: text_box_4
-  properties: {role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: OJLQEN}
-  data_bindings:
-  - {property: text, code: 'self.item[''borrower_email'']', writeback: false}
-- name: text_box_5
-  properties: {role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: ILYKBG}
-  data_bindings:
-  - {property: text, code: 'self.item[''lender_email'']', writeback: false}
-- name: text_box_6
-  properties: {role: outlined, enabled: false}
-  type: TextBox
+  - {property: text, code: 'self.item[''borrower_customer_id'']', writeback: false}
+- name: label_5
+  properties: {align: center}
+  type: Label
   layout_properties: {column: NPPJWD}
   data_bindings:
   - {property: text, code: 'self.item[''lender_customer_id'']', writeback: false}
-- name: text_box_7
-  properties: {role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: FCEOND}
+- name: label_7
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: AMIBQP}
   data_bindings:
-  - {property: text, code: 'self.item[''total_remaining_amount'']', writeback: false}
-- name: text_box_8
-  properties: {role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: IVKBTG}
+  - {property: text, code: 'self.item[''emi_number'']', writeback: false}
+- name: label_8
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: POFFSI}
   data_bindings:
-  - {property: text, code: 'self.item[''remaining_tenure'']', writeback: false}
-- name: text_box_9
-  properties: {role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: DAXDLF}
+  - {property: text, code: 'self.item[''scheduled_payment_made'']', writeback: false}
+- name: label_9
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: HEOULS}
   data_bindings:
-  - {property: text, code: 'self.item[''extra_fee'']', writeback: false}
-- name: text_box_10
-  properties: {role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: UZTMTH}
+  - {property: text, code: 'self.item[''scheduled_payment'']', writeback: false}
+- name: label_10
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: KYNONL}
   data_bindings:
-  - {property: text, code: 'self.item[''payment_type'']', writeback: false}
+  - {property: text, code: 'self.item[''next_payment'']', writeback: false}

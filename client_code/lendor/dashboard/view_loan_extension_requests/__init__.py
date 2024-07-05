@@ -58,15 +58,15 @@ class view_loan_extension_requests(view_loan_extension_requestsTemplate):
                 'loan_id': loan['loan_id'],
                 'borrower_loan_created_timestamp': loan_details['borrower_loan_created_timestamp'],
                 'loan_updated_status': loan_details['loan_updated_status'],
-                  'extend_fee': loan['extend_fee'],
+                'extend_fee': loan['extend_fee'],
                 'extension_amount': loan['extension_amount'],
                 'total_extension_months': loan['total_extension_months'],
                 'reason': loan['reason'],
                 'new_emi': loan['new_emi'],
                 'final_repayment_amount': loan['final_repayment_amount'],
-                  'status': loan['status'],
+                'status': loan['status'],
                 'extension_request_date': loan['extension_request_date'],
-                'final_repayment_date': loan['final_repayment_date']
+                # 'final_repayment_date': loan['final_repayment_date']
                 })
         return profiles_with_extensions
     

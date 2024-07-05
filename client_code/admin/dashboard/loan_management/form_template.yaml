@@ -79,7 +79,7 @@ components:
 - name: edit_details
   properties: {col_widths: '{}', background: white, role: elevated-card}
   type: ColumnPanel
-  layout_properties: {grid_position: 'ASCOCD,CEHQBZ'}
+  layout_properties: {grid_position: 'ASCOCD,CEHQBZ SKOWMG,QMVYQU'}
   components:
   - name: image_2_copy
     properties: {height: '100', source: _/theme/admin/dashboard/manage_cms/organization (1).png}

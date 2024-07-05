@@ -1,93 +1,101 @@
 container: {type: ColumnPanel}
 components:
-- name: home_button_admin_1
-  properties: {}
-  type: form:admin.dashboard.home_button_admin
-  layout_properties: {grid_position: 'OZKJTN,MIEFEP', full_width_row: true}
-- name: column_panel_1
-  properties: {col_widths: '{"MBWJOT":15,"LQZNUS":25,"RGKGXI":15,"DCDWDF":5}'}
+- name: column_panel_1_copy
+  properties: {background: '#Edf0f4'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'CHBUVI,JOSQJP'}
+  layout_properties: {grid_position: 'XKFRUF,WCGFVX', full_width_row: true}
   components:
-  - name: label_35
-    properties: {role: outlined-card, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: Loan Details}
-    type: Label
-    layout_properties: {grid_position: 'IKZOJE,ROJNUO'}
-  - name: spacer_1
-    properties: {height: 343.9998779296875}
+  - name: home_button_admin_1
+    properties: {}
+    type: form:admin.dashboard.home_button_admin
+    layout_properties: {grid_position: 'TKJGDQ,DARQMS', full_width_row: true}
+  - name: spacer_1_copy
+    properties: {height: '5'}
     type: Spacer
-    layout_properties: {grid_position: 'NESHTV,MBWJOT'}
-  - name: label_20
-    properties: {text: 'Borrower Customer Id :', bold: true}
+    layout_properties: {grid_position: 'TESUSE,GCSMBA'}
+  - name: label_3
+    properties: {text: Loan Details, bold: true, font_size: 30, align: center}
     type: Label
-    layout_properties: {grid_position: 'NESHTV,LQZNUS OUSBMA,DLAZHX'}
-  - name: label_1
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Loan ID}
+    layout_properties: {grid_position: 'YSBCDH,HOTHOD'}
+  - name: spacer_4
+    properties: {height: '15'}
+    type: Spacer
+    layout_properties: {grid_position: 'LACDGY,HHVTXF'}
+  - name: label_20_copy
+    properties: {text: 'Borrower Customer Id :', bold: true, role: input-prompt}
     type: Label
-    layout_properties: {grid_position: 'NESHTV,LQZNUS LFGBLW,BKUKJP'}
-  - name: label_5
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Borrower Name :'}
-    type: Label
-    layout_properties: {grid_position: 'NESHTV,LQZNUS THLOHW,NQLIHU'}
-  - name: label_27
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Borrower Email :'}
-    type: Label
-    layout_properties: {grid_position: 'NESHTV,LQZNUS DNXVEO,QQYGMA'}
-  - name: label_29
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Lender Email :'}
-    type: Label
-    layout_properties: {grid_position: 'NESHTV,LQZNUS QOCMRW,JPJJEA'}
-  - name: label_17
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Product Name :'}
-    type: Label
-    layout_properties: {grid_position: 'NESHTV,LQZNUS NNRGMP,LPMEGV'}
-  - name: label_19
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'EMI Number :'}
-    type: Label
-    layout_properties: {grid_position: 'NESHTV,LQZNUS HMLXYG,LLMCOU'}
-  - name: label_28
-    properties: {text: 'Days Passed  Due Date :', bold: true}
-    type: Label
-    layout_properties: {grid_position: 'NESHTV,LQZNUS XPAYBT,VMNMQQ'}
+    layout_properties: {grid_position: 'HJNTKJ,BXVGFA WRSYNH,GKDIYD'}
   - name: borrower_id
-    properties: {}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
-    layout_properties: {grid_position: 'NESHTV,RGKGXI QDBJZE,VJCEJQ'}
+    layout_properties: {grid_position: 'HJNTKJ,BXVGFA GDQZLN,WLSDLI'}
+  - name: label_1
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Loan ID}
+    type: Label
+    layout_properties: {grid_position: 'HJNTKJ,BXVGFA IOJYUV,RZVKMN'}
   - name: loan_id
-    properties: {}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
-    layout_properties: {grid_position: 'NESHTV,RGKGXI PRCTJN,QWDHOV'}
-  - name: borrower_full_name
-    properties: {}
+    layout_properties: {grid_position: 'HJNTKJ,BXVGFA SCVOCU,KAXCUC'}
+  - name: label_27_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Borrower Email :'}
     type: Label
-    layout_properties: {grid_position: 'NESHTV,RGKGXI XMQNRG,ZEHJQU'}
+    layout_properties: {grid_position: 'HJNTKJ,BXVGFA PVLUJK,JFYETO'}
   - name: borrower_email
-    properties: {}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
-    layout_properties: {grid_position: 'NESHTV,RGKGXI IGYVSF,VVGHVR'}
-  - name: lender_email
-    properties: {}
+    layout_properties: {grid_position: 'HJNTKJ,BXVGFA NYVCKI,APTTLX'}
+  - name: label_28
+    properties: {text: 'Days Passed  Due Date :', bold: true, role: input-prompt}
     type: Label
-    layout_properties: {grid_position: 'NESHTV,RGKGXI JMYEGT,MUREYL'}
-  - name: product_name
-    properties: {}
-    type: Label
-    layout_properties: {grid_position: 'NESHTV,RGKGXI LDGUTK,SHUTET'}
-  - name: emi_number
-    properties: {}
-    type: Label
-    layout_properties: {grid_position: 'NESHTV,RGKGXI NNGXTW,CDPWVJ'}
+    layout_properties: {grid_position: 'HJNTKJ,BXVGFA BQHHOS,XVGPJK'}
   - name: days_left
-    properties: {}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
-    layout_properties: {grid_position: 'NESHTV,RGKGXI SQFKKP,OYFPCU'}
-  - name: spacer_2
-    properties: {height: 263.142822265625}
+    layout_properties: {grid_position: 'HJNTKJ,BXVGFA VQYMVB,KHVSBA'}
+  - name: label_5_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Borrower Name :'}
+    type: Label
+    layout_properties: {grid_position: 'HJNTKJ,IQKFUQ YOZPRF,TDWLOK'}
+  - name: borrower_full_name
+    properties: {role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HJNTKJ,IQKFUQ NRFDTS,KLOPTO'}
+  - name: label_29
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Lender Email :'}
+    type: Label
+    layout_properties: {grid_position: 'HJNTKJ,IQKFUQ XMZISE,PAEBWV'}
+  - name: lender_email
+    properties: {role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HJNTKJ,IQKFUQ PMNIJI,KUEXXK'}
+  - name: label_17
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Product Name :'}
+    type: Label
+    layout_properties: {grid_position: 'HJNTKJ,IQKFUQ TKSNEC,ZLQVYR'}
+  - name: product_name
+    properties: {role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HJNTKJ,IQKFUQ EXBTPN,NOFHVF'}
+  - name: label_19
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'EMI Number :'}
+    type: Label
+    layout_properties: {grid_position: 'HJNTKJ,IQKFUQ WEIUVQ,YZXASE'}
+  - name: emi_number
+    properties: {role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HJNTKJ,IQKFUQ RUHAOX,ZEESIW'}
+  - name: spacer_3
+    properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'NESHTV,DCDWDF'}
-  - name: button_1
+    layout_properties: {grid_position: 'SCBTDV,DIZRLM'}
+  - name: button_1_copy
     properties: {role: outlined-button, bold: true, align: center, spacing_above: small, background: '#05264d', icon: 'fa:backward', underline: false, font: '', icon_align: left, foreground: white, spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
     type: Button
-    layout_properties: {grid_position: 'MBNYII,LZHZMS'}
+    layout_properties: {grid_position: 'NIOBRK,RAFTTB'}
     event_bindings: {click: button_1_click}
+  - name: spacer_6
+    properties: {height: 178.13330078125}
+    type: Spacer
+    layout_properties: {grid_position: 'UAVJTK,AOQVMV'}
 is_package: true

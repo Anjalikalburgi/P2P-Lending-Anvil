@@ -49,3 +49,4 @@ class loan_management(loan_managementTemplate):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.loan_management.editing_detabase_details')
 
+ 

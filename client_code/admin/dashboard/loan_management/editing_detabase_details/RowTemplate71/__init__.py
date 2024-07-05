@@ -19,11 +19,13 @@ class RowTemplate71(RowTemplate71Template):
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    self.item['next_payment'] = self.date_picker_2.date
-    self.item['scheduled_payment'] = self.date_picker_1.date
-    self.item.update()
-    self.refresh_data_bindings()
-    alert('data saved')
+    loan_details = self.item
+    open_form('admin.dashboard.loan_management.editing_detabase_details.edit',loan_details = None,emi_details = loan_details,extension_details = None,foreclosure_details=None)
+    # self.item['next_payment'] = self.date_picker_2.date
+    # self.item['scheduled_payment'] = self.date_picker_1.date
+    # self.item.update()
+    # self.refresh_data_bindings()
+    # alert('data saved')
 
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""

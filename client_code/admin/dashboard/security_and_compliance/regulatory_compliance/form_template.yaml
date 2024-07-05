@@ -14,10 +14,6 @@ components:
   type: ColumnPanel
   layout_properties: {grid_position: 'JDMCUY,LHNVBC', full_width_row: true}
   components:
-  - name: spacer_1
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {grid_position: 'UNVAHX,HWVYTW', full_width_row: true}
   - name: label_1_copy
     properties: {text: Security Compliance, align: center, bold: true, font_size: 30, background: '#ADC4CE', role: outlined-card}
     type: Label

@@ -1,0 +1,708 @@
+container: {type: ColumnPanel}
+components:
+- name: home_button_admin_1
+  properties: {}
+  type: form:admin.dashboard.home_button_admin
+  layout_properties: {grid_position: 'ITOJHS,AUFNEV', full_width_row: true}
+- name: loan_details_column_panel_1
+  properties: {col_widths: '{"EPPLIW":10,"GJSJKK":10}', role: outlined-card, visible: false}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'WGIQOW,PDYXGU'}
+  components:
+  - name: label_1
+    properties: {align: center, role: title, text: Loan Details, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'DRPJAE,WRTTYM'}
+  - name: label_7
+    properties: {text: 'Loan Id :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,EPPLIW NGPZWT,EPQRPK'}
+  - name: loan_id_label
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,EPPLIW QUKGSP,UZXVTU'}
+  - name: label_7_copy_2_copy_4_copy_5
+    properties: {text: 'Borrower Customer Id :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,EPPLIW HMFNUC,VWOJZU'}
+  - name: borrower_id
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,EPPLIW KWUSWA,JSEYPN'}
+  - name: label_7_copy
+    properties: {text: 'Borrower Name :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,GJSJKK BCIISL,PIBTOS'}
+  - name: borrower_name
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,GJSJKK DNWRSX,YHPXFB'}
+  - name: label_7_copy_2_copy_4_copy_3
+    properties: {text: 'Lender Customer Id :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,GJSJKK WOADKW,JYUWCD'}
+  - name: leneder_id
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,GJSJKK OUPLHF,LPDCFH'}
+  - name: label_7_copy_2
+    properties: {text: 'Borrower Email :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'SEKAWM,TLJXJI'}
+  - name: borrower_email
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'SEKAWM,TLJXJI FLCMWO,UOWFAI'}
+  - name: label_7_copy_2_copy
+    properties: {text: 'Lender Email :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'SEKAWM,FMCVDU DZUBKK,VJBVCS'}
+  - name: lender_email
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'SEKAWM,FMCVDU ACRYIO,QMGWBP'}
+  - name: label_7_copy_2_copy_2
+    properties: {text: 'Product Id :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'CTRQMW,RQEZTK'}
+  - name: label_7_copy_2_copy_3
+    properties: {text: 'Product Name :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'CTRQMW,TSNQLK'}
+  - name: product_id
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HRZNWJ,BGTPMO MKDJSD,GAHKOB'}
+  - name: label_7_copy_2_copy_4
+    properties: {text: 'Loan Amount :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HRZNWJ,BGTPMO EEWVLO,BPXUAM'}
+  - name: product_name
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HRZNWJ,DCCPKB XBPEYC,IQVZYN'}
+  - name: label_7_copy_2_copy_4_copy_2
+    properties: {text: 'Total Repayment amount :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HRZNWJ,DCCPKB RRHPBN,ZFPCSL'}
+  - name: loan_amount
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ'}
+  - name: label_7_copy_2_copy_4_copy_copy_3
+    properties: {text: 'Tenure :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ YBGYWW,ANQAIS'}
+  - name: tenure
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ VUDVKE,FKQZDB'}
+  - name: label_7_copy_2_copy_4_copy
+    properties: {text: 'Loan Updated Status :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ XCAIWI,IEWQMM'}
+  - name: updated_status
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ EJCFPC,GPBBEE'}
+  - name: label_7_copy_2_copy_4_copy_copy
+    properties: {text: 'Total Processing Fee :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ EVXNCM,GFQDEX'}
+  - name: processing_fee
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey, bold: false}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ ARIRBW,YRQKMQ'}
+  - name: label
+    properties: {text: 'Lender Returns :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ SKPFNL,XCMTPY'}
+  - name: lender_returnss
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ MAIYUH,IHQFAT'}
+  - name: label_copy_2_copy_2
+    properties: {text: 'Emi Payment Type :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ PKWOJN,PTVSJI'}
+  - name: emi_payment_type
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ CPGQEX,QBEJPU'}
+  - name: total_repayment_amount
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR MFTMSP,BTXBQL'}
+  - name: label_7_copy_2_copy_4_copy_copy_copy
+    properties: {text: Interest Rate, bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR RVVRWU,KXDPHR'}
+  - name: interest_rate
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR EIVZAT,PZBZUN'}
+  - name: label_7_copy_2_copy_4_copy_4
+    properties: {text: 'Membership Type:', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR ZZMVDA,YAYCRE'}
+  - name: membership_type
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR PJUFNL,RYRDXR'}
+  - name: label_7_copy_2_copy_4_copy_copy_2
+    properties: {text: 'Total Interest Amount :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR FRFCKQ,HPQGHE'}
+  - name: interest_amount
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR GECMDY,BAXYCT'}
+  - name: label_copy_3
+    properties: {text: 'Total Amount Paid :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR JFQVVC,USSMEO'}
+  - name: total_amount
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey, underline: false}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR INXZRC,JWRXHX'}
+  - name: label_copy_2_copy_3
+    properties: {text: 'Remaining Amount :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR SDONIZ,NUPDLO'}
+  - name: remaining_amount
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR RCWYNW,ODMOGX'}
+  - name: column_panel_2
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'BKHBUT,WINDOI'}
+    components:
+    - name: label_2
+      properties: {align: center, text: Editable Details, bold: true, role: title}
+      type: Label
+      layout_properties: {grid_position: 'OWKMZN,CIBRQV'}
+    - name: label_copy_2
+      properties: {text: 'First Emi Due Date :', bold: true, align: left, role: input-prompt}
+      type: Label
+      layout_properties: {grid_position: 'ZFQFLR,CGXEZI'}
+    - name: first_date_picker_1
+      properties: {role: outlined}
+      type: DatePicker
+      layout_properties: {grid_position: 'ZFQFLR,CGXEZI GFZYPY,OXEYMY'}
+    - name: label_copy
+      properties: {text: 'Loan Disbursed Time Stamp :', bold: true, align: left, role: input-prompt}
+      type: Label
+      layout_properties: {grid_position: 'ZFQFLR,PFEXSC GLKENL,ATPYPH'}
+    - name: disbursed_date_picker_2
+      properties: {role: outlined, pick_time: true}
+      type: DatePicker
+      layout_properties: {grid_position: 'ZFQFLR,PFEXSC ATWVLS,EUHRPA'}
+    - name: button_1
+      properties: {text: Save, background: '#05264d', font_size: null, foreground: white}
+      type: Button
+      layout_properties: {grid_position: 'RTKYOW,NSHXAH'}
+      event_bindings: {click: loan_details_click}
+- name: spacer_1
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: ''}
+- name: emi_panel
+  properties: {col_widths: '{"EPPLIW":10,"GJSJKK":10}', role: outlined-card, visible: false}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'EFAJCE,YECDIS'}
+  components:
+  - name: label_1_copy
+    properties: {align: center, role: title, text: Emi Details, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'DRPJAE,WRTTYM'}
+  - name: label_7_copy_3
+    properties: {text: 'Loan Id :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,EPPLIW NGPZWT,EPQRPK'}
+  - name: loan_id_label_copy
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,EPPLIW QUKGSP,UZXVTU'}
+  - name: label_7_copy_2_copy_4_copy_5_copy
+    properties: {text: 'Borrower Customer Id :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,EPPLIW HMFNUC,VWOJZU'}
+  - name: borrower_id_copy
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,EPPLIW KWUSWA,JSEYPN'}
+  - name: label_7_copy_2_copy_4_copy_3_copy
+    properties: {text: 'Lender Customer Id :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,GJSJKK WOADKW,JYUWCD'}
+  - name: leneder_id_copy
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,GJSJKK OUPLHF,LPDCFH'}
+  - name: label_7_copy_2_copy_3_copy
+    properties: {text: 'Account No : ', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,GJSJKK SLRQML,MQPHTT'}
+  - name: account_no
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,GJSJKK CJRFGT,GHOSHX'}
+  - name: label_7_copy_2_copy_5
+    properties: {text: 'Borrower Email :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'SEKAWM,TLJXJI'}
+  - name: borrower_email_copy
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'SEKAWM,TLJXJI FLCMWO,UOWFAI'}
+  - name: label_7_copy_2_copy_copy
+    properties: {text: 'Lender Email :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'SEKAWM,FMCVDU DZUBKK,VJBVCS'}
+  - name: lender_email_copy
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'SEKAWM,FMCVDU ACRYIO,QMGWBP'}
+  - name: label_3
+    properties: {role: input-prompt, text: 'Payment Type :', bold: true}
+    type: Label
+    layout_properties: {grid_position: 'LQYKGQ,KHSWVH'}
+  - name: label_7_copy_2_copy_4_copy_2_copy
+    properties: {text: 'Remaining Amount :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'LQYKGQ,OFDIIV'}
+  - name: Payment_type
+    properties: {align: left, role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'XFXUOO,QGCOOO'}
+  - name: total_repayment_amount_copy
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'XFXUOO,JQHHLC'}
+  - name: label_7_copy_2_copy_4_copy_copy_3_copy
+    properties: {text: 'EMI Number :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ YBGYWW,ANQAIS'}
+  - name: emi_number
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ VUDVKE,FKQZDB'}
+  - name: label_7_copy_2_copy_4_copy_copy_4
+    properties: {text: 'Days Passed Due date :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ XCAIWI,IEWQMM'}
+  - name: days_left
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ EJCFPC,GPBBEE'}
+  - name: label_7_copy_2_copy_4_copy_copy_copy_2
+    properties: {text: Payment  Made Date ;, bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ EVXNCM,GFQDEX'}
+  - name: schedule_payment_made
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey, bold: false}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ ARIRBW,YRQKMQ'}
+  - name: label_copy_4
+    properties: {text: 'Lender Returns :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ SKPFNL,XCMTPY'}
+  - name: lender_returns
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ MAIYUH,IHQFAT'}
+  - name: label_copy_2_copy_2_copy
+    properties: {text: 'Part Payment Date : ', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ PKWOJN,PTVSJI'}
+  - name: payment_payment_date
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ CPGQEX,QBEJPU'}
+  - name: label_7_copy_2_copy_4_copy_copy_copy_copy
+    properties: {text: 'Remaining Tenure :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR RVVRWU,KXDPHR'}
+  - name: remaining_tenure
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR EIVZAT,PZBZUN'}
+  - name: label_7_copy_2_copy_4_copy_4_copy
+    properties: {text: 'Extra Fees :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR ZZMVDA,YAYCRE'}
+  - name: extra_fee
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR PJUFNL,RYRDXR'}
+  - name: label_7_copy_2_copy_4_copy_copy_2_copy
+    properties: {text: 'Total Amount Paid :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR FRFCKQ,HPQGHE'}
+  - name: Total_amount_paid
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR GECMDY,BAXYCT'}
+  - name: label_copy_3_copy
+    properties: {text: 'Platform Fee :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR JFQVVC,USSMEO'}
+  - name: platform_fee
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey, underline: false}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR INXZRC,JWRXHX'}
+  - name: label_copy_2_copy_3_copy
+    properties: {text: 'Part Payment Amount :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR SDONIZ,NUPDLO'}
+  - name: part_payment_amount
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR RCWYNW,ODMOGX'}
+  - name: column_panel_2_copy
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'BKHBUT,WINDOI'}
+    components:
+    - name: label_2_copy
+      properties: {align: center, text: Editable Details, bold: true, role: title}
+      type: Label
+      layout_properties: {grid_position: 'OWKMZN,CIBRQV'}
+    - name: label_copy_2_copy
+      properties: {text: 'Scheduled Payment :', bold: true, align: left, role: input-prompt}
+      type: Label
+      layout_properties: {grid_position: 'ZFQFLR,CGXEZI GFKIKM,XAEWSQ'}
+    - name: schedule_date_picker_1_copy
+      properties: {role: outlined}
+      type: DatePicker
+      layout_properties: {grid_position: 'ZFQFLR,CGXEZI GFZYPY,OXEYMY'}
+    - name: label_copy_copy
+      properties: {text: 'Next Payment :', bold: true, align: left, role: input-prompt}
+      type: Label
+      layout_properties: {grid_position: 'ZFQFLR,PFEXSC GLKENL,ATPYPH'}
+    - name: next_date_picker_2_copy
+      properties: {role: outlined, pick_time: false}
+      type: DatePicker
+      layout_properties: {grid_position: 'ZFQFLR,PFEXSC ATWVLS,EUHRPA'}
+    - name: button_2
+      properties: {text: Save, background: '#05264d', foreground: white, font_size: null}
+      type: Button
+      layout_properties: {grid_position: 'JVHRGK,TOPUJC'}
+      event_bindings: {click: emi_detaisl_click}
+- name: spacer_2
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'LRXLVB,TGQNCS'}
+- name: extension_panel
+  properties: {col_widths: '{"EPPLIW":10,"GJSJKK":10}', role: outlined-card, visible: false}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'DIDGZH,WQPXQC'}
+  components:
+  - name: label_1_copy_2
+    properties: {align: center, role: title, text: Extesion Details, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'DRPJAE,WRTTYM'}
+  - name: label_7_copy_4
+    properties: {text: 'Loan Id :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,EPPLIW NGPZWT,EPQRPK'}
+  - name: E_loan_id
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,EPPLIW QUKGSP,UZXVTU'}
+  - name: label_7_copy_2_copy_4_copy_5_copy_2
+    properties: {text: 'Borrower Customer Id :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,EPPLIW HMFNUC,VWOJZU'}
+  - name: E_borrower_id_copy_2
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,EPPLIW KWUSWA,JSEYPN'}
+  - name: label_7_copy_copy_2
+    properties: {text: 'Borrower Name :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,GJSJKK BCIISL,PIBTOS'}
+  - name: E_borrower_name_copy_2
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,GJSJKK DNWRSX,YHPXFB'}
+  - name: label_7_copy_2_copy_4_copy_3_copy_2
+    properties: {text: 'Lender Customer Id :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,GJSJKK WOADKW,JYUWCD'}
+  - name: E_leneder_id_copy_2
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,GJSJKK OUPLHF,LPDCFH'}
+  - name: label_7_copy_2_copy_6
+    properties: {text: 'Borrower Email :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'SEKAWM,TLJXJI'}
+  - name: E_borrower_email_copy_2
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'SEKAWM,TLJXJI FLCMWO,UOWFAI'}
+  - name: label_7_copy_2_copy_copy_2
+    properties: {text: 'Lender Email :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'SEKAWM,FMCVDU DZUBKK,VJBVCS'}
+  - name: E_lender_email_copy_2
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'SEKAWM,FMCVDU ACRYIO,QMGWBP'}
+  - name: label_7_copy_2_copy_4_copy_7
+    properties: {text: 'Loan Amount :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HRZNWJ,BGTPMO'}
+  - name: label_7_copy_2_copy_4_copy_2_copy_2
+    properties: {text: 'New EMI :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HRZNWJ,DCCPKB RRHPBN,ZFPCSL'}
+  - name: E_loan_amount_copy_2
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ'}
+  - name: label_7_copy_2_copy_4_copy_copy_3_copy_2
+    properties: {text: Extension Months, bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ YBGYWW,ANQAIS'}
+  - name: E_extension_months
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ VUDVKE,FKQZDB'}
+  - name: label_7_copy_2_copy_4_copy_copy_5
+    properties: {text: 'Approved Date :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ XCAIWI,IEWQMM'}
+  - name: E_approved_date
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ EJCFPC,GPBBEE'}
+  - name: E_emi
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR MFTMSP,BTXBQL'}
+  - name: label_7_copy_2_copy_4_copy_copy_copy_copy_2
+    properties: {text: Extension Amount, bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR RVVRWU,KXDPHR'}
+  - name: E_extension_amount
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR EIVZAT,PZBZUN'}
+  - name: label_7_copy_2_copy_4_copy_4_copy_2
+    properties: {text: 'Reason :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR ZZMVDA,YAYCRE'}
+  - name: E_reason
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR PJUFNL,RYRDXR'}
+  - name: column_panel_2_copy_2
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'JGVTBQ,UDLSMF'}
+    components:
+    - name: label_2_copy_2
+      properties: {align: center, text: Editable Details, bold: true, role: title}
+      type: Label
+      layout_properties: {grid_position: 'OWKMZN,CIBRQV'}
+    - name: label_copy_2_copy_4
+      properties: {text: 'Extension Request Date :', bold: true, align: left, role: input-prompt}
+      type: Label
+      layout_properties: {grid_position: 'ZFQFLR,CGXEZI'}
+    - name: Extesnion_request_datepicker
+      properties: {role: outlined, pick_time: true}
+      type: DatePicker
+      layout_properties: {grid_position: 'ZFQFLR,CGXEZI GFZYPY,OXEYMY'}
+    - name: label_copy_2_copy_3_copy_2
+      properties: {text: 'Status :', bold: true, align: left, role: input-prompt}
+      type: Label
+      layout_properties: {grid_position: 'ZFQFLR,CGXEZI YATASG,NAIKWR'}
+    - name: E_status
+      properties: {role: outlined}
+      type: TextBox
+      layout_properties: {grid_position: 'ZFQFLR,CGXEZI SGELBY,IURBHT'}
+    - name: label_copy_copy_2
+      properties: {text: 'EMI Number :', bold: true, align: left, role: input-prompt}
+      type: Label
+      layout_properties: {grid_position: 'ZFQFLR,PFEXSC GLKENL,ATPYPH'}
+    - name: E_emi_number
+      properties: {role: outlined}
+      type: TextBox
+      layout_properties: {grid_position: 'ZFQFLR,PFEXSC RIHFDW,YDOHTF'}
+    - name: button_3
+      properties: {text: Save, background: '#05264d', foreground: white}
+      type: Button
+      layout_properties: {grid_position: 'NCCEWQ,USCYJA'}
+      event_bindings: {click: emi_details_click}
+  - name: spacer_3
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: ',undefined'}
+- name: forelosure_panel
+  properties: {col_widths: '{"EPPLIW":10,"GJSJKK":10}', role: outlined-card, visible: false}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'GGGEAV,SQUPBY'}
+  components:
+  - name: label_1_copy_3
+    properties: {align: center, role: title, text: Foreclosure Details, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'DRPJAE,WRTTYM'}
+  - name: label_7_copy_5
+    properties: {text: 'Loan Id :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,EPPLIW NGPZWT,EPQRPK'}
+  - name: _Floan_id_label_copy_3
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,EPPLIW QUKGSP,UZXVTU'}
+  - name: label_7_copy_2_copy_4_copy_5_copy_3
+    properties: {text: 'Borrower Customer Id :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,EPPLIW HMFNUC,VWOJZU'}
+  - name: F_borrower_id_copy_3
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,EPPLIW KWUSWA,JSEYPN'}
+  - name: label_7_copy_copy_3
+    properties: {text: 'Borrower Name :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,GJSJKK BCIISL,PIBTOS'}
+  - name: F_borrower_name_copy_3
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,GJSJKK DNWRSX,YHPXFB'}
+  - name: label_7_copy_2_copy_4_copy_3_copy_3
+    properties: {text: 'Lender Customer Id :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,GJSJKK WOADKW,JYUWCD'}
+  - name: F_leneder_id_copy_3
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'WVVDTS,GJSJKK OUPLHF,LPDCFH'}
+  - name: label_7_copy_2_copy_7
+    properties: {text: 'Borrower Email :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'SEKAWM,TLJXJI'}
+  - name: F_borrower_email_copy_3
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'SEKAWM,TLJXJI FLCMWO,UOWFAI'}
+  - name: label_7_copy_2_copy_copy_3
+    properties: {text: 'Lender Email :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'SEKAWM,FMCVDU DZUBKK,VJBVCS'}
+  - name: F_lender_email_copy_3
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'SEKAWM,FMCVDU TCVUIT,AWEOYH'}
+  - name: label_7_copy_2_copy_2_copy_3
+    properties: {text: 'Loan Amount :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'CTRQMW,RQEZTK'}
+  - name: label_7_copy_2_copy_3_copy_3
+    properties: {text: 'Product Name :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'CTRQMW,TSNQLK'}
+  - name: F_loan_amount
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HRZNWJ,BGTPMO MKDJSD,GAHKOB'}
+  - name: label_7_copy_2_copy_4_copy_8
+    properties: {text: 'Foreclosure Amount :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HRZNWJ,BGTPMO EEWVLO,BPXUAM'}
+  - name: F_product_name_copy_3
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HRZNWJ,DCCPKB XBPEYC,IQVZYN'}
+  - name: label_7_copy_2_copy_4_copy_2_copy_3
+    properties: {text: 'Total Due Amount :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HRZNWJ,DCCPKB RRHPBN,ZFPCSL'}
+  - name: foreclosure_amount
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ'}
+  - name: label_7_copy_2_copy_4_copy_copy_3_copy_3
+    properties: {text: 'Foreclosure Fee :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ YBGYWW,ANQAIS'}
+  - name: foreclosure_fee
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ VUDVKE,FKQZDB'}
+  - name: label_7_copy_2_copy_4_copy_copy_6
+    properties: {text: 'Reason :', bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ XCAIWI,IEWQMM'}
+  - name: F_reason
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,CTOMMQ EJCFPC,GPBBEE'}
+  - name: total_due_amount
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR MFTMSP,BTXBQL'}
+  - name: label_7_copy_2_copy_4_copy_copy_copy_copy_3
+    properties: {text: Interest Rate, bold: true, align: left, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR RVVRWU,KXDPHR'}
+  - name: F_interest_rate_copy_3
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR EIVZAT,PZBZUN'}
+  - name: label_4
+    properties: {role: input-prompt, text: 'Apprpved Date :', bold: true}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR IHMVWO,FJKILE'}
+  - name: F_status_timestamp
+    properties: {role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'HVTRJZ,IIBPLR RTQEBQ,VIYGZW'}
+  - name: column_panel_2_copy_3
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'BKHBUT,WINDOI'}
+    components:
+    - name: label_2_copy_3
+      properties: {align: center, text: Editable Details, bold: true, role: title}
+      type: Label
+      layout_properties: {grid_position: 'OWKMZN,CIBRQV'}
+    - name: label_copy_2_copy_5
+      properties: {text: Requested Date, bold: true, align: left, role: input-prompt}
+      type: Label
+      layout_properties: {grid_position: 'ZFQFLR,CGXEZI'}
+    - name: F_requested_on
+      properties: {role: outlined, pick_time: true}
+      type: DatePicker
+      layout_properties: {grid_position: 'ZFQFLR,CGXEZI GFZYPY,OXEYMY'}
+    - name: label_copy_copy_3
+      properties: {text: 'EMI Number :', bold: true, align: left, role: input-prompt}
+      type: Label
+      layout_properties: {grid_position: 'ZFQFLR,PFEXSC GLKENL,ATPYPH'}
+    - name: F_emi_number
+      properties: {role: outlined}
+      type: TextBox
+      layout_properties: {grid_position: 'ZFQFLR,PFEXSC XATIVL,XXMUHF'}
+    - name: label_7_copy_2_copy_4_copy_copy_copy_4
+      properties: {text: 'Status :', bold: true, align: left, role: input-prompt}
+      type: Label
+      layout_properties: {grid_position: 'GBMURL,RIJWUA'}
+    - name: F_status
+      properties: {role: outlined}
+      type: TextBox
+      layout_properties: {grid_position: 'VKZWIW,DDRUYZ'}
+    - name: button_4
+      properties: {text: Save, bold: true, background: '#05264d', foreground: white}
+      type: Button
+      layout_properties: {grid_position: 'QMXKYK,BKXTMA'}
+      event_bindings: {click: foreclosure_click}
+- name: button_1_copy_3
+  properties: {role: elevated-button, bold: true, align: center, spacing_above: small, background: '#05264d', icon: 'fa:backward', underline: false, font: '16', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
+  type: Button
+  layout_properties: {grid_position: 'YSBFXE,DGRPVX'}
+  event_bindings: {click: button_1_copy_3_click}
+is_package: true

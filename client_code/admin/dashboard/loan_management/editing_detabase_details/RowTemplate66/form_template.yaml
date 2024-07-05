@@ -1,98 +1,56 @@
 is_package: true
 container: {type: DataRowPanel}
 components:
-- name: text_box_1
-  properties: {align: center, role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: JKSDUP}
-  data_bindings:
-  - {property: text, code: 'self.item[''loan_id'']', writeback: false}
-- name: text_box_2
-  properties: {role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: VJQQOR}
-  data_bindings:
-  - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
-- name: text_box_3
-  properties: {role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: OJLQEN}
-  data_bindings:
-  - {property: text, code: 'self.item[''borrower_customer_id'']', writeback: false}
 - name: link_1
-  properties: {align: center, text: Save, bold: true}
+  properties: {align: center, text: Edit Details, bold: true}
   type: Link
   layout_properties: {column: CWDKTB}
   event_bindings: {click: save_button_click}
-- name: text_box_4
-  properties: {role: outlined, enabled: false, visible: true}
-  type: TextBox
-  layout_properties: {column: NCNXNH}
+- name: label_1
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: JKSDUP}
   data_bindings:
-  - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
-- name: text_box_5
-  properties: {role: outlined, enabled: false}
-  type: TextBox
+  - {property: text, code: 'self.item[''loan_id'']', writeback: false}
+- name: label_2
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
+- name: label_3
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item[''borrower_customer_id'']', writeback: false}
+- name: label_4
+  properties: {align: center}
+  type: Label
   layout_properties: {column: NNUANN}
   data_bindings:
   - {property: text, code: 'self.item[''product_name'']', writeback: false}
-- name: text_box_6
-  properties: {role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: YYMYOY}
+- name: label_7
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: NCNXNH}
   data_bindings:
-  - {property: text, code: 'self.item[''borrower_email_id'']', writeback: false}
-- name: text_box_7
-  properties: {role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: OIMIZA}
-  data_bindings:
-  - {property: text, code: 'self.item[''lender_email_id'']', writeback: false}
-- name: date_picker_1
-  properties: {role: outlined, align: center}
-  type: DatePicker
-  layout_properties: {column: JBAEAG}
-  data_bindings:
-  - {property: date, code: 'self.item[''first_emi_payment_due_date'']', writeback: false}
-- name: date_picker_2
-  properties: {role: outlined, pick_time: true, align: center}
-  type: DatePicker
-  layout_properties: {column: RMMXRQ}
-  data_bindings:
-  - {property: date, code: 'self.item[''loan_disbursed_timestamp'']', writeback: false}
-- name: date_picker_3
-  properties: {role: outlined, pick_time: true, enabled: false}
-  type: DatePicker
-  layout_properties: {column: DTAUMF}
-  data_bindings:
-  - {property: date, code: 'self.item[''lender_accepted_timestamp'']', writeback: false}
-- name: text_box_11
-  properties: {role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: PKEKOT}
-  data_bindings:
-  - {property: text, code: 'self.item[''membership_type'']', writeback: false}
-- name: text_box_10
-  properties: {role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: IDOSNA}
-  data_bindings:
-  - {property: text, code: 'self.item[''remaining_amount'']', writeback: false}
-- name: text_box_9
-  properties: {role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: JVQFYQ}
-  data_bindings:
-  - {property: text, code: 'self.item[''total_repayment_amount'']', writeback: false}
-- name: text_box_8
-  properties: {role: outlined, enabled: false}
-  type: TextBox
-  layout_properties: {column: CLNKGP}
-  data_bindings:
-  - {property: text, code: 'self.item[''loan_amount'']', writeback: false}
-- name: text_box_12
-  properties: {role: outlined, enabled: false}
-  type: TextBox
+  - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
+- name: label_10
+  properties: {align: center}
+  type: Label
   layout_properties: {column: MHGEVA}
   data_bindings:
   - {property: text, code: 'self.item[''tenure'']', writeback: false}
+- name: label_11
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: CLNKGP}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_amount'']', writeback: false}
+- name: label_12
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: JVQFYQ}
+  data_bindings:
+  - {property: text, code: 'self.item[''total_repayment_amount'']', writeback: false}

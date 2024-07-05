@@ -33,7 +33,7 @@ class view_profile(view_profileTemplate):
             self.label_20.text = self.loan_data['total_repayment_amount']
             self.label_22.text = self.loan_data['total_payments_made']
             # self.label_24.text = self.loan_data['member_rom']
-            self.label_26.text = self.loan_data['beseem_score']
+            self.label_26.text = self.loan_data['ascend_score']
             self.label_28.text = self.loan_data['borrower_email_id']
             self.label_30.text = self.loan_data['tenure']
             self.label_32.text = self.loan_data['loan_updated_status']
