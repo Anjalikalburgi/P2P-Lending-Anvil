@@ -23,7 +23,8 @@ components:
   type: form:borrower.borrower_registration_forms.registration_process
   layout_properties: {grid_position: 'IXQBED,QRWAJN'}
 - name: column_panel_1
-  properties: {role: outlined-card}
+  properties:
+    role: [outlined-card, elevated-card]
   type: ColumnPanel
   layout_properties: {grid_position: 'YEGIEW,YQLQYI'}
   components:
