@@ -37,7 +37,7 @@ components:
     layout_properties: {grid_position: 'ZJKQFV,TMBRQR'}
     components:
     - name: label_2
-      properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Secondary Container', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your  Name  *}
+      properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Secondary Container', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: Enter Your  Name  *}
       type: Label
       layout_properties: {grid_position: 'RKZEYY,BNYXUD RCKXZX,PBOYXZ'}
     - name: full_name_text_box
@@ -110,7 +110,7 @@ components:
         border: ''
         italic: false
         enabled: true
-        font_size: 19
+        font_size: 14
         tooltip: ''
       type: DropDown
       layout_properties: {grid_position: 'RKZEYY,OQQCFW XGTTIC,UXFGEE'}
