@@ -52,7 +52,14 @@ class wallet(walletTemplate):
 
   def refresh(self):
     """R efresh repeating panels with the latest data"""
-    self.repeating_panel_1.items = app_tables.fin_wallet_transactions.search()
+    transactions = app_tables.fin_wallet_transactions.search(customer_id=self.user_id)
+
+    # Sort transactions by a specific field, e.g., 'transaction_date', in descending order
+    sorted_transactions = sorted(transactions, key=itemgetter('transaction_time_stamp'), reverse=True)
+
+    # Limit to top 5 transactions
+    top_5_transactions = sorted_transactions[:5]
+    self.repeating_panel_1.items = top_5_transactions
     
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
